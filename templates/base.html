@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" />
+        <link href="/resources/css/reset.css" rel="stylesheet" media="all"/>
+        <link href="/resources/css/print.css"  rel="stylesheet" media="print" />
+
+        {% block head %}
+            <link href="/resources/css/styles.css" rel="stylesheet" media="screen" />
+        {% endblock %}
+
+        <title>{{ page_title }}</title>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
+

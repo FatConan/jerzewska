@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block head %}
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
+    <link href="/resources/css/portfolio.css" rel="stylesheet" media="screen"/>
+    <link href="/resources/css/print.css"  rel="stylesheet" media="print" />
+    <script type="text/javascript" src="/resources/javascript/portfolio.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="page">
+        <section class="main" >
+            <header class="intro">
+                <div class="intro-inner">
+                    {% include "snippets/nav_alt.html" %}
+                </div>
+            </header>
+            <section class="project-details">
+                {{ content|safe }}
+
+                <ul class="shots">
+                    {% for item in portfolio_images %}
+                        {% if "," in item %}
+                            {% set path, color = item.split(",") %}
+                        {% else %}
+                            {% set path, color = item, "" %}
+                        {% endif %}
+                        <li style="background-image:url(/resources/img/portfolio/thumbs/{{ path }})">
+                            <a data-fancybox="gallery" data-loop="{{ loop.index }}" class="thumb {% if loop.index == 1 %}selected{% endif %}" data-half="/resources/img/portfolio/half/{{ path }}" data-color="{{ color }}" href="/resources/img/portfolio/full/{{ path }}"></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <ul class="navlinks">
+                    {%  if prev_link %}
+                        <li><a title="Previous project" class="navlink previous" href="{{ prev_link }}">Previous</a></li>
+                    {%  endif %}
+                    <li><a href="/#portfolio" class="return">Go back to portfolio</a></li>
+                    {%  if next_link %}
+                        <li><a title="Next project" class="navlink next" href="{{ next_link }}">Next</a></li>
+                    {%  endif %}
+                </ul>
+
+            </section>
+        </section>
+        <section class="supplemental">
+
+        </section>
+    </div>
+{% endblock %}

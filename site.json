@@ -1,0 +1,146 @@
+{
+    "sites": [
+        {
+            "root": "jerzewska",
+            "pages": [
+                {
+                    "source": "pages/home.md",
+                    "target": "output/index.html"
+                },
+                {
+                    "source": "pages/400.md",
+                    "target": "output/400.shtml"
+                },
+                {
+                    "source": "pages/401.md",
+                    "target": "output/401.shtml"
+                },
+                {
+                    "source": "pages/403.md",
+                    "target": "output/403.shtml"
+                },
+                {
+                    "source": "pages/404.md",
+                    "target": "output/404.shtml"
+                },
+                {
+                    "source": "pages/500.md",
+                    "target": "output/500.shtml"
+                },
+                {
+                    "source": "pages/balkan-tour.md",
+                    "target": "output/portfolio/balkan-trip.html"
+                },
+                {
+                    "source": "pages/eco-tour.md",
+                    "target": "output/portfolio/eco-tour.html"
+                },
+                {
+                    "source": "pages/gefion.md",
+                    "target": "output/portfolio/gefion.html"
+                },
+                {
+                    "source": "pages/blackbx.md",
+                    "target": "output/portfolio/blackbx.html"
+                },
+                {
+                    "source": "pages/illustration.md",
+                    "target": "output/portfolio/illustration.html"
+                },
+                {
+                    "source": "pages/kotlownia.md",
+                    "target": "output/portfolio/kotlownia.html"
+                },
+                {
+                    "source": "pages/kubus.md",
+                    "target": "output/portfolio/kubus.html"
+                },
+                {
+                    "source": "pages/kwk.md",
+                    "target": "output/portfolio/kwk.html"
+                },
+                {
+                    "source": "pages/logos.md",
+                    "target": "output/portfolio/logos.html"
+                },
+                {
+                    "source": "pages/package.md",
+                    "target": "output/portfolio/package.html"
+                },
+                {
+                    "source": "pages/photomanipulation.md",
+                    "target": "output/portfolio/photo-manipulation.html"
+                },
+                {
+                    "source": "pages/photos.md",
+                    "target": "output/portfolio/photography.html"
+                },
+                {
+                    "source": "pages/print.md",
+                    "target": "output/portfolio/print.html"
+                },
+                {
+                    "source": "pages/rpz.md",
+                    "target": "output/portfolio/rpz.html"
+                },
+                {
+                    "source": "pages/terefere.md",
+                    "target": "output/portfolio/terefere.html"
+                },
+                {
+                    "source": "pages/waterbysun.md",
+                    "target": "output/portfolio/waterbysun.html"
+                },
+                {
+                    "source": "pages/web.md",
+                    "target": "output/portfolio/web.html"
+                }
+            ],
+            "templates": [
+                "templates"
+            ],
+            "resources": [
+                {
+                    "source": "resources/favicon.ico",
+                    "target": "output/favicon.ico",
+                    "resource_type": "relocate"
+                },
+                {
+                    "source": "resources/error/401.jpg",
+                    "target": "output/401.jpg",
+                    "resource_type": "relocate"
+                },
+                {
+                    "source": "resources/error/403.jpg",
+                    "target": "output/403.jpg",
+                    "resource_type": "relocate"
+                },
+                {
+                    "source": "resources/error/404.jpg",
+                    "target": "output/404.jpg",
+                    "resource_type": "relocate"
+                },
+                {
+                    "source": "resources/error/500.jpg",
+                    "target": "output/500.jpg",
+                    "resource_type": "relocate"
+                },
+                {
+                    "source": "resources/img",
+                    "target": "output/resources/img",
+                    "resource_type": "relocate"
+                },
+                {
+                    "source": "resources/javascript",
+                    "target": "output/resources/javascript",
+                    "resource_type": "relocate"
+                },
+                {
+                    "source": "resources/css",
+                    "target": "output/resources/css",
+                    "resource_type": "relocate"
+                }
+            ]
+        }
+    ]
+}

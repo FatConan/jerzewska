@@ -1,0 +1,185 @@
+/* default font */
+html {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15pt;
+    line-height: 20pt;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background: #ffffff;
+}
+
+h1 {
+    color: #6913E0;
+    text-align: center;
+    font-size: 35pt;
+    font-weight: normal;
+    line-height: 1.2;
+    padding: 110px 0 50px;
+    margin: 0;
+}
+h1 strong {
+    font-weight: bold;
+}
+h1::before {
+  display: block;
+  content: " ";
+  margin-top: -200px;
+  height: 200px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+p {
+    margin: 1.2em 0;
+}
+
+p a {
+    color: #0ef3d4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container {
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.wide-container {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Main nav */
+nav.main {
+    background: #6B00E9 url(../img/backgrounds/face.png) top right no-repeat;
+    background-size: 894px 850px;
+    background-attachment: fixed;
+    margin: 0 0 0 0;
+    position: fixed;
+    display: block;
+    width: 100vw;
+    min-width: 650px;
+    top: 0;
+    left: 0;
+    transition: background-color 0.5s;
+    z-index: 10;
+}
+
+nav.main.portfolio {
+    background: linear-gradient(90deg, #fff 50%, transparent 50%);
+    width: 100%;
+}
+
+nav.main .inner {
+    background: transparent;
+    display: inline-block;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+nav.main.scrolling {
+
+}
+
+
+nav.main.alt .inner{
+    background: #fff;
+    transition: background-color 0.5s;
+}
+
+nav.main li {
+    display: inline-block;
+}
+
+nav.main li a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12pt;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+    line-height: 115px;
+    padding: 0 20px;
+    margin-right: 20px;
+}
+
+nav.main.portfolio li a,
+nav.main.alt li a{
+    color: #000;
+}
+
+nav.main a.home {
+    background: url(../img/logo_trans.png) center center no-repeat;
+    display: block;
+    width: 15%;
+    min-width: 115px;
+    height: 115px;
+    padding: 20px 0;
+    text-indent: -9999px;
+    float: left;
+    transition: background 0.5s;
+}
+
+nav.main.portfolio a.home,
+nav.main.alt a.home {
+    background: url(../img/logo.png) center center no-repeat;
+    transition: background 0.5s;
+}
+
+@keyframes pulse {
+    50% {
+        background: rgb(107,0,233);
+    }
+}
+
+.loading-pulse {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 24px;
+    background: rgba(107,0,233,0.2);
+    animation: pulse 750ms infinite;
+    animation-delay: 250ms;
+}
+.loading-pulse:before,
+.loading-pulse:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 16px;
+    width: 6px;
+    background: rgba(107,0,233,0.2);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulse 750ms infinite;
+}
+.loading-pulse:before {
+    left: -12px;
+}
+.loading-pulse:after {
+    left: 12px;
+    animation-delay: 500ms;
+}
+
+@media screen and (max-width: 1048px) {
+    nav.main.portfolio {
+        background: #fff;
+    }
+}

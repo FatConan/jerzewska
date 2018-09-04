@@ -1,0 +1,121 @@
+@import "/resources/css/base.css";
+
+header nav li a {
+    color: #000;
+}
+
+header nav a.home {
+    background: url(../img/logo_trans.png) center center no-repeat;
+}
+
+div.page {
+    display: table;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+section.main {
+    min-height: 100vh;
+    width: 50%;
+    display: table-cell;
+}
+
+section.supplemental {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    width: 50%;
+    display: table-cell;
+    transition: background-image .5s;
+}
+
+section.project-details {
+    width: 80%;
+    margin: 200px auto 50px;
+    position: relative;
+}
+
+section.project-details h1{
+    text-align: left;
+    padding: 0;
+}
+
+ul.shots {
+    width: auto;
+    max-width: 620px;
+    padding: 10px 0 0;
+    display: block;
+    text-align: left;
+}
+
+ul.shots li {
+    margin: 0 auto;
+    display: inline-block;
+    height: 148px;
+    width: 148px;
+    background-size: cover;
+}
+
+ul.shots li a {
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    height: 148px;
+    width: 148px;
+    transition: background-color 0.5s;
+}
+
+ul.shots li a:hover {
+    background: rgba(105, 19, 224, 0.8) url(../img/icons/plus.png) center center no-repeat;
+    transition: background-color 0.5s;
+}
+
+ul.navlinks {
+    width: 100%;
+    display: table;
+}
+
+ul.navlinks li {
+    display: table-cell;
+    padding: 0;
+    margin: 0;
+    width: 33%;
+}
+a.navlink,
+a.return {
+    background: url(../img/icons/backarrow.png) center left no-repeat;
+    background-size: 16px 16px;
+    color: #000;
+    font-size: 70%;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+    padding: 20px 0 20px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.navlink.next {
+    padding: 20px 30px 20px 0;
+    background: url(../img/icons/rarrow.png) center right no-repeat;
+    background-size: 9px 16px;
+    text-align: right;
+}
+
+a.navlink.previous {
+    padding: 20px 0 20px 30px;
+    background: url(../img/icons/larrow.png) center left no-repeat;
+    background-size: 9px 16px;
+    text-align: left;
+}
+
+@media screen and (max-width: 1048px) {
+    section.supplemental {
+        display: none;
+    }
+    section.main {
+        width: 100%;
+    }
+}
