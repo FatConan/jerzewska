@@ -1,4 +1,4 @@
-page_title: BLACK**BX**
+page_title: BLACKBX
 template: portfolio-page.html
 prev_link: /portfolio/eco-tour.html
 next_link: /portfolio/kotlownia.html
