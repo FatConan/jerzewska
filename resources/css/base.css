@@ -9,6 +9,7 @@ body {
     font-size: 15pt;
     line-height: 20pt;
     -webkit-text-size-adjust: 100%;
+    min-width: 750px;
 }
 
 body {
