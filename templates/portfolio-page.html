@@ -18,7 +18,7 @@
                 {{ content|safe }}
 
                 <ul class="shots">
-                    {% for item in portfolio_images %}
+                    {% for item in DATA.get("portfolio_images", []) %}
                         {% if "," in item %}
                             {% set path, color = item.split(",") %}
                         {% else %}
@@ -31,12 +31,12 @@
                 </ul>
 
                 <ul class="navlinks">
-                    {%  if prev_link %}
-                        <li><a title="Previous project" class="navlink previous" href="{{ prev_link }}">Previous</a></li>
+                    {%  if DATA.get("prev_link") %}
+                        <li><a title="Previous project" class="navlink previous" href="{{ DATA.get("prev_link") }}">Previous</a></li>
                     {%  endif %}
                     <li><a href="/#portfolio" class="return">Go back to portfolio</a></li>
-                    {%  if next_link %}
-                        <li><a title="Next project" class="navlink next" href="{{ next_link }}">Next</a></li>
+                    {%  if DATA.get("next_link") %}
+                        <li><a title="Next project" class="navlink next" href="{{ DATA.get("next_link") }}">Next</a></li>
                     {%  endif %}
                 </ul>
 
