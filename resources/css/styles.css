@@ -4,22 +4,6 @@ p.section-header {
     text-align: center;
 }
 
-.container {
-    width: 70%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.container .inner {
-    padding: 0 20px;
-}
-
-.wide-container {
-    width: 90%;
-    max-width: 1800px;
-    margin: 0 auto;
-}
-
 section {
     border-bottom: 3px solid #F4F5F5;
 }
@@ -27,47 +11,33 @@ section.contact {
     border-bottom: none;
     padding-bottom: 100px;
 }
+
 /* Main header */
-header {
-    margin: 0;
-    color: #fff;
-    min-height: 800px;
-}
-
-header:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-height: 800px;
-  z-index: -10;
-  background: #6B00E9 url(../img/backgrounds/face.png) top right no-repeat;
-  -webkit-background-size: 894px 850px;
-  -moz-background-size: 894px 850px;
-  -o-background-size: 894px 850px;
-  background-size: 894px 850px;
-}
-
-header div.intro-inner {
-    background: url(../img/backgrounds/header.svg) bottom left repeat-x;
-    min-height: 800px;
-    margin-bottom: -2px;
-}
-
 #about{
     padding-bottom: 100px;
+}
+header.intro{
+    background: #6B00E9 url(../img/backgrounds/face.png) no-repeat fixed top right;
+    background-size: 70% auto;
+}
+header div.intro-inner {
+    background: url(../img/backgrounds/header.svg) bottom left repeat-x;
+    margin-bottom: -2px;
 }
 
 header h1 {
     margin: 0;
-    padding: 260px 0 30px;
+    padding: 30px 0 30px;
     color: #fff;
     text-align: left;
     font-size: 35pt;
+    line-height: 1.7;
     letter-spacing: 0.01em;
-    white-space: nowrap;
+    box-sizing: border-box;
+}
+header .title-text{
+    width: 70%;
+    margin: 0 auto;
 }
 
 header h1 span {
@@ -76,9 +46,9 @@ header h1 span {
 }
 
 header p {
-    width:  65%;
     color: #B3A9EB;
 }
+
 
 /* Skill sets */
 table.skills {
@@ -220,7 +190,6 @@ table.skills {
 }
 
 .portfolio-grid td .title {
-    /*margin: 80% 0 0;*/
     text-indent: -9999px;
     overflow: hidden;
     font-size: 0;
@@ -344,17 +313,16 @@ ul.contact li.linkedin a {
 ul.timeline-links {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
     margin: 0 auto 30px;
     text-align: center;
-    width: 50%;
-    min-width: 500px;
+    width: 75%;
+    box-sizing: border-box;
 }
 
 ul.timeline-links li {
     grid-row: 1;
-    display: inline-block;
-    margin: 20px;
     box-sizing: border-box;
 }
 
@@ -437,7 +405,7 @@ div.timeline .base.grey {
    transition: filter 0.5s ease, opacity 0.5s ease;
  }
 
-@media screen and (max-width: 1048px) {
+/*@media screen and (max-width: 1048px) {
     div.timeline div.base,
     div.timeline div.over {
         background: none;
@@ -454,5 +422,19 @@ div.timeline .base.grey {
     }
     header p {
         width:  80%;
+    }
+}*/
+
+@media only screen and (max-width: 700px) {
+    ul.timeline-links {
+        width: 95%;
+    }
+
+    header .title-text{
+        width: 95%;
+    }
+
+    ul.contact a.email {
+       font-size: 20pt;
     }
 }

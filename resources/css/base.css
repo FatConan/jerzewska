@@ -9,7 +9,6 @@ body {
     font-size: 15pt;
     line-height: 20pt;
     -webkit-text-size-adjust: 100%;
-    min-width: 750px;
 }
 
 body {
@@ -27,20 +26,20 @@ h1 {
     font-size: 35pt;
     font-weight: normal;
     line-height: 1.2;
-    padding: 110px 0 50px;
+    padding: 50px 0 50px;
     margin: 0;
 }
 h1 strong {
     font-weight: bold;
 }
-h1::before {
+/*h1::before {
   display: block;
   content: " ";
   margin-top: -200px;
   height: 200px;
   visibility: hidden;
   pointer-events: none;
-}
+}*/
 
 p {
     margin: 1.2em 0;
@@ -52,32 +51,25 @@ p a {
     font-weight: 600;
 }
 
-.container {
-    width: 80%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.wide-container {
-    width: 90%;
-    max-width: 1800px;
-    margin: 0 auto;
-}
-
 /* Main timeline */
 nav.main {
     background: #6B00E9 url(../img/backgrounds/face.png) top right no-repeat;
-    background-size: 894px 850px;
+    background-size: 70% auto;
     background-attachment: fixed;
     margin: 0 0 0 0;
     position: fixed;
     display: block;
-    width: 100vw;
-    min-width: 650px;
+    width: 100%;
     top: 0;
     left: 0;
     transition: background-color 0.5s;
     z-index: 10;
+    box-sizing: border-box;
+}
+
+nav.main.fiddle{
+    position: relative;
+    visibility: hidden;
 }
 
 nav.main.portfolio {
@@ -85,25 +77,24 @@ nav.main.portfolio {
     width: 100%;
 }
 
-nav.main .inner {
+nav.main .inner{
     background: transparent;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 155px auto;
+    grid-template-rows: 155px;
     width: 100%;
     transition: background-color 0.5s;
+    box-sizing: border-box;
 }
-
-nav.main.scrolling {
-
-}
-
 
 nav.main.alt .inner{
     background: #fff;
     transition: background-color 0.5s;
 }
 
-nav.main li {
-    display: inline-block;
+nav.main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
 }
 
 nav.main li a {
@@ -114,10 +105,22 @@ nav.main li a {
     font-weight: bold;
     font-size: 12pt;
     letter-spacing: 0.1em;
-    margin-top: 20px;
-    line-height: 115px;
-    padding: 0 20px;
-    margin-right: 20px;
+    line-height: 155px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 700px){
+    nav.main ul{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px;
+        padding-right: 20px;
+    }
+
+    nav.main li a {
+        line-height: 50px;
+        text-align: right;
+    }
 }
 
 nav.main.portfolio li a,
@@ -128,19 +131,16 @@ nav.main.alt li a{
 nav.main a.home {
     background: url(../img/logo_trans.png) center center no-repeat;
     display: block;
-    width: 15%;
-    min-width: 115px;
-    height: 115px;
-    padding: 20px 0;
     text-indent: -9999px;
-    float: left;
-    transition: background 0.5s;
+    transition: background-image 0.5s;
+    box-sizing: border-box;
+
 }
 
 nav.main.portfolio a.home,
 nav.main.alt a.home {
     background: url(../img/logo.png) center center no-repeat;
-    transition: background 0.5s;
+    transition: background-image 0.5s;
 }
 
 @keyframes pulse {
