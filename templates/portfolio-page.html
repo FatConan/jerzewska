@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
-    <link href="/resources/css/portfolio.css" rel="stylesheet" media="screen"/>
+    <link href="/resources/css/portfolio.css?tick={{ GLOBALS['site'].tick() }}" rel="stylesheet" media="screen"/>
     <link href="/resources/css/print.css"  rel="stylesheet" media="print" />
 
     <script type="text/javascript" data-main="/resources/javascript/portfolio" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>

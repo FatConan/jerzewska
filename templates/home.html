@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
     <script type="text/javascript" data-main="/resources/javascript/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
-    <link href="/resources/css/styles.css" rel="stylesheet" media="screen" />
+    <link href="/resources/css/styles.css?tick={{ GLOBALS['site'].tick() }}" rel="stylesheet" media="screen" />
 {% endblock %}
 {% block body %}
     <header class="intro">
@@ -87,121 +87,103 @@
     <section class="skillset">
         <div class="container">
             <h1 id="skillset">Skillset</h1>
-            <table class="skills">
-                <tbody>
-                    <tr>
-                        <th class="icon-title">Creative cloud:</th>
-                        <td>
-                            <span class="photoshop" title="Photoshop">Photoshop</span><span class="sep">,</span>
-                            <span class="illustrator" title="Illustrator">Illustrator</span><span class="sep">,</span>
-                            <span class="indesign" title="InDesign">InDesign</span><span class="sep">,</span>
-                            <span class="experience-design" title="Experience Design">Experience Design</span><span class="sep">,</span>
-                            <span class="dreamweaver" title="Dreamweaver">Dreamweaver</span><span class="sep">,</span>
-                            <span class="muse" title="Muse">Muse</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Additional:</th>
-                        <td>Sketch, Craft/Invision, UXPin, HTML, CSS, <br />Wordpress, Hubspot</td>
-                    </tr>
-                    <tr>
-                        <th>Languages:</th>
-                        <td>Polish, English</td>
-                    </tr>
-                    <tr>
-                        <th>Interests:</th>
-                        <td>Design, Architecture, Photography, <br />Cooking, Comic Books, Video Games</td>
-                    </tr>
-                </tbody>
-            </table>
+            <section class="skills">
+                <div>
+                    <h2 class="icon-title">Creative cloud:</h2>
+                    <p>
+                        <span class="photoshop" title="Photoshop">Photoshop</span><span class="sep">,</span>
+                        <span class="illustrator" title="Illustrator">Illustrator</span><span class="sep">,</span>
+                        <span class="indesign" title="InDesign">InDesign</span><span class="sep">,</span>
+                        <span class="experience-design" title="Experience Design">Experience Design</span><span class="sep">,</span>
+                        <span class="dreamweaver" title="Dreamweaver">Dreamweaver</span><span class="sep">,</span>
+                        <span class="muse" title="Muse">Muse</span>
+                    </p>
+                </div>
+                <div>
+                    <h2>Additional:</h2>
+                    <p>Sketch, Craft/Invision, UXPin, HTML, CSS, <br />Wordpress, Hubspot</p>
+                </div>
+                <div>
+                    <h2>Languages:</h2>
+                    <p>Polish, English</p>
+                </div>
+                <div>
+                    <h2>Interests:</h2>
+                    <p>Design, Architecture, Photography, <br />Cooking, Comic Books, Video Games</p>
+                </div>
+            </section>
         </div>
     </section>
 
     <section class="portfolio">
         <div class="container">
             <h1 id="portfolio">Portfolio</h1>
-            <table class="portfolio-grid">
-                <tbody>
-                    <tr>
-                        <td rowspan="2" class="eco-tour">
-                            <p class="title">Eco-Tour Travel Agency</p>
-                            <a class="eco-tour" href="/portfolio/eco-tour.html">ECO-TOUR</a>
-                        </td>
-                        <td class="blackbx">
-                            <p class="title">BLACK<strong>BX</strong></p>
-                            <a class="blackbx" href="/portfolio/blackbx.html">BLACK<strong>BX</strong></a>
-                        </td>
-                        <td class="kotlownia">
-                            <p class="title">Kotłownia Revitalisation</p>
-                            <a class="kotlownia" href="/portfolio/kotlownia.html">Kotłownia</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="rpz">
-                            <p class="title">Exhibition for Energetab 2014</p>
-                            <a class="rpz" href="/portfolio/rpz.html">RPZ</a>
-                        </td>
-                    </tr>
-                    <tr>
-                         <td colspan="2" class="photo-manipulation">
-                            <p class="title">Photo Manipulation</p>
-                            <a class="photo-manipulation" href="/portfolio/photo-manipulation.html">Photo Manipulations</a>
-                        </td>
-                        <td class="tere-fere">
-                            <p class="title">Tere-Fere</p>
-                            <a class="tere-fere" href="/portfolio/terefere.html">Tere-Fere</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="balkan">
-                            <p class="title">Balkan Trip 2014 Branding</p>
-                            <a class="balkan" href="/portfolio/balkan-trip.html">Balkan Trip</a>
-                        </td>
-                        <td class="kurczaki">
-                            <p class="title">Kurczaki by Kubus Application Interface Pitch</p>
-                            <a class="kurczaki" href="/portfolio/kubus.html">Kurczaki by Kubus</a>
-                        </td>
-                         <td class="package">
-                            <p class="title">Packaging project for Aloelive</p>
-                            <a class="aloe-live" href="/portfolio/package.html">Packaging</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="wbs">
-                            <p class="title">Water By Sun</p>
-                            <a class="wbs" href="/portfolio/waterbysun.html">Water By Sun</a>
-                        </td>
-                        <td colspan="2" class="photography">
-                            <p class="title">Photography</p>
-                            <a class="photography" href="/portfolio/photography.html">Photography</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="illustration">
-                            <p class="title">Illustration</p>
-                            <a class="illustration" href="/portfolio/illustration.html">Illustration</a>
-                        </td>
-                        <td rowspan="2" class="print">
-                            <p class="title">Print</p>
-                            <a class="print" href="/portfolio/print.html">Print</a>
-                        </td>
-                        <td class="web">
-                            <p class="title">Web Design</p>
-                            <a class="web" href="/portfolio/web.html">Web Design</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="logos">
-                            <p class="title">Logos</p>
-                            <a class="logos" href="/portfolio/logos.html">Logos</a>
-                        </td>
-                        <td class="kwk">
-                            <p class="title">Sympozjum KWK</p>
-                            <a class="kwk" href="/portfolio/kwk.html">Sympozjum KWK</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <section class="portfolio-grid">
+                <div class="eco-tour">
+                    <p class="title">Eco-Tour Travel Agency</p>
+                    <a class="eco-tour" href="/portfolio/eco-tour.html">ECO-TOUR</a>
+                </div>
+                <div class="blackbx">
+                    <p class="title">BLACK<strong>BX</strong></p>
+                    <a class="blackbx" href="/portfolio/blackbx.html">BLACK<strong>BX</strong></a>
+                </div>
+                <div class="kotlownia">
+                    <p class="title">Kotłownia Revitalisation</p>
+                    <a class="kotlownia" href="/portfolio/kotlownia.html">Kotłownia</a>
+                </div>
+                <div class="rpz">
+                    <p class="title">Exhibition for Energetab 2014</p>
+                    <a class="rpz" href="/portfolio/rpz.html">RPZ</a>
+                </div>
+                 <div class="photo-manipulation">
+                    <p class="title">Photo Manipulation</p>
+                    <a class="photo-manipulation" href="/portfolio/photo-manipulation.html">Photo Manipulations</a>
+                </div>
+                <div class="tere-fere">
+                    <p class="title">Tere-Fere</p>
+                    <a class="tere-fere" href="/portfolio/terefere.html">Tere-Fere</a>
+                </div>
+                <div class="balkan">
+                    <p class="title">Balkan Trip 2014 Branding</p>
+                    <a class="balkan" href="/portfolio/balkan-trip.html">Balkan Trip</a>
+                </div>
+                <div class="kurczaki">
+                    <p class="title">Kurczaki by Kubus Application Interface Pitch</p>
+                    <a class="kurczaki" href="/portfolio/kubus.html">Kurczaki by Kubus</a>
+                </div>
+                 <div class="package">
+                    <p class="title">Packaging project for Aloelive</p>
+                    <a class="aloe-live" href="/portfolio/package.html">Packaging</a>
+                </div>
+                <div class="wbs">
+                    <p class="title">Water By Sun</p>
+                    <a class="wbs" href="/portfolio/waterbysun.html">Water By Sun</a>
+                </div>
+                <div class="photography">
+                    <p class="title">Photography</p>
+                    <a class="photography" href="/portfolio/photography.html">Photography</a>
+                </div>
+                <div class="illustration">
+                    <p class="title">Illustration</p>
+                    <a class="illustration" href="/portfolio/illustration.html">Illustration</a>
+                </div>
+                <div class="print">
+                    <p class="title">Print</p>
+                    <a class="print" href="/portfolio/print.html">Print</a>
+                </div>
+                <div class="web">
+                    <p class="title">Web Design</p>
+                    <a class="web" href="/portfolio/web.html">Web Design</a>
+                </div>
+                <div class="logos">
+                    <p class="title">Logos</p>
+                    <a class="logos" href="/portfolio/logos.html">Logos</a>
+                </div>
+                <div class="kwk">
+                    <p class="title">Sympozjum KWK</p>
+                    <a class="kwk" href="/portfolio/kwk.html">Sympozjum KWK</a>
+                </div>
+            </section>
         </div>
     </section>
 

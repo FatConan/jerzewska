@@ -6,7 +6,7 @@ requirejs(["build"], function(){
 
             /* Set up the scroll tracker */
             $(window).scroll(function(){
-                let a = $("div.intro-inner").height() - (mainNav.height() + 70);
+                let a = $("div.intro-inner").height() - (mainNav.height());
                 let pos = $(window).scrollTop();
                 if(pos > a) {
                     mainNav.removeClass("scrolling").addClass("alt")
