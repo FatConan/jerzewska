@@ -2,20 +2,33 @@ requirejs(["build"], function(){
     'use strict';
     requirejs(["jquery", "domReady", "./timeline/TimelineHandler"], function ($, domReady, TimelineHandler) {
         domReady(function(){
-            let mainNav = $("nav.main");
-
-            /* Set up the scroll tracker */
-            $(window).scroll(function(){
-                let a = $("div.intro-inner").height() - (mainNav.height());
-                let pos = $(window).scrollTop();
-                if(pos > a) {
-                    mainNav.removeClass("scrolling").addClass("alt")
-                }else if(pos > 0){
-                    mainNav.removeClass("alt").addClass("scrolling");
-                }else{
-                    mainNav.removeClass("alt").removeClass("scrolling");
+            class NavSwitcher{
+                constructor(){
+                     this.mainNav = $("nav.main.shown");
+                     this.mainNavInner = this.mainNav.find("div.inner");
+                     this.introHeader = $("header.intro")
+                     this.cutoffPoint  = this.introHeader.height() - (this.mainNavInner.height());
+                     this.checkScroll();
+                     this.addListener();
                 }
-            });
+
+                checkScroll(){
+                    let pos = $(window).scrollTop();
+                    if(pos > this.cutoffPoint) {
+                        this.mainNav.addClass("alt");
+                    }else{
+                        this.mainNav.removeClass("alt");
+                    }
+                }
+
+                addListener(){
+                    $(window).scroll(function(){
+                        this.checkScroll();
+                    }.bind(this));
+                }
+            }
+
+            new NavSwitcher();
 
             /* Handle hovering on the timeline */
             let overlay = $("div.timeline .over");
