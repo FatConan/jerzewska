@@ -3,21 +3,25 @@
 header nav li a {
     color: #000;
 }
-
 header nav a.home {
     background: url(../img/logo_trans.png) center center no-repeat;
+}
+header.intro {
+    padding-bottom: 0;
 }
 
 div.page {
     display: table;
     min-height: 100vh;
     min-width: 100vw;
+    box-sizing: border-box;
 }
 
 section.main {
     min-height: 100vh;
     width: 50%;
     display: table-cell;
+    box-sizing: border-box;
 }
 
 section.supplemental {
@@ -48,7 +52,6 @@ ul.shots {
     display: block;
     text-align: left;
 }
-
 ul.shots li {
     margin: 0 auto;
     display: inline-block;
@@ -56,7 +59,6 @@ ul.shots li {
     width: 148px;
     background-size: cover;
 }
-
 ul.shots li a {
     display: block;
     text-indent: -9999px;
@@ -65,7 +67,6 @@ ul.shots li a {
     width: 148px;
     transition: background-color 0.5s;
 }
-
 ul.shots li a:hover {
     background: rgba(105, 19, 224, 0.8) url(../img/icons/plus.png) center center no-repeat;
     transition: background-color 0.5s;
@@ -75,7 +76,6 @@ ul.navlinks {
     width: 100%;
     display: table;
 }
-
 ul.navlinks li {
     display: table-cell;
     padding: 0;
@@ -103,7 +103,6 @@ a.navlink.next {
     background-size: 9px 16px;
     text-align: right;
 }
-
 a.navlink.previous {
     padding: 20px 0 20px 30px;
     background: url(../img/icons/larrow.png) center left no-repeat;

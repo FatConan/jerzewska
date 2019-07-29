@@ -88,7 +88,7 @@ nav.main.alt ul li.home a{
 
 header.intro {
     background: transparent url(../img/backgrounds/header.svg) bottom -1px left repeat-x;
-    padding-bottom: 180px;
+    padding-bottom: 140px;
 }
 .title-text{
     width: 70%;
@@ -127,14 +127,14 @@ header h1 span {
 h1 strong {
     font-weight: bold;
 }
-h1::before {
+/*h1::before {
   display: block;
   content: " ";
   margin-top: -200px;
   height: 200px;
   visibility: hidden;
   pointer-events: none;
-}
+}*/
 p{
     margin: 1.2em 0;
 }
