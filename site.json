@@ -1,7 +1,7 @@
 {
     "sites": [
         {
-            "root": "jerzewska",
+            "root": ".",
             "pages": [
                {
                     "source": "pages/index.md",
@@ -22,43 +22,35 @@
             "resources": [
                 {
                     "source": "resources/favicon.ico",
-                    "target": "./favicon.ico",
-                    "resource_type": "relocate"
+                    "target": "./favicon.ico"
                 },
                 {
                     "source": "resources/error/401.jpg",
-                    "target": "./401.jpg",
-                    "resource_type": "relocate"
+                    "target": "./401.jpg"
                 },
                 {
                     "source": "resources/error/403.jpg",
-                    "target": "./403.jpg",
-                    "resource_type": "relocate"
+                    "target": "./403.jpg"
                 },
                 {
                     "source": "resources/error/404.jpg",
-                    "target": "./404.jpg",
-                    "resource_type": "relocate"
+                    "target": "./404.jpg"
                 },
                 {
                     "source": "resources/error/500.jpg",
-                    "target": "./500.jpg",
-                    "resource_type": "relocate"
+                    "target": "./500.jpg"
                 },
                 {
                     "source": "resources/img",
-                    "target": "./resources/img",
-                    "resource_type": "relocate"
+                    "target": "./resources/img"
                 },
                 {
                     "source": "resources/javascript",
-                    "target": "./resources/javascript",
-                    "resource_type": "relocate"
+                    "target": "./resources/javascript"
                 },
                 {
                     "source": "resources/css",
-                    "target": "./resources/css",
-                    "resource_type": "relocate"
+                    "target": "./resources/css"
                 }
             ]
         }
