@@ -1,6 +1,8 @@
 language: python
 python: 3.5
 before_install:
+- openssl aes-256-cbc -K $encrypted_1f9732908fdf_key -iv $encrypted_1f9732908fdf_iv
+  -in deploy_key.enc -out deploy_key -d
 - chmod 400 deploy_key
 - git clone --branch=master https://github.com/FatConan/sand.git sand-processor
 - cd sand-processor
@@ -17,5 +19,4 @@ deploy:
 env:
   global: 
 dd:
-- openssl aes-256-cbc -K $encrypted_1f9732908fdf_key -iv $encrypted_1f9732908fdf_iv
-  -in deploy_key.enc -out deploy_key -d
+  secure: P3uJ57jNC5icOJ3DjLxxCC19RPrf9yM/dgsko1lsV/90GCXKt3ACa5pGZu3EQXaIJxvCxEeTteTRldbxaGWhGGwbBzrcCSbAmIsYaz7w+6IcBYsKmBYafoNHzHnhqzJq8FXLzHF56yepEv8rXbWxl2WNFEUJooNoR4Ki0BLLoXXhUNS2UiPwi4zJfr/LF4XPXAfPj8dAjZjNSSU9hM/9qSDmjUOFDDZk8iiALXHQALJDeaiFaPW/uCM10pqEiTIGW58F9pjuASovvDebcS51A7DojAt/awBzEfIwcKPzDkJ1EtT38d4KP/x5WqdK7w6dN07FT9fNE82Wv+B8qm3i6Opbojppbd9P3hEHt93lDaxht1gEMmiVkKsX8B97khMxXzTuSANIWRb8UpRIeS+SovcpoXQW0w3ecpNAS1+MbtQOwu4rVQqOVise4LH/72s3eUlyrazJ6CNKCAs8Z7YDGRRhHNddxmFLcak1Qx9mjRhfKGLpZmZhz2aJnd1HCkRbZqtnknmVOG9dysBIuH9Ekp0uvTfnWZaF7Feu0FWDcMOETui3AH+Ir9phQoE1GZAuR350B14u5CMJDAVDASLJHmTo3xdBPAyN8GlPPKTAQfnRQl80zhOGvV8EP7yJU6eBpzS4d8FHab07xNpJfKYByXSAnAbM4ZC7dbSQIfIenjo=
