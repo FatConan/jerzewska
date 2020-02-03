@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block body %}
+    {% include "snippets/nav.html" %}
+    {% block content %}
+            <section class="content {{ page_class }}">
+                {% include "snippets/social.html" %}
+                <article class="cms">
+                    {% block page_content %}{{ content|safe }}{% endblock %}
+                </article>
+                {% block post_article %}{% endblock %}
+            </section>
+            {% block post_content %}{% endblock %}
+    {% endblock %}
+    {% include "snippets/footer.html" %}
+{% endblock %}

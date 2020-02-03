@@ -1,0 +1,45 @@
+@import "definitions.less";
+
+.headerDisplacer{
+    display: block;
+    position: absolute;
+    top: -50px;
+    font-family: @highlightFont, @fallbackFont;
+    font-size: 50px;
+    color: #1D1D1B;
+    -webkit-text-fill-color: #1D1D1B;
+    font-weight: bold;
+    letter-spacing: -0.83px;
+    line-height: 61px;
+    text-transform: capitalize;
+}
+
+.cms {
+    h1 {
+        .headerColor();
+        font-family: @highlightFont, @fallbackFont;
+        font-size: 95px;
+        font-weight: 900;
+        position: relative;
+        margin-bottom: 30px;
+        line-height: 1.2;
+
+        span{
+            .headerDisplacer();
+        }
+
+        &#hello-there {
+            text-transform: lowercase;
+
+            &::before {
+                content: "Well,";
+                .headerDisplacer();
+            }
+        }
+    }
+
+    p{
+        margin: 30px 0;
+        line-height: 29px;
+    }
+}

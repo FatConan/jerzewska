@@ -1,0 +1,42 @@
+@bodyTextColor: #000;
+
+@headerStartColor: #1D1D1B;
+@headerEndColor: #6201D7;
+.headerColor{
+     background: linear-gradient(96deg, @headerStartColor, @headerEndColor 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@footerColor: #000;
+@footerTextColor: #fff;
+@navFontColor: #000;
+@contentMaxWidth: 960px;
+
+@bodyFont: "Raleway";
+@highlightFont: "Montserrat";
+@fallbackFont: monospace;
+
+.socialFont{
+    font-family: @bodyFont, @fallbackFont;
+    font-size: 12px;
+    font-weight: bold;
+}
+.footerFont{
+    font-family: @highlightFont, @fallbackFont;
+    font-size: 12px;
+}
+.contentFont{
+    font-family: @bodyFont, @fallbackFont;
+    font-size: 22px;
+}
+.navFont{
+    font-family: @bodyFont, @fallbackFont;
+    font-size: 12px;
+}
+.defaultWidthAndMargin{
+    width: @contentMaxWidth;
+    max-width: @contentMaxWidth;
+    margin: 0 auto;
+    box-sizing: border-box;
+}

@@ -1,0 +1,50 @@
+.skills {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-gap: 5px 15px;
+
+    span {
+        text-indent: -9999px;
+        overflow: hidden;
+        height: 64px;
+        width: 64px;
+        white-space: nowrap;
+        display: inline-block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 50px 50px;
+
+        &.sep {
+            display: none;
+        }
+
+        &.photoshop {
+            background-image: url(../img/icons/ps.png);
+        }
+
+        &.illustrator {
+            background-image: url(../img/icons/ai.png);
+        }
+
+        &.indesign {
+            background-image: url(../img/icons/id.png);
+        }
+
+        &.experience-design {
+            background-image: url(../img/icons/xd.png);
+        }
+
+        &.dreamweaver {
+            background-image: url(../img/icons/dw.png);
+        }
+
+        &.muse {
+            background-image: url(../img/icons/mu.png);
+        }
+    }
+
+    h2 {
+        align-self: center;
+    }
+}

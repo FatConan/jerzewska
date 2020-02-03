@@ -4,8 +4,8 @@
             "root": ".",
             "pages": [
                {
-                    "source": "pages/index.md",
-                    "target": "./index.html"
+                    "source": "pages/*.md",
+                    "target": "./*.html"
                 },
                 {
                     "source": "pages/errors/*.md",
@@ -49,8 +49,18 @@
                     "target": "./resources/javascript"
                 },
                 {
-                    "source": "resources/css",
-                    "target": "./resources/css"
+                    "source": "resources/css/*.css",
+                    "target": "./resources/css/*.css"
+                },
+                {
+                    "source": "resources/css/base.less",
+                    "target": "./resources/css/base.css",
+                    "resource_type": "less"
+                },
+                {
+                    "source": "resources/css/cms.less",
+                    "target": "./resources/css/cms.css",
+                    "resource_type": "less"
                 }
             ]
         }

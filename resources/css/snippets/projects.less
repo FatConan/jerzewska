@@ -1,0 +1,179 @@
+/* porfolio */
+
+.primary{
+    a:hover {
+        background-color: #6A01E9;
+        color: #fff;
+    }
+}
+
+.secondary{
+    a:hover {
+        background-color: #FFD82F;
+        color: #000;
+    }
+}
+
+.tertiary{
+    a:hover {
+        background-color: #2EF1D1;
+        color: #000;
+    }
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1.2fr);
+    grid-template-areas: "kurczaki     aloelive            oodls"
+                         "kurczaki     photomanipulation   photomanipulation"
+                         "logos        waterbysun          illustration"
+                         "rpz          rpz                 webdesign"
+                         "photography  kwk                 webdesign";
+    grid-gap: 20px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+
+    &::before {
+        content: '';
+        width: 0;
+        padding-bottom: 75%;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+    }
+
+    & > *:first-child {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+    }
+
+    div {
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+        border-radius: 25px;
+
+        &.oodls {
+            background-image: url(../img/portfolio/grid/photomanip_min.png);
+            grid-area: oodls;
+            .primary();
+        }
+
+        &.photo-manipulation {
+            background-image: url(../img/portfolio/grid/photomanip_min.png);
+            grid-area: photomanipulation;
+            .secondary();
+        }
+
+        &.kurczaki {
+            background-image: url(../img/portfolio/grid/kurczaki_min.png);
+            grid-area: kurczaki;
+            .secondary();
+        }
+
+        &.aloe-live {
+            background-image: url(../img/portfolio/grid/package_min.png);
+            grid-area: aloelive;
+            .tertiary();
+        }
+
+        &.rpz {
+            background-image: url(../img/portfolio/grid/rpz_min.png);
+            grid-area: rpz;
+            .secondary();
+        }
+
+        &.wbs {
+            background-image: url(../img/portfolio/grid/wbs_min.png);
+            grid-area: waterbysun;
+            .tertiary();
+        }
+
+        &.photography {
+            background-image: url(../img/portfolio/grid/photo_min.png);
+            grid-area: photography;
+            .tertiary();
+        }
+
+        &.illustration {
+            background-image: url(../img/portfolio/grid/illustrations_min.png);
+            grid-area: illustration;
+            .primary();
+        }
+
+        &.print {
+            background-image: url(../img/portfolio/grid/poster_min.png);
+            grid-area: print;
+        }
+
+        &.logos {
+            background-image: url(../img/portfolio/grid/logos_min.png);
+            grid-area: logos;
+            .primary();
+        }
+
+        &.kwk {
+            background-image: url(../img/portfolio/grid/kwk_min.png);
+            grid-area: kwk;
+            .primary();
+        }
+
+        &.web {
+            background-image: url(../img/portfolio/grid/web_min.png);
+            grid-area: webdesign;
+            .tertiary();
+        }
+    }
+
+    a {
+        position: absolute;
+        border-radius: 25px;
+        color: transparent;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: left;
+        text-indent: -9999px;
+        transition: background-color 0.5s, color 0.5s;
+        box-sizing: border-box;
+        padding: 0 20px;
+
+        span{
+            display: block;
+        }
+
+        .title{
+            padding-top: 60px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .focus{
+            padding-top: 15px;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        &::after{
+            content: "See project";
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: block;
+            padding: 30px 0 0;
+        }
+
+        &:hover {
+            text-indent: 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+    }
+}

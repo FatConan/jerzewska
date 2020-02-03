@@ -5,8 +5,7 @@
         <meta name="theme-color" content="#6B00E9" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" />
-        <link href="/resources/css/reset.css" rel="stylesheet" media="all"/>
+        <link href="/resources/css/reset.css" rel="stylesheet" media="all" />
         <link href="/resources/css/print.css"  rel="stylesheet" media="print" />
 
         {% block head %}
@@ -17,7 +16,9 @@
         <title>{{ DATA.get("page_title") }}</title>
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="main-wrapper">
+            {% block body %}{% endblock %}
+        </div>
     </body>
 </html>
 
