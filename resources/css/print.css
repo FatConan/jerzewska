@@ -1,33 +1,33 @@
-html {
+html{
     font-family: 'Work Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-body {
+body{
     font-size: 12pt;
     line-height: 1.2;
 }
 
-h1 {
+h1{
     font-size: 22pt;
     font-weight: 500;
     padding-bottom: 1em;
 }
 
-h2 {
+h2{
     font-size: 18pt;
     font-weight: 500;
     padding-bottom: 1em;
 }
 
-h3 {
+h3{
     font-size: 14pt;
     font-weight: 500;
     padding-bottom: 1em;
 }
 
-p {
+p{
     padding-bottom: 1em;
 }
 
@@ -36,15 +36,15 @@ nav{
 }
 
 header,
-section {
+section{
     padding: 1em;
 }
 
-table.portfolio-grid td {
+table.portfolio-grid td{
     border: 1px solid #ababab;
     padding: 0.5em;
 }
 
-section.portfolio {
+section.portfolio{
     display: none;
 }

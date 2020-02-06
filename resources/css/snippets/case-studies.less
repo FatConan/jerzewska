@@ -1,0 +1,68 @@
+/* Case Studies */
+.top-row{
+    a{
+        padding-top: 350px;
+    }
+}
+
+.middle-row{
+    a{
+        padding-top: 200px;
+    }
+}
+
+.bottom-row{
+    a{
+        padding-top: 50px;
+    }
+}
+
+.case-studies-grid{
+    .gallery-grid();
+    margin-right: 160px;
+    grid-template-columns: 380px 380px;
+    grid-template-rows: 530px 400px 240px;
+    grid-template-areas: "marketing     gdpr     " "interior      eco      " "rebrand       rebrand  ";
+
+    div{
+        background-color: @galleryColorSecondary;
+
+        &.marketing-automation{
+            grid-area: marketing;
+            .top-row();
+        }
+
+        &.gdpr-friendly-control-site{
+            grid-area: gdpr;
+            .top-row();
+        }
+
+        &.interior-revitalisation-catalogue{
+            grid-area: interior;
+            .middle-row();
+        }
+
+        &.eco-friendly-branding{
+            grid-area: eco;
+            .middle-row();
+        }
+
+        &.black-bx-rebrand{
+            grid-area: rebrand;
+            .bottom-row();
+        }
+    }
+
+    a{
+        color: @bodyTextColor;
+        text-indent: 0;
+
+        &::after{
+            content: "View case study ->";
+        }
+
+        &:hover::after{
+            content: "View case study ----->";
+        }
+    }
+}

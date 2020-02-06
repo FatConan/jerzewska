@@ -1,23 +1,30 @@
 @import "definitions.less";
 @import "snippets/skills.less";
 @import "snippets/projects.less";
+@import "snippets/case-studies.less";
+@import "snippets/bio.less";
 
 html,
-body {
+body{
     color: @bodyTextColor;
     font-family: @bodyFont, @fallbackFont;
     box-sizing: border-box;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 20px 0 0 0;
     position: relative;
 }
 
-a {
+body{
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a{
     color: @bodyTextColor;
 }
 
-#main-wrapper {
+#main-wrapper{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -28,14 +35,16 @@ nav.main{
     .navFont();
     .defaultWidthAndMargin();
     margin-bottom: 100px;
-    ul {
+
+    ul{
         display: grid;
         grid-template-columns: 64px min-content min-content min-content auto min-content;
         grid-gap: 20px;
         grid-template-rows: 64px;
         grid-template-areas: "home bio studies other blank contact";
     }
-    li a {
+
+    li a{
         color: @navFontColor;
         line-height: 64px;
         display: block;
@@ -45,6 +54,7 @@ nav.main{
         text-decoration: none;
         white-space: nowrap;
     }
+
     li.home a{
         text-indent: -9999px;
         background-image: url("../img/furniture/aj.logo.svg");
@@ -52,9 +62,11 @@ nav.main{
         background-repeat: no-repeat;
         background-position: center left;
     }
+
     li.contact{
         grid-area: contact;
-        a {
+
+        a{
             text-align: right;
         }
     }
@@ -66,6 +78,7 @@ nav.social{
     right: 0;
     top: -80px;
     z-index: 10;
+
     li.top{
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2NgYGD4DwABBAEAcCBlCwAAAABJRU5ErkJggg==);
         background-position: center left;
@@ -77,7 +90,7 @@ nav.social{
         transform: rotate(90deg);
         padding-left: 42px;
 
-        span {
+        span{
             .socialFont();
             background: #fff;
             padding: 0 50px 0 10px;
@@ -100,9 +113,11 @@ nav.social{
             margin-top: 90px;
             background-image: url("../img/furniture/ic-ig.svg");
         }
+
         &.behance{
             background-image: url("../img/furniture/ic-behance.svg");
         }
+
         &.linked-in{
             background-image: url("../img/furniture/ic-linkedin.svg");
         }
@@ -121,7 +136,7 @@ section.content{
 }
 
 
-footer {
+footer{
     color: @footerTextColor;
     background: @footerColor;
     width: 100%;

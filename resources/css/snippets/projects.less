@@ -1,61 +1,42 @@
 /* porfolio */
+@import "../definitions.less";
 
 .primary{
     a:hover {
-        background-color: #6A01E9;
-        color: #fff;
+        background-color: @galleryColorPrimary;
+        color: @galleryColorPrimaryText;
     }
 }
 
 .secondary{
     a:hover {
-        background-color: #FFD82F;
-        color: #000;
+        background-color: @galleryColorSecondary;
+        color: @galleryColorSecondaryText;
     }
 }
 
 .tertiary{
     a:hover {
-        background-color: #2EF1D1;
-        color: #000;
+        background-color: @galleryColorTertiary;
+        color: @galleryColorTertiaryText;
     }
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(5, 1.2fr);
+    .gallery-grid();
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: repeat(5, 240px);
     grid-template-areas: "kurczaki     aloelive            oodls"
                          "kurczaki     photomanipulation   photomanipulation"
                          "logos        waterbysun          illustration"
                          "rpz          rpz                 webdesign"
                          "photography  kwk                 webdesign";
-    grid-gap: 20px;
-    margin: 0 auto;
-    position: relative;
-    box-sizing: border-box;
 
-    &::before {
-        content: '';
-        width: 0;
-        padding-bottom: 75%;
-        grid-row: 1 / 1;
-        grid-column: 1 / 1;
-    }
-
-    & > *:first-child {
-        grid-row: 1 / 1;
-        grid-column: 1 / 1;
+    &:before{
+        padding-bottom: 100%;
     }
 
     div {
-        position: relative;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-sizing: border-box;
-        border-radius: 25px;
-
         &.oodls {
             background-image: url(../img/portfolio/grid/photomanip_min.png);
             grid-area: oodls;
@@ -129,51 +110,8 @@
     }
 
     a {
-        position: absolute;
-        border-radius: 25px;
-        color: transparent;
-        font-size: 16px;
-        letter-spacing: 0.05em;
-        text-decoration: none;
-        display: block;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: left;
-        text-indent: -9999px;
-        transition: background-color 0.5s, color 0.5s;
-        box-sizing: border-box;
-        padding: 0 20px;
-
-        span{
-            display: block;
-        }
-
-        .title{
-            padding-top: 60px;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .focus{
-            padding-top: 15px;
-            font-size: 12px;
-            font-style: italic;
-        }
-
         &::after{
             content: "See project";
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            display: block;
-            padding: 30px 0 0;
-        }
-
-        &:hover {
-            text-indent: 0;
-            transition: background-color 0.5s, color 0.5s;
         }
     }
 }
