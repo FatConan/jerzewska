@@ -103,9 +103,22 @@
             </li>
         </ol>
     </section>
-
-    <h1 id="lets-talk"><span>Let's</span> talk</h1>
-    <section class="contact">
-
+    <section class="contact split">
+        <h1 id="lets-talk"><span>Let's</span> talk</h1>
+        <form action="https://formspree.io/mayodkqy"
+            method="POST"
+            class="form">
+            <div class="input-row">
+                <label for="talk_text">Email</label>
+                <input id="talk_text" type="text" placeholder="Your email address" required name="_replyto">
+            </div>
+            <div class="input-row">
+                <label for="talk_message">Message</label>
+                <textarea id="talk_message" name="message" required placeholder="How can I help?"></textarea>
+            </div>
+            <div class="button-row">
+                <button type="submit">Send</button>
+            </div>
+        </form>
     </section>
 {% endblock %}

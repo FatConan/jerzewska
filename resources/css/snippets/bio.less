@@ -8,7 +8,7 @@
     grid-template-areas: "pro intern"
                          "pro edu";
 
-    ol {
+    ol{
         li{
             display: block;
             margin: 0;
@@ -16,28 +16,31 @@
             border-left: 1px solid #EDECED;
             position: relative;
 
-            &:before{
-                content: "o";
-                color: @galleryColorPrimary;
+            &::before{
+                content: " ";
+                background-size: 16px auto;
+                background-position: center center;
+                background-repeat: no-repeat;
                 display: block;
-                height: 10px;
-                width: 10px;
+                height: 16px;
+                line-height: 16px;
+                text-align: center;
+                width: 16px;
                 position: absolute;
                 top: 0;
-                left: -5px;
+                left: -8px;
                 z-index: 10;
             }
 
-            li {
+            li{
+                &::before{
+                    display: none;
+                }
                 border: 0;
                 padding: 0;
-
-                &:before{
-                    content: "";
-                    z-index: 0;
-                }
             }
         }
+
         &::before{
             box-sizing: border-box;
             display: inline-block;
@@ -57,13 +60,15 @@
             font-weight: bold;
             margin-bottom: 5px;
         }
+
         .date{
             color: @galleryColorPrimary;
             font-family: @highlightFont, @fallbackFont;
             font-size: 12px;
             margin-bottom: 10px;
         }
-        .title {
+
+        .title{
             font-family: @bodyFont, @fallbackFont;
             margin-bottom: 20px;
 
@@ -71,10 +76,12 @@
                 content: "⌄";
             }
         }
+
         .courses{
             font-family: @bodyFont, @fallbackFont;
             margin-bottom: 20px;
         }
+
         .description{
             height: 0;
             display: none;
@@ -86,20 +93,42 @@
             content: 'Professional';
             color: @galleryColorPrimary;
         }
+        li::before{
+            background-image: url("/resources/img/furniture/skill-bullets/professional.svg");
+        }
         grid-area: pro;
     }
+
     ol.internship{
         &::before{
             content: 'Internship';
             color: @galleryColorTertiary;
         }
+        li::before{
+            background-image: url("/resources/img/furniture/skill-bullets/intern.svg");
+        }
         grid-area: intern;
     }
+
     ol.education{
         &::before{
             content: 'Education';
             color: @galleryColorSecondary;
         }
+        li::before{
+            background-image: url("/resources/img/furniture/skill-bullets/education.svg");
+        }
         grid-area: edu;
+    }
+}
+
+.contact{
+    padding: 50px 0 30px;
+    h1{
+        grid-area: alpha;
+    }
+
+    form{
+        grid-area: beta;
     }
 }

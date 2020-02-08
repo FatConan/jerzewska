@@ -24,6 +24,14 @@
 @galleryColorTertiary: #2EF1D1;
 @galleryColorTertiaryText: black;
 
+
+section.split{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "alpha beta";
+}
+
 .socialFont{
     font-family: @bodyFont, @fallbackFont;
     font-size: 12px;

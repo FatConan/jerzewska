@@ -1,0 +1,44 @@
+@import "../definitions.less";
+
+@formBorderColor: #E5E5E5;
+@formBorderRadius: 18.5px;
+
+form.form{
+    .input-row, .button-row{
+
+    }
+    label {
+        font-family: @bodyFont, @fallbackFont;
+        display: block;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    input, textarea{
+        display: block;
+        padding: 10px;
+        border: 1px solid @formBorderColor;
+        border-radius: @formBorderRadius;
+        font-family: @bodyFont, @fallbackFont;
+        font-size: 14px;
+        line-height: 1.2;
+        width: 300px;
+    }
+
+    textarea{
+        height: 150px;
+    }
+
+    button{
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+        width: 300px;
+        font-family: @bodyFont, @fallbackFont;
+        font-size: 14px;
+        line-height: 22px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+}
