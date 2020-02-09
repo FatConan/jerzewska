@@ -24,19 +24,17 @@
 @galleryColorTertiary: #2EF1D1;
 @galleryColorTertiaryText: black;
 
-.arrow{
-    @size: 14px;
-    @width: 1px;
-
+.arrow(@size, @width, @direction){
     cursor: pointer;
     display: block;
-    width: @size / 1.414;
-    height: @size / 1.414 * 2;
     position: relative;
 
-    & span,
-    &:before,
-    &:after{
+    a{
+        position: relative;
+        text-align: @direction;
+    }
+
+    .drawArrow(@size, @width, @direction){
         background: @bodyTextColor;
         content: '';
         display: block;
@@ -44,74 +42,118 @@
         height: @width;
         position: absolute;
         top: calc(50% - (@width / 2));
+        transform-origin: @direction 50%;
+        transition: width 0.3s, @direction 0.3s 0.05s;
+        z-index: 10;
     }
 
-    &:before{
-        transform: rotate(-45deg);
-    }
+    span.arrow{
+        .drawArrow(@size, @width, @direction);
 
-    &:after{
-        transform: rotate(45deg);
-    }
-
-    & span{
-        width: 0;
-    }
-
-    &:hover span{
-        width: @size * 1.414;
-    }
-
-    &.arrow--left{
-        & span,
         &:before,
         &:after{
+            .drawArrow(@size, @width, @direction);
+        }
+        &:before{
+            transform: rotate(-45deg);
+            transition: @direction 0.3s 0.05s;
+        }
+        &:after{
+            transform: rotate(45deg);
+            transition: @direction 0.3s 0.05s;
+        }
+    }
+
+    &.left{
+        span.label{
+            padding-left: 30px;
+        }
+        span.arrow{
             left: 0;
-            transform-origin: left 50%;
         }
-
-        &:before,
-        &:after{
-            transition: left 0.3s 0.05s;
-        }
-
-        & span{
-            transition: width 0.3s, left 0.3s 0.05s;
-        }
-
         &:hover{
-            & span,
-            &:before,
-            &:after{
-                left: @size/ 1.414 * -1;
+            span.arrow{
+                width: @size * 1.414;
+
+                &:before,
+                &:after{
+                    left: @size/ -1.414;
+                }
             }
         }
     }
-    &.arrow--right{
-        & span,
-        &:before,
-        &:after{
+
+    &.right{
+        span.label{
+            padding-right: 30px;
+        }
+        span.arrow{
             right: 0;
-            transform-origin: right 50%;
         }
-
-        &:before,
-        &:after{
-            transition: right 0.3s 0.05s;
-        }
-
-        & span{
-            transition: width 0.3s, right 0.3s 0.05s;
-        }
-
         &:hover{
-            & span,
-            &:before,
-            &:after{
-                right: @size/ 1.414 * -1;
+            span.arrow{
+                width: @size * 1.414;
+
+                &:before,
+                &:after{
+                    right: @size/ -1.414;
+                }
             }
         }
     }
+
+
+
+
+    /*a{
+        cursor: pointer;
+        display: block;
+        width: @size / 1.414;
+        height: @size / 1.414 * 2;
+        position: relative;
+
+        span.arrow{
+            &:before,
+            &:after{
+                background: @bodyTextColor;
+                content: '';
+                display: block;
+                width: @size;
+                height: @width;
+                position: absolute;
+                top: calc(50% - (@width / 2));
+                    @{direction}: 0;
+                transform-origin: @direction 50%;
+            }
+
+
+            &:before{
+                transform: rotate(-45deg);
+                transition: @direction 0.3s 0.05s;
+            }
+
+            &:after{
+                transform: rotate(45deg);
+                transition: @direction 0.3s 0.05s;
+            }
+        }
+
+        span.arrow{
+            width: 0;
+            transition: width 0.3s, @direction 0.3s 0.05s;
+        }
+
+        &:hover{
+            span.arrow{
+                width: @size * 1.414;
+
+                &:before,
+                &:after{
+                    @{direction}: @size/ 1.414 * -1;
+                }
+            }
+        }
+    }*/
 }
 
 section.split{

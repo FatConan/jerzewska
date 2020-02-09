@@ -1,3 +1,8 @@
+@import "../definitions.less";
+
+@arrowSize: 14px;
+@arrowWidth: 2px;
+
 .gallery-display{
     .shots{
         li{
@@ -24,12 +29,8 @@
         text-transform: uppercase;
         margin-bottom: 20px;
 
-        li{
-            display: block;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-
+        div{
+            white-space: nowrap;
 
             a{
                 display: block;
@@ -38,20 +39,26 @@
 
             &.previous{
                 grid-area: previous;
-                text-align: left;
+                .arrow(@arrowSize, @arrowWidth, left);
             }
             &.switcher{
                 grid-area: switcher;
             }
             &.next{
                 grid-area: next;
-                text-align: right;
+                .arrow(@arrowSize, @arrowWidth, right);
             }
 
             .photo-links{
                 display: flex;
 
-                li{
+                div{
+                    &.previous-photo{
+                        .arrow(@arrowSize, @arrowWidth, left);
+                    }
+                    &.next-photo{
+                        .arrow(@arrowSize, @arrowWidth, right);
+                    }
                     &.monitor{
                         align-items: center;
                         justify-content: center;

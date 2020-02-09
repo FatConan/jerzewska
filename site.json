@@ -8,6 +8,10 @@
                     "target": "./*.html"
                 },
                 {
+                    "source": "pages/test/*.md",
+                    "target": "./test/*.html"
+                },
+                {
                     "source": "pages/errors/*.md",
                     "target": "./*.shtml"
                 },
@@ -58,6 +62,11 @@
                 {
                     "source": "resources/css/base.less",
                     "target": "./resources/css/base.css",
+                    "resource_type": "less"
+                },
+                {
+                    "source": "resources/css/snippets/gallery.less",
+                    "target": "./resources/css/gallery.css",
                     "resource_type": "less"
                 }
             ]

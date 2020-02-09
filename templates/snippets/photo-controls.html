@@ -1,0 +1,17 @@
+<nav class="gallery-navigation">
+    <div class="nav-links">
+        {%  if DATA.get("prev_link") %}
+            <div class="previous left"><a title="Previous project" href="{{ DATA.get("prev_link") }}"><span class="arrow">&nbsp;</span><span class="label">Previous project</span></a></div>
+        {%  endif %}
+        <div class="switcher">
+            <div class="photo-links">
+                <div class="previous-photo left"><a href="#"><span class="arrow">&nbsp;</span><span class="label">&nbsp;</span></a></div>
+                <div class="monitor" data-total="{{ DATA.get("portfolio_images", [])|length }}">1/{{ DATA.get("portfolio_images", [])|length }}</div>
+                <div class="next-photo right"><a href="#"><span class="label">&nbsp;</span><span class="arrow">&nbsp;</span></a></div>
+            </div>
+        </div>
+        {%  if DATA.get("next_link") %}
+            <div class="next right"><a title="Next project" href="{{ DATA.get("next_link") }}"><span class="label">Next project</span><span class="arrow">&nbsp;</span></a></div>
+        {%  endif %}
+    </div>
+</nav>
