@@ -1,29 +1,75 @@
 define(["underscore", "jquery"], function(_, $){
     return class Galleria{
         constructor(){
+            this.index = 0;
             this.events = window.eventHandler;
             this.galleria = $("ul.galleria");
             this.galleriaNav = $(".galleria-nav");
             this.shots = this.galleria.find("li");
+            this.total = this.shots.length;
 
-            console.log(this.galleria, this.galleriaNav);
+            this.monitor = this.galleriaNav.find(".monitor");
+
+            this.loadImages();
+            this.addEvents();
         }
 
-        /*switch($el){
-            this.fader.hide();
-            this.fader.css("background-image", this.supplemental.css("background-image"));
-            this.fader.css("background-color", this.supplemental.css("background-color"));
-            this.fader.show();
+        addEvents(){
+            this.events.addListener(".galleria-nav div", function(e, args){
+                e.preventDefault();
+                let direction = args.$matchedEl.data("direction");
+                if(direction){
+                    this.show(direction);
+                }
+            }.bind(this));
+        }
 
-            let imgSrc = $el.data("half");
-            let fullImg = new Image();
-            fullImg.src = imgSrc;
+        async loadImages(){
+            this.shots.find("img").each(function(i, e){
+                $.ajax({
+                    url: $(e).prop("src"),
+                    method: "GET"
+                });
+            });
+        }
 
-            let bg_col = $el.data("color") ? $el.data("color") : "transparent";
-            this.supplemental.css("background-image", "url(" + fullImg.src + ")");
-            this.supplemental.css("background-color", $el.data("color"));
+        transition(el, action){
+            return new Promise(resolve => {
+                if(el.length) {
+                    const transitionEnded = e => {
+                        el[0].removeEventListener('transitionend', transitionEnded);
+                        el[0].removeEventListener('transitioncancel', transitionEnded);
+                        resolve();
+                    };
+                    el[0].addEventListener('transitionend', transitionEnded);
+                    el[0].addEventListener('transitioncancel', transitionEnded);
+                    action(el);
+                    setTimeout(transitionEnded, 500);
+                }else{
+                    console.log("No element o track");
+                    resolve();
+                }
+            });
+        }
 
-            this.fader.fadeOut(500);
-        }*/
+        async show(direction){
+            let index = 0;
+            if(direction === "next"){
+                index = (this.index + 1) % this.total;
+            }else{
+                index = ((this.index - 1) + this.total) % this.total;
+            }
+
+            await this.transition(this.shots, function(el){el.removeClass("selected")});
+
+            this.index = index;
+            this.shots.removeClass("showing");
+            let $el = $(this.shots[this.index]);
+            if($el.length){
+                $el.addClass("showing");
+                this.transition($el, function(el){el.addClass("selected")});
+                this.monitor.empty().append(this.index+1  + "/" + this.total);
+            }
+        }
     }
 });

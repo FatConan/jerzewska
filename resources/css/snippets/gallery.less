@@ -2,22 +2,30 @@
 
 @arrowSize: 14px;
 @arrowWidth: 2px;
+@galleryDisplayTransition: 0.1s;
 
 .gallery-display{
     .shots{
+        margin-bottom: 30px;
         li{
             display: none;
             opacity: 0;
-            transition: opacity 0.5s;
+            transition: opacity @galleryDisplayTransition, display 0s;
 
             img{
                 width: 100%;
                 height: auto;
+            }
 
+            &.showing {
+                display: block;
+                opacity: 0;
+                transition: opacity @galleryDisplayTransition, display 0s;
             }
             &.selected{
                 display: block;
                 opacity: 1;
+                transition: opacity @galleryDisplayTransition, display 0s;
             }
         }
     }

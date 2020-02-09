@@ -9,6 +9,7 @@ define(["jquery", "underscore"], function ($, _) {
             };
             this.target = $(options.target);
             this.listeners = {};
+            this.keyboardListeners = {};
             this.listen();
         }
 
@@ -49,6 +50,14 @@ define(["jquery", "underscore"], function ($, _) {
             }
         }
 
+        addKeyboardListener(targetMatch, character, action){
+            if(this.keyboardListeners[character]){
+                this.keyboardListeners[character][targetMatch].push(action);
+            }else{
+                this.keyboardListeners[character] = {targetMatch: [action]};
+            }
+        }
+
         addNullListener(targetMatch){
             /* Add a null listener, used to allow elements within elements to invoke default behaviour when their parent has a listener present */
             this.addListener(targetMatch, this.nullAction);
@@ -75,11 +84,29 @@ define(["jquery", "underscore"], function ($, _) {
              to try again.
              */
             this.clickEvent = "click";
-            /*if(this.touchscreen && "ontouchstart" in document.documentElement){
-                this.clickEvent = "touchstart";
-                //Disable the cursor on touchscreens
-                $("html").css("cursor", "none");
-            }*/
+
+            this.target.on("keyup", function(e){
+                 if(this.debug){
+                    console.log("HIGH LEVEL EVENT HANDLER firing on ", e);
+                }
+                const el = e.target;
+                const $el = $(el);
+
+                let match = this.parentMatches(el, this.keyboardListeners);
+                if(match !== null && match[0] !== null){
+                    /*
+                      Check to see if we have a match in the listener list for the object being clicked by tracking up through the
+                      DOM until we find a match. Harvest the details of those matching elements and pass them alongside the original event to
+                      the registered action function.
+                   */
+                    $(match[2]).each(function(i, action){
+                        if(this.debug){
+                            console.log("HIGH LEVEL EVENT HANDLER performing actions for ", match, e);
+                        }
+                        action(e, {el: el, $el:$el, matchedEl: match[0], $matchedEl: $(match[0]), trigger: match[1]});
+                    }.bind(this));
+                }
+            }.bind(this));
 
             this.target.on(this.clickEvent, function(e){
                 if(this.debug){

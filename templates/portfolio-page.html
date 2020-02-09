@@ -17,10 +17,8 @@
                     {% else %}
                         {% set path, color = item, "" %}
                     {% endif %}
-                    <li class="display {% if loop.index == 1 %}selected{% endif %}">
-                        <a data-fancybox="gallery" data-loop="{{ loop.index }}" data-half="/resources/img/portfolio/half/{{ path }}" data-color="{{ color }}" href="/resources/img/portfolio/full/{{ path }}">
-                            <img src="/resources/img/portfolio/full/{{ path }}" />
-                        </a>
+                    <li class="{% if loop.index == 1 %}selected showing{% endif %}">
+                        <img data-loop="{{ loop.index }}" data-color="{{ color }}" src="/resources/img/portfolio/full/{{ path }}" />
                     </li>
                 {% endfor %}
             </ul>
