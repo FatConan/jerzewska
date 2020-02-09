@@ -17,7 +17,7 @@
                     {% else %}
                         {% set path, color = item, "" %}
                     {% endif %}
-                    <li class="{% if loop.index == 1 %}selected showing{% endif %}">
+                    <li class="{% if loop.index == 1 %}showing{% endif %}">
                         <img data-loop="{{ loop.index }}" data-color="{{ color }}" src="/resources/img/portfolio/full/{{ path }}" />
                     </li>
                 {% endfor %}

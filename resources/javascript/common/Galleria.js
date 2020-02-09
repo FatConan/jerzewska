@@ -7,8 +7,16 @@ define(["underscore", "jquery"], function(_, $){
             this.galleriaNav = $(".galleria-nav");
             this.shots = this.galleria.find("li");
             this.total = this.shots.length;
-
             this.monitor = this.galleriaNav.find(".monitor");
+
+
+            let params = new URLSearchParams(location.search);
+            let startingIndex = 0;
+            let i = params.get("i");
+            if(i){
+                startingIndex = parseInt(params.get("i"), 10) - 1;
+            }
+            this.showSpecific(startingIndex);
 
             this.loadImages();
             this.addEvents();
@@ -21,6 +29,16 @@ define(["underscore", "jquery"], function(_, $){
                 if(direction){
                     this.show(direction);
                 }
+            }.bind(this));
+
+            this.events.addKeyboardListener("body", "ArrowLeft", function(e, args){
+                e.preventDefault();
+                this.show("previous");
+            }.bind(this));
+
+            this.events.addKeyboardListener("body", "ArrowRight", function(e, args){
+                e.preventDefault();
+                this.show("next");
             }.bind(this));
         }
 
@@ -44,25 +62,20 @@ define(["underscore", "jquery"], function(_, $){
                     el[0].addEventListener('transitionend', transitionEnded);
                     el[0].addEventListener('transitioncancel', transitionEnded);
                     action(el);
-                    setTimeout(transitionEnded, 500);
+                    setTimeout(transitionEnded, 200);
                 }else{
-                    console.log("No element o track");
                     resolve();
                 }
             });
         }
 
-        async show(direction){
-            let index = 0;
-            if(direction === "next"){
-                index = (this.index + 1) % this.total;
-            }else{
-                index = ((this.index - 1) + this.total) % this.total;
-            }
-
+        async showSpecific(index){
+            let cleanedIndex = + (index + this.total) % this.total;
             await this.transition(this.shots, function(el){el.removeClass("selected")});
 
-            this.index = index;
+            this.index = cleanedIndex;
+            history.pushState({image: this.index}, window.title, "?i=" + (this.index+1));
+
             this.shots.removeClass("showing");
             let $el = $(this.shots[this.index]);
             if($el.length){
@@ -70,6 +83,17 @@ define(["underscore", "jquery"], function(_, $){
                 this.transition($el, function(el){el.addClass("selected")});
                 this.monitor.empty().append(this.index+1  + "/" + this.total);
             }
+        }
+
+        async show(direction){
+            let index = 0;
+            if(direction === "next"){
+                index = (this.index + 1);
+            }else{
+                index = (this.index - 1);
+            }
+
+            this.showSpecific(index);
         }
     }
 });

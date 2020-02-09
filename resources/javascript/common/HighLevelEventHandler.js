@@ -54,7 +54,9 @@ define(["jquery", "underscore"], function ($, _) {
             if(this.keyboardListeners[character]){
                 this.keyboardListeners[character][targetMatch].push(action);
             }else{
-                this.keyboardListeners[character] = {targetMatch: [action]};
+                let o = {};
+                o[targetMatch] =  [action];
+                this.keyboardListeners[character] = o;
             }
         }
 
@@ -86,13 +88,17 @@ define(["jquery", "underscore"], function ($, _) {
             this.clickEvent = "click";
 
             this.target.on("keyup", function(e){
-                 if(this.debug){
+                console.log(e);
+                if(this.debug){
                     console.log("HIGH LEVEL EVENT HANDLER firing on ", e);
                 }
                 const el = e.target;
                 const $el = $(el);
+                console.log(el);
 
-                let match = this.parentMatches(el, this.keyboardListeners);
+                let searchSpace = this.keyboardListeners[e.key];
+                console.log(searchSpace);
+                let match = this.parentMatches(el, searchSpace);
                 if(match !== null && match[0] !== null){
                     /*
                       Check to see if we have a match in the listener list for the object being clicked by tracking up through the
