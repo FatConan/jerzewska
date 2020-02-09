@@ -13,7 +13,10 @@
                 },
                 {
                     "source": "pages/portfolio/*.md",
-                    "target": "./portfolio/*.html"
+                    "target": "./portfolio/*.html",
+                    "config": {
+                        "template": "portfolio-page.html"
+                    }
                 }
             ],
             "templates": [
@@ -55,11 +58,6 @@
                 {
                     "source": "resources/css/base.less",
                     "target": "./resources/css/base.css",
-                    "resource_type": "less"
-                },
-                {
-                    "source": "resources/css/cms.less",
-                    "target": "./resources/css/cms.css",
                     "resource_type": "less"
                 }
             ]

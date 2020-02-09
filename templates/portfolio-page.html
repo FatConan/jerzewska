@@ -1,48 +1,45 @@
-{% extends "base.html" %}
-{% block head %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
-    <link href="/resources/css/portfolio.css?tick={{ GLOBALS['site'].tick() }}" rel="stylesheet" media="screen"/>
-    <link href="/resources/css/print.css"  rel="stylesheet" media="print" />
+{% extends "page.html" %}
 
+{% block head_extra %}
     <script type="text/javascript" data-main="/resources/javascript/portfolio" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
 {% endblock %}
-{% block body %}
-    <div class="page">
-        <section class="main" >
-            <header class="intro">
-                <div class="intro-inner">
-                    {% include "snippets/nav_alt.html" %}
-                </div>
-            </header>
-            <section class="project-details">
-                {{ content|safe }}
+{% block page_content %}
+    <section class="project-details">
+        <div class="cms-alt">{{ content|safe }}</div>
 
-                <ul class="shots">
-                    {% for item in DATA.get("portfolio_images", []) %}
-                        {% if "," in item %}
-                            {% set path, color = item.split(",") %}
-                        {% else %}
-                            {% set path, color = item, "" %}
-                        {% endif %}
-                        <li style="background-image:url(/resources/img/portfolio/thumbs/{{ path }})">
-                            <a data-fancybox="gallery" data-loop="{{ loop.index }}" class="thumb {% if loop.index == 1 %}selected{% endif %}" data-half="/resources/img/portfolio/half/{{ path }}" data-color="{{ color }}" href="/resources/img/portfolio/full/{{ path }}"></a>
-                        </li>
-                    {% endfor %}
-                </ul>
-
-                <ul class="navlinks">
+        <section class="gallery-display">
+             <nav class="gallery-navigation">
+                <ul class="nav-links">
                     {%  if DATA.get("prev_link") %}
-                        <li><a title="Previous project" class="navlink previous" href="{{ DATA.get("prev_link") }}">Previous</a></li>
+                    <li class="previous"><a class="arrow arrow--left"  title="Previous project" href="{{ DATA.get("prev_link") }}"><span>Previous project</span></a></li>
                     {%  endif %}
-                    <li><a href="/#portfolio" class="return">Go back to portfolio</a></li>
+                    <li class="switcher">
+                        <ul class="photo-links">
+                            <li class="previous-photo"><a class="arrow arrow--left" href="#"><span>&nbsp;</span></a></li>
+                            <li class="monitor" data-total="{{ DATA.get("portfolio_images", [])|length }}">1/{{ DATA.get("portfolio_images", [])|length }}</li>
+                            <li class="next-photo"><a class="arrow arrow--right" href="#"><span>&nbsp;</span></a></li>
+                        </ul>
+                    </li>
                     {%  if DATA.get("next_link") %}
-                        <li><a title="Next project" class="navlink next" href="{{ DATA.get("next_link") }}">Next</a></li>
+                    <li class="next"><a class="arrow arrow--right"  title="Next project" href="{{ DATA.get("next_link") }}"><span>Next project</span></a></li>
                     {%  endif %}
                 </ul>
-            </section>
-        </section>
-        <section class="supplemental">
+            </nav>
 
+            <ul class="shots">
+                {% for item in DATA.get("portfolio_images", []) %}
+                    {% if "," in item %}
+                        {% set path, color = item.split(",") %}
+                    {% else %}
+                        {% set path, color = item, "" %}
+                    {% endif %}
+                    <li class="display {% if loop.index == 1 %}selected{% endif %}">
+                        <a data-fancybox="gallery" data-loop="{{ loop.index }}" data-half="/resources/img/portfolio/half/{{ path }}" data-color="{{ color }}" href="/resources/img/portfolio/full/{{ path }}">
+                            <img src="/resources/img/portfolio/full/{{ path }}" />
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </section>
-    </div>
+    </section>
 {% endblock %}

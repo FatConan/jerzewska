@@ -24,6 +24,95 @@
 @galleryColorTertiary: #2EF1D1;
 @galleryColorTertiaryText: black;
 
+.arrow{
+    @size: 14px;
+    @width: 1px;
+
+    cursor: pointer;
+    display: block;
+    width: @size / 1.414;
+    height: @size / 1.414 * 2;
+    position: relative;
+
+    & span,
+    &:before,
+    &:after{
+        background: @bodyTextColor;
+        content: '';
+        display: block;
+        width: @size;
+        height: @width;
+        position: absolute;
+        top: calc(50% - (@width / 2));
+    }
+
+    &:before{
+        transform: rotate(-45deg);
+    }
+
+    &:after{
+        transform: rotate(45deg);
+    }
+
+    & span{
+        width: 0;
+    }
+
+    &:hover span{
+        width: @size * 1.414;
+    }
+
+    &.arrow--left{
+        & span,
+        &:before,
+        &:after{
+            left: 0;
+            transform-origin: left 50%;
+        }
+
+        &:before,
+        &:after{
+            transition: left 0.3s 0.05s;
+        }
+
+        & span{
+            transition: width 0.3s, left 0.3s 0.05s;
+        }
+
+        &:hover{
+            & span,
+            &:before,
+            &:after{
+                left: @size/ 1.414 * -1;
+            }
+        }
+    }
+    &.arrow--right{
+        & span,
+        &:before,
+        &:after{
+            right: 0;
+            transform-origin: right 50%;
+        }
+
+        &:before,
+        &:after{
+            transition: right 0.3s 0.05s;
+        }
+
+        & span{
+            transition: width 0.3s, right 0.3s 0.05s;
+        }
+
+        &:hover{
+            & span,
+            &:before,
+            &:after{
+                right: @size/ 1.414 * -1;
+            }
+        }
+    }
+}
 
 section.split{
     display: grid;

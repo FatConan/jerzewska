@@ -5,13 +5,12 @@
         <meta name="theme-color" content="#6B00E9" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="/resources/css/reset.css" rel="stylesheet" media="all" />
-        <link href="/resources/css/print.css"  rel="stylesheet" media="print" />
-
         {% block head %}
             <script type="text/javascript" data-main="/resources/javascript/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
             <link href="/resources/css/styles.css?tick={{ GLOBALS['site'].tick() }}" rel="stylesheet" media="screen" />
         {% endblock %}
+
+        {% block head_extra %}{% endblock %}
 
         <title>{{ DATA.get("page_title") }}</title>
     </head>

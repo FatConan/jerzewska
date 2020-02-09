@@ -1,10 +1,12 @@
+@import "reset.less";
 @import "definitions.less";
+@import "cms.less";
 @import "snippets/forms.less";
 @import "snippets/skills.less";
 @import "snippets/projects.less";
 @import "snippets/case-studies.less";
 @import "snippets/bio.less";
-
+@import "snippets/gallery.less";
 
 html,
 body{
@@ -63,6 +65,16 @@ nav.main{
         background-size: auto 64px;
         background-repeat: no-repeat;
         background-position: center left;
+    }
+
+    li.bio{
+        grid-area: bio;
+    }
+    li.studies{
+        grid-area: studies;
+    }
+    li.other{
+        grid-area: other;
     }
 
     li.contact{
