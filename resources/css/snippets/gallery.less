@@ -1,6 +1,7 @@
 @import "../definitions.less";
 
 @arrowSize: 14px;
+@altArrowSize: 8px;
 @arrowWidth: 2px;
 @galleryDisplayTransition: 0.1s;
 
@@ -53,14 +54,14 @@
 
             &.previous{
                 grid-area: previous;
-                .arrow(@arrowSize, @arrowWidth, left);
+                .arrow(@arrowSize, @altArrowSize, @arrowWidth, left);
             }
             &.switcher{
                 grid-area: switcher;
             }
             &.next{
                 grid-area: next;
-                .arrow(@arrowSize, @arrowWidth, right);
+                .arrow(@arrowSize, @altArrowSize, @arrowWidth, right);
             }
 
             .photo-links{
@@ -68,10 +69,10 @@
 
                 div{
                     &.previous-photo{
-                        .arrow(@arrowSize, @arrowWidth, left);
+                        .arrow(@arrowSize, @arrowSize, @arrowWidth, left);
                     }
                     &.next-photo{
-                        .arrow(@arrowSize, @arrowWidth, right);
+                        .arrow(@arrowSize, @arrowSize, @arrowWidth, right);
                     }
                     &.monitor{
                         align-items: center;

@@ -2,33 +2,33 @@
 @import "../definitions.less";
 
 .primary{
-    a:hover {
+    a:hover{
         background-color: @galleryColorPrimary;
         color: @galleryColorPrimaryText;
     }
 }
 
 .secondary{
-    a:hover {
+    a:hover{
         background-color: @galleryColorSecondary;
         color: @galleryColorSecondaryText;
     }
 }
 
 .tertiary{
-    a:hover {
+    a:hover{
         background-color: @galleryColorTertiary;
         color: @galleryColorTertiaryText;
     }
 }
 
-.portfolio-grid {
+.portfolio-grid{
     .gallery-grid();
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: repeat(5, 240px);
-    grid-template-areas: "kurczaki     aloelive            oodls"
+    grid-template-areas: "kurczaki     aloelive            app"
                          "kurczaki     photomanipulation   photomanipulation"
-                         "logos        waterbysun          illustration"
+                         "logos        waterbysun          kot"
                          "rpz          rpz                 webdesign"
                          "photography  kwk                 webdesign";
 
@@ -36,82 +36,86 @@
         padding-bottom: 100%;
     }
 
-    div {
-        &.oodls {
-            background-image: url(../img/portfolio/grid/photomanip_min.png);
-            grid-area: oodls;
+    div{
+        a:after{
+            content: "See Project >";
+            text-transform: uppercase;
+        }
+        &.app{
+            background-image: url(../img/portfolio/grid/aj-gallery-app.png);
+            grid-area: app;
             .primary();
         }
 
-        &.photo-manipulation {
-            background-image: url(../img/portfolio/grid/photomanip_min.png);
+        &.photo-manipulation{
+            background-image: url(../img/portfolio/grid/aj-gallery-photoman.png);
             grid-area: photomanipulation;
             .secondary();
         }
 
-        &.kurczaki {
-            background-image: url(../img/portfolio/grid/kurczaki_min.png);
+        &.kurczaki{
+            background-image: url(../img/portfolio/grid/aj-gallery-kur.png);
             grid-area: kurczaki;
             .secondary();
         }
 
-        &.aloe-live {
-            background-image: url(../img/portfolio/grid/package_min.png);
+        &.aloe-live{
+            background-image: url(../img/portfolio/grid/aj-gallery-pack.png);
             grid-area: aloelive;
             .tertiary();
         }
 
-        &.rpz {
-            background-image: url(../img/portfolio/grid/rpz_min.png);
+        &.rpz{
+            background-image: url(../img/portfolio/grid/aj-gallery-rpz.png);
             grid-area: rpz;
             .secondary();
         }
 
-        &.wbs {
-            background-image: url(../img/portfolio/grid/wbs_min.png);
+        &.wbs{
+            background-image: url(../img/portfolio/grid/aj-gallery-wbs.png);
             grid-area: waterbysun;
             .tertiary();
         }
 
-        &.photography {
-            background-image: url(../img/portfolio/grid/photo_min.png);
+        &.photography{
+            background-image: url(../img/portfolio/grid/aj-gallery-phot.png);
             grid-area: photography;
             .tertiary();
         }
 
-        &.illustration {
+        &.kot{
+            background-image: url(../img/portfolio/grid/aj-gallery-kot.png);
+            grid-area: kot;
+            .primary();
+        }
+
+        &.illustration{
             background-image: url(../img/portfolio/grid/illustrations_min.png);
             grid-area: illustration;
             .primary();
         }
 
-        &.print {
+        &.print{
             background-image: url(../img/portfolio/grid/poster_min.png);
             grid-area: print;
         }
 
-        &.logos {
-            background-image: url(../img/portfolio/grid/logos_min.png);
+        &.logos{
+            background-image: url(../img/portfolio/grid/aj-gallery-logos.png);
             grid-area: logos;
             .primary();
         }
 
-        &.kwk {
-            background-image: url(../img/portfolio/grid/kwk_min.png);
+        &.kwk{
+            background-image: url(../img/portfolio/grid/aj-gallery-kwk.png);
             grid-area: kwk;
             .primary();
         }
 
-        &.web {
-            background-image: url(../img/portfolio/grid/web_min.png);
+        &.web{
+            background-image: url(../img/portfolio/grid/aj-gallery-web.png);
             grid-area: webdesign;
             .tertiary();
-        }
-    }
-
-    a {
-        &::after{
-            content: "See project";
         }
     }
 }

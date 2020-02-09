@@ -1,7 +1,7 @@
 page_title: Water By Sun
 template: portfolio-page.html
-prev_link: /portfolio/photography.html
-next_link: /portfolio/illustration.html
+prev_link: /portfolio/logos.html
+next_link: /portfolio/kotlownia.html
 portfolio_images: waterbysun/wbs_bc.png, #fff
     waterbysun/wbs_brand.png, #fff
     waterbysun/wbs_broc.png, #fff

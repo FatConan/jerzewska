@@ -1,6 +1,6 @@
 page_title: Kotlownia
 template: portfolio-page.html
-prev_link: /portfolio/blackbx.html
+prev_link: /portfolio/waterbysun.html
 next_link: /portfolio/rpz.html
 portfolio_images: kotlownia/ktl_cover.png, #fff
     kotlownia/ktl_cover2.png, #fff

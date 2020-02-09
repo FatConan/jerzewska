@@ -6,6 +6,7 @@ portfolio_images: terefere/tf_bc.png, #fff
     terefere/tf_brand2.png, #fff
     terefere/tf_pack.png, #fff
     terefere/tf_tag.png, #fff
+    terefere/phone.gif, #fff
     
 #Tere Fere
 Visual identity designed for an enterprise offering hand painted custom fabrics, as a part of my mid-term project at UCN. 

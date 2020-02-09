@@ -1,7 +1,7 @@
 page_title: KWK
 template: portfolio-page.html
-prev_link: /portfolio/web.html
-next_link: /portfolio/logos.html
+prev_link: /portfolio/photography.html
+next_link: /portfolio/webdesign.html
 portfolio_images: kwk/kwk_flyer.png, #fff
     kwk/kwk_id.png, #fff
     kwk/kwk_poster.png, #fff

@@ -1,7 +1,7 @@
 page_title: Photo Manipulation
 template: portfolio-page.html
-prev_link: /portfolio/terefere.html
-next_link: /portfolio/balkan-trip.html
+prev_link: /portfolio/app.html
+next_link: /portfolio/logos.html
 portfolio_images: photomanipulation/pm1.png, #fff
     photomanipulation/pm2.png, #fff
     photomanipulation/pm3.png, #fff

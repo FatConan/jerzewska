@@ -9,14 +9,14 @@ define(["underscore", "jquery"], function(_, $){
             this.total = this.shots.length;
             this.monitor = this.galleriaNav.find(".monitor");
 
-
             let params = new URLSearchParams(location.search);
             let startingIndex = 0;
             let i = params.get("i");
             if(i){
                 startingIndex = parseInt(params.get("i"), 10) - 1;
             }
-            this.showSpecific(startingIndex);
+
+            this.showSpecific(startingIndex, false);
 
             this.loadImages();
             this.addEvents();
@@ -69,12 +69,14 @@ define(["underscore", "jquery"], function(_, $){
             });
         }
 
-        async showSpecific(index){
+        async showSpecific(index, withPush){
             let cleanedIndex = + (index + this.total) % this.total;
             await this.transition(this.shots, function(el){el.removeClass("selected")});
 
             this.index = cleanedIndex;
-            history.pushState({image: this.index}, window.title, "?i=" + (this.index+1));
+            if(withPush){
+                history.pushState({image: this.index}, window.title, "?i=" + (this.index + 1));
+            }
 
             this.shots.removeClass("showing");
             let $el = $(this.shots[this.index]);
@@ -93,7 +95,7 @@ define(["underscore", "jquery"], function(_, $){
                 index = (this.index - 1);
             }
 
-            this.showSpecific(index);
+            this.showSpecific(index, true);
         }
     }
 });

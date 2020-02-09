@@ -24,7 +24,7 @@
 @galleryColorTertiary: #2EF1D1;
 @galleryColorTertiaryText: black;
 
-.arrow(@size, @width, @direction){
+.arrow(@size, @flareSize, @width, @direction){
     cursor: pointer;
     display: block;
     position: relative;
@@ -83,7 +83,7 @@
 
         &:before,
         &:after{
-            .drawArrow(@size, @width, @direction);
+            .drawArrow(@flareSize, @width, @direction);
         }
         &:before{
             transform: rotate(-45deg);
@@ -95,8 +95,87 @@
         }
     }
 
-    &:hover{
-        background-color: #efefef;
+    &[data-direction="previous"]{
+        &:hover{
+            span.arrow{
+                width: @size * 1.414;
+                left: @size/-1.414;
+            }
+        }
+    }
+
+    &[data-direction="next"]{
+        &:hover{
+            span.arrow{
+                width: @size * 1.414;
+                right: @size/-1.414;
+            }
+        }
+    }
+}
+
+.gridArrow(@size, @flareSize, @width, @direction, @color){
+    cursor: pointer;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+
+    &[data-direction="previous"]{
+        span.label{
+            padding-left: 20px;
+        }
+        span.arrow{
+            left: 0;
+            &:before,
+            &:after{
+                left: 0;
+            }
+        }
+    }
+
+    &[data-direction="next"]{
+        span.label{
+            padding-right: 20px;
+        }
+        span.arrow{
+            right: 0;
+            &:before,
+            &:after{
+                right: 0;
+            }
+        }
+    }
+
+    .drawArrow(@size, @width, @direction){
+        background: @color;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        width: @size;
+        height: @width;
+        position: absolute;
+        top: calc(50% - (@width / 2));
+        transform-origin: @direction 50%;
+        transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
+        z-index: 10;
+    }
+
+    span.arrow{
+        .drawArrow(@size, @width, @direction);
+        width: 0;
+
+        &:before,
+        &:after{
+            .drawArrow(@flareSize, @width, @direction);
+        }
+        &:before{
+            transform: rotate(-45deg);
+            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
+        }
+        &:after{
+            transform: rotate(45deg);
+            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
+        }
     }
 
     &[data-direction="previous"]{

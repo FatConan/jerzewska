@@ -1,7 +1,7 @@
 page_title: RPZ
 template: portfolio-page.html
-prev_link: /portfolio/kotlownia.html
-next_link: /portfolio/terefere.html
+prev_link: /portfolio/waterbysun.html
+next_link: /portfolio/photography.html
 portfolio_images: rpz/rpz_ad.png, #fff
     rpz/rpz_bag.png, #fff
     rpz/rpz_flyer.png, #fff

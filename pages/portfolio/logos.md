@@ -1,7 +1,7 @@
 page_title: Package
 template: portfolio-page.html
-prev_link: /portfolio/kwk.html
-next_link: /portfolio/eco-tour.html
+prev_link: /portfolio/photo-manipulation.html
+next_link: /portfolio/waterbysun.html
 portfolio_images: logos/logo1.png, #fff
     logos/logo2.png, #fff
     logos/logo3.png, #fff

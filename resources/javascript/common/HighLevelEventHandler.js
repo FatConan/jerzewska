@@ -70,9 +70,17 @@ define(["jquery", "underscore"], function ($, _) {
         }
 
         list(){
+            console.log("CLICK listeners");
             for(let a in this.listeners){
                 if(this.listeners.hasOwnProperty(a)){
                     console.log(a, this.listeners[a]);
+                }
+            }
+
+            console.log("KEYUP listeners");
+            for(let a in this.keyboardListeners){
+                if(this.keyboardListeners.hasOwnProperty(a)){
+                    console.log(a, this.keyboardListeners[a]);
                 }
             }
         }
@@ -88,16 +96,13 @@ define(["jquery", "underscore"], function ($, _) {
             this.clickEvent = "click";
 
             this.target.on("keyup", function(e){
-                console.log(e);
                 if(this.debug){
                     console.log("HIGH LEVEL EVENT HANDLER firing on ", e);
                 }
                 const el = e.target;
                 const $el = $(el);
-                console.log(el);
 
                 let searchSpace = this.keyboardListeners[e.key];
-                console.log(searchSpace);
                 let match = this.parentMatches(el, searchSpace);
                 if(match !== null && match[0] !== null){
                     /*

@@ -1,7 +1,7 @@
 page_title: Photography
 template: portfolio-page.html
-prev_link: /portfolio/package.html
-next_link: /portfolio/waterbysun.html
+prev_link: /portfolio/rpz.html
+next_link: /portfolio/kwk.html
 portfolio_images: photos/DSC01181.png, #fff
     photos/DSC01195.png, #fff
     photos/DSC01352.png, #fff
