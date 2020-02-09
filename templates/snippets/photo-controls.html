@@ -1,7 +1,12 @@
 <nav class="gallery-navigation">
     <div class="nav-links">
         {%  if DATA.get("prev_link") %}
-            <div class="previous left"><a title="Previous project" href="{{ DATA.get("prev_link") }}"><span class="arrow">&nbsp;</span><span class="label">Previous project</span></a></div>
+            <div class="previous left">
+                <a title="Previous project" href="{{ DATA.get("prev_link") }}">
+                    <span class="arrow">&nbsp;</span>
+                    <span class="label">Previous project</span>
+                </a>
+            </div>
         {%  endif %}
         <div class="switcher">
             <div class="photo-links">
@@ -11,7 +16,12 @@
             </div>
         </div>
         {%  if DATA.get("next_link") %}
-            <div class="next right"><a title="Next project" href="{{ DATA.get("next_link") }}"><span class="label">Next project</span><span class="arrow">&nbsp;</span></a></div>
+            <div class="next right">
+                <a title="Next project" href="{{ DATA.get("next_link") }}">
+                    <span class="label">Next project</span>
+                    <span class="arrow">&nbsp;</span>
+                </a>
+            </div>
         {%  endif %}
     </div>
 </nav>

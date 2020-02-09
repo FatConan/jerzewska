@@ -28,14 +28,44 @@
     cursor: pointer;
     display: block;
     position: relative;
+    box-sizing: border-box;
 
     a{
         position: relative;
         text-align: @direction;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    &.left{
+        span.label{
+            padding-left: 20px;
+        }
+        span.arrow{
+            left: 0;
+            &:before,
+            &:after{
+                left: 0;
+            }
+        }
+    }
+
+    &.right{
+        span.label{
+            padding-right: 20px;
+        }
+        span.arrow{
+            right: 0;
+            &:before,
+            &:after{
+                right: 0;
+            }
+        }
     }
 
     .drawArrow(@size, @width, @direction){
         background: @bodyTextColor;
+        box-sizing: border-box;
         content: '';
         display: block;
         width: @size;
@@ -43,12 +73,13 @@
         position: absolute;
         top: calc(50% - (@width / 2));
         transform-origin: @direction 50%;
-        transition: width 0.3s, @direction 0.3s 0.05s;
+        transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
         z-index: 10;
     }
 
     span.arrow{
         .drawArrow(@size, @width, @direction);
+        width: 0;
 
         &:before,
         &:after{
@@ -56,104 +87,31 @@
         }
         &:before{
             transform: rotate(-45deg);
-            transition: @direction 0.3s 0.05s;
+            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
         }
         &:after{
             transform: rotate(45deg);
-            transition: @direction 0.3s 0.05s;
+            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
         }
     }
 
     &.left{
-        span.label{
-            padding-left: 30px;
-        }
-        span.arrow{
-            left: 0;
-        }
         &:hover{
             span.arrow{
                 width: @size * 1.414;
-
-                &:before,
-                &:after{
-                    left: @size/ -1.414;
-                }
+                left: @size/-1.414;
             }
         }
     }
 
     &.right{
-        span.label{
-            padding-right: 30px;
-        }
-        span.arrow{
-            right: 0;
-        }
         &:hover{
             span.arrow{
                 width: @size * 1.414;
-
-                &:before,
-                &:after{
-                    right: @size/ -1.414;
-                }
+                right: @size/-1.414;
             }
         }
     }
-
-
-
-
-    /*a{
-        cursor: pointer;
-        display: block;
-        width: @size / 1.414;
-        height: @size / 1.414 * 2;
-        position: relative;
-
-        span.arrow{
-            &:before,
-            &:after{
-                background: @bodyTextColor;
-                content: '';
-                display: block;
-                width: @size;
-                height: @width;
-                position: absolute;
-                top: calc(50% - (@width / 2));
-                    @{direction}: 0;
-                transform-origin: @direction 50%;
-            }
-
-
-            &:before{
-                transform: rotate(-45deg);
-                transition: @direction 0.3s 0.05s;
-            }
-
-            &:after{
-                transform: rotate(45deg);
-                transition: @direction 0.3s 0.05s;
-            }
-        }
-
-        span.arrow{
-            width: 0;
-            transition: width 0.3s, @direction 0.3s 0.05s;
-        }
-
-        &:hover{
-            span.arrow{
-                width: @size * 1.414;
-
-                &:before,
-                &:after{
-                    @{direction}: @size/ 1.414 * -1;
-                }
-            }
-        }
-    }*/
 }
 
 section.split{
