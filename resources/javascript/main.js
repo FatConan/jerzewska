@@ -1,8 +1,8 @@
 requirejs(["build"], function(){
     'use strict';
-    requirejs(["jquery", "domReady", "./timeline/TimelineHandler"], function ($, domReady, TimelineHandler) {
+    boot(["jquery", "domReady", "./common/Galleria"], function ($, domReady, Galleria) {
         domReady(function(){
-
+            new Galleria();
         });
     });
 });

@@ -8,11 +8,11 @@
                 </a>
             </div>
         {%  endif %}
-        <div class="switcher">
+        <div class="switcher galleria-nav">
             <div class="photo-links">
-                <div class="previous-photo left"><a href="#"><span class="arrow">&nbsp;</span><span class="label">&nbsp;</span></a></div>
-                <div class="monitor" data-total="{{ DATA.get("portfolio_images", [])|length }}">1/{{ DATA.get("portfolio_images", [])|length }}</div>
-                <div class="next-photo right"><a href="#"><span class="label">&nbsp;</span><span class="arrow">&nbsp;</span></a></div>
+                <div class="previous-photo galleria-previous left"><a href="#"><span class="arrow">&nbsp;</span><span class="label">&nbsp;</span></a></div>
+                <div class="monitor galleria-monitor" data-total="{{ DATA.get("portfolio_images", [])|length }}">1/{{ DATA.get("portfolio_images", [])|length }}</div>
+                <div class="next-photo galleria-next right"><a href="#"><span class="label">&nbsp;</span><span class="arrow">&nbsp;</span></a></div>
             </div>
         </div>
         {%  if DATA.get("next_link") %}

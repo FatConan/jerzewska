@@ -10,7 +10,7 @@
         <section class="gallery-display">
             {% include "snippets/photo-controls.html" %}
 
-            <ul class="shots">
+            <ul class="galleria shots">
                 {% for item in DATA.get("portfolio_images", []) %}
                     {% if "," in item %}
                         {% set path, color = item.split(",") %}

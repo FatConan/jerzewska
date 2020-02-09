@@ -17,3 +17,9 @@ requirejs.config({
         }
     }
 });
+
+const boot = function(dependencies, f){
+    requirejs(["boot"], function(){
+        requirejs(dependencies, f);
+    });
+};
