@@ -2,16 +2,15 @@ page_title: Package
 template: portfolio-page.html
 prev_link: /portfolio/photo-manipulation.html
 next_link: /portfolio/waterbysun.html
-portfolio_images: logos/logo1.png, #fff
-    logos/logo2.png, #fff
-    logos/logo3.png, #fff
-    logos/logo4.png, #fff
-    logos/logo5.png, #fff
-    logos/logo6.png, #fff
-    logos/logo7.png, #fff
-    logos/logo8.png, #fff
-    
-    
+portfolio_images: logos/logo-balkan.png, #fff
+    logos/logo-ecotour.png, #fff
+    logos/logo-ict.png, #fff
+    logos/logo-ls.png, #fff
+    logos/logo-oodls.png, #fff
+    logos/logo-strzelec.png, #fff
+    logos/logo-terefere.png, #fff
+    logos/logo-wbs.png, #fff
+
     
 #Logos
 A collection of logos designed for a wide range of clients. 

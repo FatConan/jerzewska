@@ -1,5 +1,21 @@
 {% extends "page.html" %}
 
+{% block head_extra %}
+    <script type="text/javascript" data-main="/resources/javascript/home/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+{% endblock %}
+
+{% block page_content %}
+    <div class="cms home">
+        <div>
+            {% block page_content_inner %}{{ content|safe }}{% endblock %}
+            <a href="/portfolio" class="cs-link bottom right">Portfolio<span class="arrow">&nbsp;</span></a>
+            <a href="#" class="cs-link bottom left">Read Case Study<span class="arrow">&nbsp;</span></a>
+            <a href="#" class="cs-link middle">Read Case Study<span class="arrow">&nbsp;</span></a>
+            <a href="#" class="cs-link top right">Read Case Study<span class="arrow">&nbsp;</span></a>
+        </div>
+    </div>
+{% endblock %}
+
 {% block post_article %}
     <p>New Page LIST</p>
 {% endblock %}

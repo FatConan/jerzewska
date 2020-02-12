@@ -1,0 +1,124 @@
+@import "../definitions.less";
+
+ .drawArrow{
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    margin: 20px auto;
+    transform-origin: right 50%;
+}
+
+div.home{
+    background: transparent url(/resources/img/home/home-img.png) bottom right no-repeat;
+    background-size: 484px auto;
+
+    div:first-child{
+        min-height: 500px;
+        position: relative;
+    }
+
+    &:hover div:first-child{
+        background-color: transparent;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: 484px auto;
+
+        &.top.right{
+            background-image: url(/resources/img/home/home-hover-top-right.png);
+        }
+
+        &.bottom.right{
+             background-image: url(/resources/img/home/home-hover-bottom-right.png);
+        }
+
+        &.bottom.left{
+            background-image: url(/resources/img/home/home-hover-bottom-left.png);
+        }
+
+        &.middle{
+            background-image: url(/resources/img/home/home-hover-middle.png);
+        }
+    }
+
+    a.cs-link{
+        box-sizing: border-box;
+        color: #fff;
+        font-family: @highlightFont, @fallbackFont;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 20px;
+        position: absolute;
+        opacity: 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        overflow: hidden;
+
+        span.arrow{
+            .drawArrow();
+
+            &:before,
+            &:after{
+                .drawArrow();
+                content: " ";
+                position: absolute;
+                right: 0;
+                top: 50%;
+            }
+            &:before{
+                transform: rotate(45deg);
+            }
+            &:after{
+                transform: rotate(135deg);
+            }
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &.bottom.right{
+            color: @bodyTextColor;
+            height: 182px;
+            width: 182px;
+            border-radius: 91px;
+            bottom: 41px;
+            padding-top: 82px;
+            right: 0;
+        }
+
+        &.bottom.left{
+            height: 285px;
+            width: 285px;
+            border-radius: 142.4px;
+            bottom: 0;
+            padding-top: 133px;
+            right: 200px;
+        }
+
+        &.middle{
+            height: 79px;
+            width: 79px;
+            border-radius: 39.5px;
+            bottom: 242px;
+            right: 10px;
+            text-indent: -9999px;
+        }
+
+        &.top.right{
+            color: @bodyTextColor;
+            height: 185px;
+            width: 185px;
+            border-radius: 92.5px;
+            bottom: 254px;
+            right: 92px;
+            padding-top: 83px;
+        }
+    }
+
+    p{
+        max-width: 50%;
+    }
+}
