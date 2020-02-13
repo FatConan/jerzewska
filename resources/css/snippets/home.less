@@ -1,15 +1,5 @@
 @import "../definitions.less";
 
- .drawArrow{
-    display: block;
-    position: relative;
-    width: 20px;
-    height: 1px;
-    background: #000000;
-    margin: 20px auto;
-    transform-origin: right 50%;
-}
-
 div.home{
     background: transparent url(/resources/img/home/home-img.png) bottom right no-repeat;
     background-size: 484px auto;
@@ -56,23 +46,8 @@ div.home{
         text-align: center;
         overflow: hidden;
 
-        span.arrow{
-            .drawArrow();
-
-            &:before,
-            &:after{
-                .drawArrow();
-                content: " ";
-                position: absolute;
-                right: 0;
-                top: 50%;
-            }
-            &:before{
-                transform: rotate(45deg);
-            }
-            &:after{
-                transform: rotate(135deg);
-            }
+        div.inner{
+            .simpleArrow(30px, 14px, 6px, 7px, 2px, 90deg);
         }
 
         &:hover{
@@ -104,7 +79,10 @@ div.home{
             border-radius: 39.5px;
             bottom: 242px;
             right: 10px;
-            text-indent: -9999px;
+
+            span.label{
+                display: none;
+            }
         }
 
         &.top.right{

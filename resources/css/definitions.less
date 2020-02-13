@@ -24,176 +24,134 @@
 @galleryColorTertiary: #2EF1D1;
 @galleryColorTertiaryText: black;
 
-.arrow(@size, @flareSize, @width, @direction){
-    cursor: pointer;
+.simpleArrow(@arrowSize, @frondSize, @arrowTopOffset, @topOffset, @width, @rotation){
     display: block;
     position: relative;
-    box-sizing: border-box;
+    transform-origin: top -8px center;
+    cursor: pointer;
+    //transform: rotate(@rotation);
+    margin: 0 auto;
+    background: pink;
 
-    a{
-        position: relative;
-        text-align: @direction;
-        box-sizing: border-box;
-        padding: 5px 20px;
-        line-height: @size;
-    }
-
-    &[data-direction="previous"]{
-        span.label{
-            padding-left: 20px;
-        }
-        span.arrow{
-            left: 0;
-            &:before,
-            &:after{
-                left: 0;
-            }
-        }
-    }
-
-    &[data-direction="next"]{
-        span.label{
-            padding-right: 20px;
-        }
-        span.arrow{
-            right: 0;
-            &:before,
-            &:after{
-                right: 0;
-            }
-        }
-    }
-
-    .drawArrow(@size, @width, @direction){
-        background: @bodyTextColor;
-        box-sizing: border-box;
-        content: '';
+    span.a{
         display: block;
-        width: @size;
-        height: @width;
+        width: @arrowSize;
+        height: 2px;
+        background: #000;
         position: absolute;
-        top: calc(50% - (@width / 2));
-        transform-origin: @direction 50%;
-        transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
-        z-index: 10;
-    }
-
-    span.arrow{
-        .drawArrow(@size, @width, @direction);
-        width: 0;
+        top: -8px;
+        left: 45%;
 
         &:before,
         &:after{
-            .drawArrow(@flareSize, @width, @direction);
+            content: " ";
+            display: block;
+            width: @frondSize;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            right: 0;
+            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
         }
+
         &:before{
-            transform: rotate(-45deg);
-            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
-        }
-        &:after{
             transform: rotate(45deg);
-            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
+            top: -@arrowTopOffset;
+        }
+
+        &:after{
+            transform: rotate(-45deg);
+            top: @arrowTopOffset;
         }
     }
 
-    &[data-direction="previous"]{
-        &:hover{
-            span.arrow{
-                width: @size * 1.414;
-                left: @size/-1.414;
-            }
-        }
-    }
-
-    &[data-direction="next"]{
-        &:hover{
-            span.arrow{
-                width: @size * 1.414;
-                right: @size/-1.414;
-            }
-        }
+    &:hover span.a{
+        width: @arrowSize;
     }
 }
 
-.gridArrow(@size, @flareSize, @width, @direction, @color){
-    cursor: pointer;
+.arrow(@arrowSize, @frondSize, @arrowTopOffset, @topOffset, @width){
     display: block;
     position: relative;
-    box-sizing: border-box;
+    transform-origin: center center;
+    cursor: pointer;
 
-    &[data-direction="previous"]{
-        span.label{
-            padding-left: 20px;
-        }
-        span.arrow{
-            left: 0;
-            &:before,
-            &:after{
-                left: 0;
-            }
-        }
-    }
-
-    &[data-direction="next"]{
-        span.label{
-            padding-right: 20px;
-        }
-        span.arrow{
-            right: 0;
-            &:before,
-            &:after{
-                right: 0;
-            }
-        }
-    }
-
-    .drawArrow(@size, @width, @direction){
-        background: @color;
-        box-sizing: border-box;
-        content: '';
+    span.label{
         display: block;
-        width: @size;
-        height: @width;
-        position: absolute;
-        top: calc(50% - (@width / 2));
-        transform-origin: @direction 50%;
-        transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
-        z-index: 10;
     }
 
-    span.arrow{
-        .drawArrow(@size, @width, @direction);
+    span.a{
+        display: block;
         width: 0;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: @topOffset;
+        transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
 
         &:before,
         &:after{
-            .drawArrow(@flareSize, @width, @direction);
+            content: " ";
+            display: block;
+            width: @frondSize;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
         }
+
         &:before{
-            transform: rotate(-45deg);
-            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
-        }
-        &:after{
             transform: rotate(45deg);
-            transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
+            top: -@arrowTopOffset;
+        }
+
+        &:after{
+            transform: rotate(-45deg);
+            top: @arrowTopOffset;
         }
     }
 
+    &:hover span.a{
+        width: @arrowSize;
+    }
+
     &[data-direction="previous"]{
-        &:hover{
-            span.arrow{
-                width: @size * 1.414;
-                left: @size/-1.414;
+        span.label{
+            text-align: left;
+            padding-left: 30px;
+        }
+        span.a{
+            left: 10px;
+            &:before,
+            &:after{
+                left: -2px;
             }
+             &:before{
+                transform: rotate(-45deg);
+            }
+            &:after{
+                transform: rotate(45deg);
+            }
+        }
+        &:hover span.a{
+            left: 0;
         }
     }
 
     &[data-direction="next"]{
-        &:hover{
-            span.arrow{
-                width: @size * 1.414;
-                right: @size/-1.414;
+        span.label{
+            text-align: right;
+            padding-right: 30px;
+        }
+        span.a{
+            right: 10px;
+            &:before,
+            &:after{
+                right: -2px;
             }
+        }
+        &:hover span.a{
+            right: 0;
         }
     }
 }

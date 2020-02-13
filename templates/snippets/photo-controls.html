@@ -3,23 +3,23 @@
         {%  if DATA.get("prev_link") %}
             <div class="previous" data-direction="previous">
                 <a title="Previous project" href="{{ DATA.get("prev_link") }}">
-                    <span class="arrow">&nbsp;</span>
+                    <span class="a">&nbsp;</span>
                     <span class="label">Previous project</span>
                 </a>
             </div>
         {%  endif %}
         <div class="switcher galleria-nav">
             <div class="photo-links">
-                <div class="previous-photo" data-direction="previous"><span class="arrow">&nbsp;</span><span class="label">&nbsp;</span></div>
+                <div class="previous-photo" data-direction="previous"><span class="a">&nbsp;</span><span class="label">&nbsp;</span></div>
                 <div class="monitor" data-total="{{ DATA.get("portfolio_images", [])|length }}">1/{{ DATA.get("portfolio_images", [])|length }}</div>
-                <div class="next-photo" data-direction="next"><span class="label">&nbsp;</span><span class="arrow">&nbsp;</span></div>
+                <div class="next-photo" data-direction="next"><span class="label">&nbsp;</span><span class="a">&nbsp;</span></div>
             </div>
         </div>
         {%  if DATA.get("next_link") %}
             <div class="next" data-direction="next">
                 <a title="Next project" href="{{ DATA.get("next_link") }}">
                     <span class="label">Next project</span>
-                    <span class="arrow">&nbsp;</span>
+                    <span class="a">&nbsp;</span>
                 </a>
             </div>
         {%  endif %}

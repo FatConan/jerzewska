@@ -109,7 +109,7 @@ define(["jquery", "underscore"], function ($, _) {
                       Check to see if we have a match in the listener list for the object being clicked by tracking up through the
                       DOM until we find a match. Harvest the details of those matching elements and pass them alongside the original event to
                       the registered action function.
-                   */
+                    */
                     $(match[2]).each(function(i, action){
                         if(this.debug){
                             console.log("HIGH LEVEL EVENT HANDLER performing actions for ", match, e);
