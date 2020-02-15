@@ -24,23 +24,23 @@
 @galleryColorTertiary: #2EF1D1;
 @galleryColorTertiaryText: black;
 
-.simpleArrow(@arrowSize, @frondSize, @arrowTopOffset, @topOffset, @width, @rotation){
+//Render a simple arrow on a link
+.simpleArrow(@arrowSize, @frondSize, @arrowTopOffset, @width, @rotation, @topPadding, @color){
     display: block;
     position: relative;
     transform-origin: top -8px center;
     cursor: pointer;
-    //transform: rotate(@rotation);
-    margin: 0 auto;
-    background: pink;
 
     span.a{
         display: block;
         width: @arrowSize;
         height: 2px;
-        background: #000;
+        background: @color;
         position: absolute;
-        top: -8px;
-        left: 45%;
+        top: 50%;
+        left: 50%;
+        margin-top: @topPadding;
+        transform:  translateX(-50%) translateY(-50%) rotate(@rotation);
 
         &:before,
         &:after{
@@ -48,7 +48,7 @@
             display: block;
             width: @frondSize;
             height: 2px;
-            background: #000;
+            background: @color;
             position: absolute;
             right: 0;
             transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
@@ -70,10 +70,10 @@
     }
 }
 
-.arrow(@arrowSize, @frondSize, @arrowTopOffset, @topOffset, @width){
+//Reactive arrows to hover
+.arrow(@arrowSize, @frondSize, @arrowTopOffset, @topOffset, @width, @startWidth){
     display: block;
     position: relative;
-    transform-origin: center center;
     cursor: pointer;
 
     span.label{
@@ -82,12 +82,14 @@
 
     span.a{
         display: block;
-        width: 0;
+        width: @startWidth;
         height: 2px;
         background: #000;
         position: absolute;
-        top: @topOffset;
+        stop: @topOffset;
         transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
+        top: 50%;
+        left: 50%;
 
         &:before,
         &:after{

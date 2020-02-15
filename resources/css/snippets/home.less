@@ -46,9 +46,6 @@ div.home{
         text-align: center;
         overflow: hidden;
 
-        div.inner{
-            .simpleArrow(30px, 14px, 6px, 7px, 2px, 90deg);
-        }
 
         &:hover{
             opacity: 1;
@@ -62,6 +59,10 @@ div.home{
             bottom: 41px;
             padding-top: 82px;
             right: 0;
+
+            div.inner{
+                .simpleArrow(30px, 7px, 3px, 2px, 90deg, 25px, #000);
+            }
         }
 
         &.bottom.left{
@@ -71,6 +72,10 @@ div.home{
             bottom: 0;
             padding-top: 133px;
             right: 200px;
+
+            div.inner{
+                .simpleArrow(30px, 7px, 3px, 2px, 90deg, 25px, #fff);
+            }
         }
 
         &.middle{
@@ -83,6 +88,10 @@ div.home{
             span.label{
                 display: none;
             }
+
+            div.inner{
+                .simpleArrow(30px, 7px, 3px, 2px, 90deg, 20px, #fff);
+            }
         }
 
         &.top.right{
@@ -93,6 +102,10 @@ div.home{
             bottom: 254px;
             right: 92px;
             padding-top: 83px;
+
+            div.inner{
+                .simpleArrow(30px, 7px, 3px, 2px, 90deg, 25px, #000);
+            }
         }
     }
 

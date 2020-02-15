@@ -14,10 +14,12 @@ requirejs(["../build"], function(){
                 }
             };
 
-            $("a.cs-link").on("mouseover", function(e){
+            $overlay.on("mouseover", function(e){
                 let $match = window.eventHandler.parentMatches(e.target, matchObj);
-                if($match){
+                if($match[0] !== null){
                     $match[2]($match[0]);
+                }else{
+                    $overlay.removeClass();
                 }
             });
         });

@@ -17,7 +17,6 @@ define(["underscore", "jquery"], function(_, $){
             }
 
             this.showSpecific(startingIndex, false);
-
             this.loadImages();
             this.addEvents();
         }
