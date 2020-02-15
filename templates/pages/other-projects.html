@@ -4,71 +4,31 @@
     <h1 id="other-projects"><span>Other projects</span> gallery</h1>
 {% endblock %}
 
+{% macro entry(className, link, title, focus) -%}
+    <div class="{{ className }}">
+        <a class="{{ className }}" href="{{ link }}">
+            <span class="title">{{ title|safe }}</span>
+            <span class="focus">{{ focus|safe }}</span>
+            <div data-direction="next">
+                <span class="label">See Project</span>
+                <span class="a"></span>
+            </div>
+        </a>
+    </div>
+{%- endmacro %}
+
 {% block post_article %}
-     <section class="portfolio-grid">
-        <div class="rpz">
-            <a class="rpz" href="/portfolio/rpz.html">
-                <span class="title">RPZ Brand</span>
-                <span class="focus">Packaging, Brand, Print, Photo Manipulation</span>
-            </a>
-        </div>
-         <div class="photo-manipulation">
-            <a class="photo-manipulation" href="/portfolio/photo-manipulation.html">
-                <span class="title">Photo Manipulation</span>
-                <span class="focus">Photo Manipulation</span>
-            </a>
-        </div>
-        <div class="kurczaki">
-            <a class="kurczaki" href="/portfolio/kurczaki.html">
-                <span class="title">Kurczaki &ndash; logo and game interface mockup</span>
-                <span class="focus">Logo, UI</span>
-            </a>
-        </div>
-        <div class="aloe-live">
-            <a class="aloe-live" href="/portfolio/aloelive.html">
-                <span class="title">Aloelive Packaging</span>
-                <span class="focus">Packaging, Brand, Print, Photo Manipulation</span>
-            </a>
-        </div>
-        <div class="app">
-             <a class="app" href="/portfolio/app.html">
-                <span class="title">App</span>
-                <span class="focus">Product design</span>
-            </a>
-        </div>
-        <div class="wbs">
-            <a class="wbs" href="/portfolio/waterbysun.html">
-                <span class="title">Water by Sun Brand</span>
-                <span class="focus">Brand, Logo, Print, Web, Photo Manipulation</span>
-            </a>
-        </div>
-        <div class="photography">
-            <a class="photography" href="/portfolio/photography.html">
-                <span class="title">Photography</span>
-                <span class="focus">Photography + edits</span>
-            </a>
-        </div>
-        <div class="kot">
-            <a class="kot" href="/portfolio/kotlownia.html">
-                <span class="title">Illustration</span>
-                <span class="focus">Vector Graphics</span></a>
-        </div>
-        <div class="web">
-            <a class="web" href="/portfolio/webdesign.html">
-                <span class="title">Web Design</span>
-                <span class="focus">Web, Digital, UI</span>
-            </a>
-        </div>
-        <div class="logos">
-            <a class="logos" href="/portfolio/logos.html">
-                <span class="title">Logos</span>
-                <span class="focus">Brand, Logo</span></a>
-        </div>
-        <div class="kwk">
-            <a class="kwk" href="/portfolio/kwk.html">
-                <span class="title">KWK Symposium</span>
-                <span class="focus">Brand, Print</span>
-            </a>
-        </div>
+    <section class="portfolio-grid">
+        {{ entry("rpz", "/portfolio/rpz.html", "RPZ Brand", "Packaging, Brand, Print, Photo Manipulation") }}
+        {{ entry("photo-manipulation", "/portfolio/photo-manipulation.html", "Photo Manipulation", "Photo Manipulation") }}
+        {{ entry("kurczaki", "/portfolio/kurczaki.html", "Kurczaki &ndash; logo and game interface mockup", "Logo, UI") }}
+        {{ entry("aloe-live", "/portfolio/aloelive.html", "Aloelive Packaging", "Packaging, Brand, Print, Photo Manipulation") }}
+        {{ entry("app", "/portfolio/app.html", "App", "Product design") }}
+        {{ entry("wbs", "/portfolio/waterbysun.html", "Water by Sun Brand", "Brand, Logo, Print, Web, Photo Manipulation") }}
+        {{ entry("photography", "/portfolio/photography.html", "Photography", "Photography + edits") }}
+        {{ entry("kot", "/portfolio/kotlownia.html", "Illustration", "Vector Graphics") }}
+        {{ entry("web", "/portfolio/webdesign.html", "Web Design", "Web, Digital, UI") }}
+        {{ entry("logos", "/portfolio/logos.html", "Logos", "Brand, Logo") }}
+        {{ entry("kwk", "/portfolio/kwk.html", "KWK Symposium", "Brand, Print") }}
     </section>
 {% endblock %}

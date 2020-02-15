@@ -1,5 +1,44 @@
 {% extends "page.html" %}
 
+{% macro role(title, description) %}
+    <li>
+        <div class="title">{{ title|safe }}</div>
+        <div class="description">{{ description|safe }}</div>
+    </li>
+{%- endmacro %}
+
+{% macro professional(location, dates, roles) -%}
+    <li>
+        <div class="location">{{ location|safe }}</div>
+        <div class="date">{{ dates|safe }}</div>
+        <ol class="roles">
+            {% for r in roles %}
+                {{ role(r.0, r.1) }}
+            {% endfor %}
+        </ol>
+    </li>
+{%- endmacro %}
+
+{% macro internship(location, dates) -%}
+<li>
+    <div class="location">{{ location|safe }}</div>
+    <div class="date">{{ dates|safe }}</div>
+</li>
+{%- endmacro %}
+
+{% macro education(location, dates, courses) -%}
+<li>
+    <div class="location">{{ location|safe }}</div>
+    <div class="date">{{ dates|safe }}</div>
+    <div class="courses">
+        {% for c in courses %}
+            <div>{{ c|safe }}</div>
+        {% endfor %}
+    </div>
+</li>
+{%- endmacro %}
+
+
 {% block page_content_inner %}
     <section class="some-skills fraction">
         <h1 id="skills"><span>Some</span> skills</h1>
@@ -26,84 +65,23 @@
         <h1 id="design-experience"><span>Design</span> experience</h1>
         <section class="design-experience-grid">
             <ol class="professional">
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                    <ol class="roles">
-                        <li>
-                            <div class="title">Product Designer</div>
-                            <div class="description"></div>
-                        </li>
-                        <li>
-                            <div class="title">Graphic Designer</div>
-                            <div class="description"></div>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                    <ol class="roles">
-                        <li>
-                            <div class="title">Product Designer</div>
-                            <div class="description"></div>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                    <ol class="roles">
-                        <li>
-                            <div class="title">Product Designer</div>
-                            <div class="description"></div>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                    <ol class="roles">
-                        <li>
-                            <div class="title">Product Designer</div>
-                            <div class="description"></div>
-                        </li>
-                    </ol>
-                </li>
+                {{ professional("Stampede", "May 2004", [("Product Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("Stampede", "May 2004", [("Product Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("Stampede", "May 2004", [("Product Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("Stampede", "May 2004", [("Product Designer", "Lorem ipsum dolor sit amet")]) }}
             </ol>
             <ol class="internship">
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                </li>
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                </li>
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                </li>
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                </li>
+                {{ internship("MAMF", "Jan 2014 - Apr 2014") }}
+                {{ internship("BystraVision", "Jun 2011 - Sep 2011") }}
+                {{ internship("Eco-Tour", "Apr 2011 - may 2011") }}
+                {{ internship("DlaLejdis.pl", "Dec 2010 - Jan 2011") }}
             </ol>
              <ol class="education">
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                    <div class="courses">
-                        Lorem ipsum dolor sit amet
-                    </div>
-                </li>
-                <li>
-                    <div class="location">Stampede</div>
-                    <div class="date">May 2004</div>
-                    <div class="courses">
-                        Lorem ipsum dolor sit amet
-                    </div>
-                </li>
+                {{ education('University College of Northern Denmark', "Sep 2012 - Jun 2014",
+                    ["Program: Design, technology &amp; business"]) }}
+                {{ education("College &ldquo;Promocja&rdquo;", "Jun 2011 - Sep 2011",
+                    ["Program 1: Technician, organization of advertising activities",
+                    "Program 2: Interior design"]) }}
             </ol>
         </section>
     </section>

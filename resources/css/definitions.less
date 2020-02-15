@@ -84,12 +84,9 @@
         display: block;
         width: @startWidth;
         height: 2px;
-        background: #000;
         position: absolute;
-        stop: @topOffset;
+        top: @topOffset;
         transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
-        top: 50%;
-        left: 50%;
 
         &:before,
         &:after{
@@ -97,7 +94,6 @@
             display: block;
             width: @frondSize;
             height: 2px;
-            background: #000;
             position: absolute;
             transition: width 0.3s, left 0.3s 0.05s, right 0.3s 0.05s;
         }
@@ -234,6 +230,9 @@ section.split{
             font-size: 12px;
             font-style: italic;
         }
+        .a, .a:before, .a:after{
+                background-color: transparent;
+        }
 
         &::after{
             font-size: 14px;
@@ -246,6 +245,10 @@ section.split{
         &:hover{
             text-indent: 0;
             transition: background-color 0.5s, color 0.5s;
+
+            .a, .a:before, .a:after{
+                background-color: #000;
+            }
         }
     }
 }

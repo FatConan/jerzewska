@@ -5,6 +5,10 @@
     a:hover{
         background-color: @galleryColorPrimary;
         color: @galleryColorPrimaryText;
+
+        .a, .a:before, .a:after{
+            background-color: @galleryColorPrimaryText;
+        }
     }
 }
 
@@ -12,6 +16,10 @@
     a:hover{
         background-color: @galleryColorSecondary;
         color: @galleryColorSecondaryText;
+
+        .a, .a:before, .a:after{
+            background-color: @galleryColorSecondaryText;
+        }
     }
 }
 
@@ -19,6 +27,10 @@
     a:hover{
         background-color: @galleryColorTertiary;
         color: @galleryColorTertiaryText;
+
+        .a, .a:before, .a:after{
+            background-color: @galleryColorTertiaryText;
+        }
     }
 }
 
@@ -37,10 +49,23 @@
     }
 
     div{
-        a:after{
-            content: "See Project >";
+        //.arrow(@arrowSize, @frondSize, @arrowTopOffset, @topOffset, @width, @startWidth){
+        div{
+            position: relative;
+            font-size: 14px;
+            line-height: 18px;
             text-transform: uppercase;
+            margin-top: 20px;
+            .arrow(30px, 6px, 2px, 8px, 2px, 10px);
+
+            span.label{
+                text-align: left !important;
+            }
+            .a{
+                left: 120px;
+            }
         }
+
         &.app{
             background-image: url(../img/portfolio/grid/aj-gallery-app.png);
             grid-area: app;
