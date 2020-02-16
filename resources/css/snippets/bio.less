@@ -11,7 +11,7 @@ section.design-experience-grid{
     ol{
         li{
             display: block;
-            margin: 0;
+            margin: 0 0 30px;
             padding: 0 0 0 20px;
             border-left: 1px solid #EDECED;
             position: relative;
@@ -38,6 +38,7 @@ section.design-experience-grid{
                 }
                 border: 0;
                 padding: 0;
+                margin: 0;
             }
         }
 
@@ -58,7 +59,7 @@ section.design-experience-grid{
             font-family: @highlightFont, @fallbackFont;
             font-size: 16px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .date{
@@ -69,12 +70,33 @@ section.design-experience-grid{
         }
 
         .title{
+            cursor: pointer;
             font-size: 16px;
             font-family: @bodyFont, @fallbackFont;
             margin-bottom: 20px;
+            position: relative;
 
-            &::after{
+            &:after{
+                display: inline-block;
                 content: "⌄";
+                color: #6A01E9;
+                top: 5px;
+                padding-left: 10px;
+                position: absolute;
+                transform-origin: center center;
+                transform: rotate(-90deg);
+            }
+        }
+
+        li.open {
+            .title:after{
+                top: -4px;
+                transform: none;
+            }
+            .description{
+                height: auto;
+                display: block;
+                margin-bottom: 20px;
             }
         }
 
@@ -87,6 +109,8 @@ section.design-experience-grid{
         .description{
             height: 0;
             display: none;
+            font-size: 14px;
+            font-family: @bodyFont, @fallbackFont;
         }
     }
 
@@ -119,6 +143,9 @@ section.design-experience-grid{
         }
         li::before{
             background-image: url("/resources/img/furniture/skill-bullets/education.svg");
+        }
+        li div{
+            margin-bottom: 10px;
         }
         grid-area: edu;
     }

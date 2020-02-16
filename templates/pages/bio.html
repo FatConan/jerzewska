@@ -1,7 +1,11 @@
 {% extends "page.html" %}
 
-{% macro role(title, description) %}
-    <li>
+{% block head_extra %}
+    <script type="text/javascript" data-main="/resources/javascript/bio/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+{% endblock %}
+
+{% macro role(title, description, open) %}
+    <li {% if open %}class="open"{% endif %}>
         <div class="title">{{ title|safe }}</div>
         <div class="description">{{ description|safe }}</div>
     </li>
@@ -13,31 +17,30 @@
         <div class="date">{{ dates|safe }}</div>
         <ol class="roles">
             {% for r in roles %}
-                {{ role(r.0, r.1) }}
+                {{ role(r.0, r.1, r.2) }}
             {% endfor %}
         </ol>
     </li>
 {%- endmacro %}
 
 {% macro internship(location, dates) -%}
-<li>
-    <div class="location">{{ location|safe }}</div>
-    <div class="date">{{ dates|safe }}</div>
-</li>
+    <li>
+        <div class="location">{{ location|safe }}</div>
+        <div class="date">{{ dates|safe }}</div>
+    </li>
 {%- endmacro %}
 
 {% macro education(location, dates, courses) -%}
-<li>
-    <div class="location">{{ location|safe }}</div>
-    <div class="date">{{ dates|safe }}</div>
-    <div class="courses">
-        {% for c in courses %}
-            <div>{{ c|safe }}</div>
-        {% endfor %}
-    </div>
-</li>
+    <li>
+        <div class="location">{{ location|safe }}</div>
+        <div class="date">{{ dates|safe }}</div>
+        <div class="courses">
+            {% for c in courses %}
+                <div>{{ c|safe }}</div>
+            {% endfor %}
+        </div>
+    </li>
 {%- endmacro %}
-
 
 {% block page_content_inner %}
     <section class="some-skills fraction">
@@ -65,10 +68,15 @@
         <h1 id="design-experience"><span>Design</span> experience</h1>
         <section class="design-experience-grid">
             <ol class="professional">
-                {{ professional("Stampede", "May 2004", [("Product Designer", "Lorem ipsum dolor sit amet")]) }}
-                {{ professional("Stampede", "May 2004", [("Product Designer", "Lorem ipsum dolor sit amet")]) }}
-                {{ professional("Stampede", "May 2004", [("Product Designer", "Lorem ipsum dolor sit amet")]) }}
-                {{ professional("Stampede", "May 2004", [("Product Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("Stampede", "May 2014 - Present",
+                    [("Product Designer", "Lorem ipsum dolor sit amet", true),
+                    ("Graphic Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("deltaDNA", "Feb 2015 - May 2017", [("Web Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("Tandem Digital", "Jan 2015 - Feb 2015", [("Graphic Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("IPCON", "Jul 2014 - Jan 2015", [("Graphic Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("13 piętro", "Apr 2014 - Oct 2014", [("Graphic Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("Freelance", "Sep 2012 - Jan 2014", [("Graphic Designer", "Lorem ipsum dolor sit amet")]) }}
+                {{ professional("BystraVision", "Sep 2011 - Sep 2012", [("Graphic Designer", "Lorem ipsum dolor sit amet")]) }}
             </ol>
             <ol class="internship">
                 {{ internship("MAMF", "Jan 2014 - Apr 2014") }}
