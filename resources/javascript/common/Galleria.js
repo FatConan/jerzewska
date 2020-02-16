@@ -1,4 +1,4 @@
-define(["underscore", "jquery", "common/HighLevelEventHandler"], function(_, $, HighLevelEventHandler){
+define(["underscore", "jquery", "common/HighLevelEventHandler", "jquery-touchwipe"], function(_, $, HighLevelEventHandler){
     return class Galleria{
         constructor(){
             this.index = 0;
@@ -29,6 +29,17 @@ define(["underscore", "jquery", "common/HighLevelEventHandler"], function(_, $, 
                     this.show(direction);
                 }
             }.bind(this));
+
+            $(".galleria.shots").touchwipe({
+                 wipeLeft: function(){
+                     this.show("next");
+                 }.bind(this),
+                 wipeRight: function(){
+                     this.show("previous");
+                 }.bind(this),
+                 min_move_x: 20,
+                 preventDefaultEvents: false
+            });
 
             this.events.addKeyboardListener("body", "ArrowLeft", function(e, args){
                 e.preventDefault();

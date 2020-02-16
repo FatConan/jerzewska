@@ -77,11 +77,19 @@
         font-style: italic;
     }
 
-    p{
+    p, ul{
         display: block;
         margin: 30px 0;
         font-size: 18px;
         max-width: 80%;
+    }
+
+    ul li{
+        display: block;
+        &:before{
+            content: "—";
+            padding-right: 10px;
+        }
     }
 
     .examples{
