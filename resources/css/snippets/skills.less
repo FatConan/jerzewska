@@ -1,50 +1,82 @@
-.skills {
+.skills{
     margin: 0 auto;
     display: grid;
     grid-template-columns: min-content auto;
     grid-gap: 5px 15px;
 
-    span {
-        text-indent: -9999px;
-        overflow: hidden;
-        height: 64px;
-        width: 64px;
-        white-space: nowrap;
-        display: inline-block;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 50px 50px;
+    .software {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(7, 52px);
 
-        &.sep {
-            display: none;
-        }
+        span{
+            &.package{
+                text-indent: -9999px;
+                box-sizing: border-box;
+                overflow: hidden;
+                height: 52px;
+                width: 52px;
+                white-space: nowrap;
+                display: block;
+                line-height: 52px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 50px 50px;
+                border: 2px solid #1D1D1B;
+                border-radius: 3.62px;
+                position: relative;
 
-        &.photoshop {
-            background-image: url(../img/icons/ps.png);
-        }
+                &:after{
+                    text-indent: 0;
+                    display: block;
+                    font-family: @highlightFont, @fallbackFont;
+                    font-size: 25px;
+                    color: #1D1D1B;
+                    font-weight: 700;
+                    text-align: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    line-height: 52px;
+                    height: 52px;
+                    width: 52px;
+                }
+            }
 
-        &.illustrator {
-            background-image: url(../img/icons/ai.png);
-        }
+            &.sep{
+                display: none;
+            }
 
-        &.indesign {
-            background-image: url(../img/icons/id.png);
-        }
+            &.sketch{
+                border: 0;
+                background-image: url("../img/icons/sketch.png");
+            }
 
-        &.experience-design {
-            background-image: url(../img/icons/xd.png);
-        }
+            &.photoshop:after{
+                content: "Ps";
+            }
 
-        &.dreamweaver {
-            background-image: url(../img/icons/dw.png);
-        }
+            &.illustrator:after{
+                content: "Ai";
+            }
 
-        &.muse {
-            background-image: url(../img/icons/mu.png);
+            &.indesign:after{
+                content: "Id";
+            }
+
+            &.experience-design:after{
+                content: "Xd";
+            }
+            &.lightroom:after{
+                content: "Lr";
+            }
+            &.premier:after{
+                content: "Pr";
+            }
         }
     }
 
-    h2 {
+    h2{
         align-self: center;
     }
 }
