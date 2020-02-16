@@ -13,6 +13,20 @@ define(["jquery", "underscore"], function ($, _) {
             this.listen();
         }
 
+        static hookup(options){
+            if(!window.eventHandler){
+                window.eventHandler = new this(options);
+            }
+        }
+
+        static grabHandler(){
+            if(window.eventHandler){
+                return window.eventHandler;
+            }
+            throw "HighLevelEventHandler has not been instantiated, or is not present at the expected location. Instantiate the " +
+            " handler by calling HighLevelEventHandler.hookup({options})";
+        }
+
         findParentTag(element, tagName){
             let upperTagName = tagName.toUpperCase();
             while(element && element.tagName !== null && element.tagName.toUpperCase() !== upperTagName){

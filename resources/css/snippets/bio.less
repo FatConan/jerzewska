@@ -161,3 +161,23 @@ section.contact{
         grid-area: beta;
     }
 }
+//.arrow(@arrowSize, @frondSize, @arrowTopOffset, @topOffset, @width, @startWidth){
+//.simpleArrow(@arrowSize, @frondSize, @arrowTopOffset, @width, @rotation, @topPadding, @color){
+a.submit{
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+
+    .arrow(30px, 6px, 2px, 8px, 2px, 10px);
+    .label {
+        text-align: left !important;
+        text-transform: uppercase;
+    }
+    .a{
+        left: 50px;
+    }
+
+    .a, .a:before, .a:after{
+        background-color: #000;
+    }
+}

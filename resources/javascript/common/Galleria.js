@@ -1,8 +1,8 @@
-define(["underscore", "jquery"], function(_, $){
+define(["underscore", "jquery", "common/HighLevelEventHandler"], function(_, $, HighLevelEventHandler){
     return class Galleria{
         constructor(){
             this.index = 0;
-            this.events = window.eventHandler;
+            this.events = HighLevelEventHandler.grabHandler();
             this.galleria = $("ul.galleria");
             this.galleriaNav = $(".galleria-nav");
             this.shots = this.galleria.find("li");

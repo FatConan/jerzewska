@@ -1,8 +1,9 @@
 requirejs(["../build"], function(){
     'use strict';
-    boot(["jquery", "domReady"], function ($, domReady) {
+    boot(["jquery", "domReady", "common/HighLevelEventHandler"], function($, domReady, HighLevelEventHandler){
         domReady(function(){
-            let $overlay = $("div.home>div");
+            const $overlay = $("div.home>div");
+            const eventHandler = HighLevelEventHandler.grabHandler();
             const matchObj = {
                 "a.cs-link": function(el){
                     let classes = $(el.classList).slice(1, el.classList.length);
@@ -15,7 +16,7 @@ requirejs(["../build"], function(){
             };
 
             $overlay.on("mouseover", function(e){
-                let $match = window.eventHandler.parentMatches(e.target, matchObj);
+                let $match = eventHandler.parentMatches(e.target, matchObj);
                 if($match[0] !== null){
                     $match[2]($match[0]);
                 }else{

@@ -23,6 +23,17 @@ body{
 body{
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+    &.loading{
+        #main-wrapper{
+            opacity: 0;
+        }
+
+        .loader{
+            opacity: 1;
+        }
+    }
+
 }
 
 a{
@@ -163,4 +174,9 @@ footer{
         height: 35px;
         text-align: right;
     }
+}
+
+.loader{
+    position: fixed;
+    top: 0;
 }
