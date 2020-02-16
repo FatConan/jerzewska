@@ -15,7 +15,10 @@
     </head>
     <body>
         <div id="main-wrapper">
-            {% block body %}{% endblock %}
+            <div id="inner-wrapper">
+                {% block body %}{% endblock %}
+            </div>
+            {% include "snippets/footer.html" %}
         </div>
     </body>
 </html>

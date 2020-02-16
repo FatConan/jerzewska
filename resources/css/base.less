@@ -49,7 +49,7 @@ a{
 
 nav.main{
     .navFont();
-    .defaultWidthAndMargin();
+    //.defaultWidthAndMargin();
     margin-bottom: 100px;
 
     ul{
@@ -150,10 +150,14 @@ nav.social{
     }
 }
 
-section.content{
+#inner-wrapper{
     .defaultWidthAndMargin();
-    .contentFont();
+    padding: 0 20px;
     flex: 1;
+}
+
+section.content{
+    .contentFont();
     position: relative;
 
     article{
@@ -174,9 +178,4 @@ footer{
         height: 35px;
         text-align: right;
     }
-}
-
-.loader{
-    position: fixed;
-    top: 0;
 }
