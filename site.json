@@ -3,13 +3,17 @@
         {
             "root": ".",
             "pages": [
-               {
+                {
                     "source": "pages/*.md",
                     "target": "./*.html"
                 },
                 {
-                    "source": "pages/test/*.md",
-                    "target": "./test/*.html"
+                    "source": "pages/case-studies/*.md",
+                    "target": "./case-studies/*.html",
+                    "config": {
+                        "jinja_pass": true,
+                        "template": "case-study.html"
+                    }
                 },
                 {
                     "source": "pages/errors/*.md",
