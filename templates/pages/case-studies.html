@@ -4,10 +4,11 @@
     <h1 id="case-studies"><span>Case</span> studies</h1>
 {% endblock %}
 
-{% macro entry(className, link, title) -%}
+{% macro entry(className, link, title, focus) -%}
     <div class="{{ className }}">
         <a class="{{ className }}" href="{{ link }}">
             <span class="title">{{ title|safe }}</span>
+            <span class="focus">{{ focus|safe }}</span>
             <div data-direction="next">
                 <span class="label">View Case Study</span>
                 <span class="a"></span>
@@ -23,5 +24,6 @@
         {{ entry("interior-revitalisation-catalogue", "/case-studies/interior-revitalisation-catalogue.html", "Interior Revitalisation Catalogue") }}
         {{ entry("eco-friendly-branding", "/case-studies/eco-friendly-branding.html", 'Branding for eco-friendly travel agency "Eco-Tour"') }}
         {{ entry("black-bx-rebrand", "/case-studies/black-bx-rebrand.html", 'BLACKBX rebrand to Stampede') }}
+        {{ entry("shooting-society", "/case-studies/shooting-society.html", 'Shooting Society Logo') }}
     </section>
 {% endblock %}
