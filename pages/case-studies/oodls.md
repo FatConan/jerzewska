@@ -8,18 +8,21 @@
 
 Oodls is a Scottish startup that provides stock images providing opportunities to
 sell and buy through Instagram accounts.
+
 While working for another company I was sharing an office with them. We ended
 up collaborating on some projects. I ended up helping them with a re-brand and
 couple of email templates for them.
 
 ## The brief:
 
-Minimalistic logo, showing stock photography.
-Including Word mark and symbol/icon available for the app, software and social
-media
+* Minimalistic logo, showing stock photography.
+* Including Word mark and symbol/icon available for the app, software and social
+* media
 “oodles of photos”
 {maybe?
-Inspirations:
+
+## Inspirations:
+
 (pics of inspi)}
 
 ## Research:
