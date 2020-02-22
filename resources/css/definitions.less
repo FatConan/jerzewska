@@ -11,7 +11,7 @@
 @footerColor: #000;
 @footerTextColor: #fff;
 @navFontColor: #000;
-@contentMaxWidth: 1000px;
+@contentMaxWidth: 980px;
 
 @bodyFont: "Raleway";
 @highlightFont: "Montserrat";
@@ -182,6 +182,9 @@ section.split{
     font-size: 12px;
 }
 .defaultWidthAndMargin{
+    /* Switch width to 100% and add
+    degradation to certain views for mobile
+     */
     width: @contentMaxWidth;
     max-width: @contentMaxWidth;
     margin: 0 auto;
@@ -191,7 +194,7 @@ section.split{
 .gallery-grid{
     display: grid;
     grid-gap: 20px;
-    margin: 0 auto 80px;
+    margin: 64px auto 80px;
     position: relative;
     box-sizing: border-box;
 

@@ -15,14 +15,16 @@ body{
     font-family: @bodyFont, @fallbackFont;
     box-sizing: border-box;
     height: 100%;
+    line-height: 1.2;
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: 0;
     position: relative;
 }
 
 body{
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 20px 0 0 0;
 
     &.loading{
         #main-wrapper{
@@ -33,7 +35,6 @@ body{
             opacity: 1;
         }
     }
-
 }
 
 a{
@@ -54,8 +55,8 @@ nav.main{
 
     ul{
         display: grid;
-        grid-template-columns: 64px min-content min-content min-content auto min-content;
-        grid-gap: 20px;
+        grid-template-columns: 42px min-content min-content min-content auto min-content;
+        grid-gap: 35px;
         grid-template-rows: 64px;
         grid-template-areas: "home bio studies other blank contact";
     }
@@ -63,6 +64,7 @@ nav.main{
     li a{
         color: @navFontColor;
         line-height: 64px;
+        letter-spacing: 1px;
         display: block;
         overflow: hidden;
         font-weight: bold;
@@ -74,7 +76,7 @@ nav.main{
     li.home a{
         text-indent: -9999px;
         background-image: url("../img/furniture/aj.logo.svg");
-        background-size: auto 64px;
+        background-size: auto 60px;
         background-repeat: no-repeat;
         background-position: center left;
     }
@@ -82,9 +84,11 @@ nav.main{
     li.bio{
         grid-area: bio;
     }
+
     li.studies{
         grid-area: studies;
     }
+
     li.other{
         grid-area: other;
     }
