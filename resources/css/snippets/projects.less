@@ -2,6 +2,7 @@
 @import "../definitions.less";
 
 .primary{
+    a.hover,
     a:hover{
         background-color: @galleryColorPrimary;
         color: @galleryColorPrimaryText;
@@ -10,9 +11,15 @@
             background-color: @galleryColorPrimaryText;
         }
     }
+
+    .hover .label,
+    &:hover .label{
+        color: #fff;
+    }
 }
 
 .secondary{
+    a.hover,
     a:hover{
         background-color: @galleryColorSecondary;
         color: @galleryColorSecondaryText;
@@ -24,6 +31,7 @@
 }
 
 .tertiary{
+    a.hover,
     a:hover{
         background-color: @galleryColorTertiary;
         color: @galleryColorTertiaryText;
@@ -54,8 +62,8 @@
             position: relative;
             font-size: 14px;
             line-height: 18px;
-            text-transform: uppercase;
             margin-top: 20px;
+            .linkText();
             .arrow(30px, 6px, 2px, 8px, 2px, 10px);
 
             span.label{

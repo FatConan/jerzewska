@@ -3,10 +3,10 @@
 .headerDisplacer{
     display: block;
     font-family: @highlightFont, @fallbackFont;
-    font-size: 50px;
+    font-size: 40px;
     color: #1D1D1B;
     -webkit-text-fill-color: #1D1D1B;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: -0.83px;
     line-height: 61px;
     margin-bottom: -10px;
@@ -19,7 +19,7 @@
     h1{
         .headerColor();
         font-family: @highlightFont, @fallbackFont;
-        font-size: 95px;
+        font-size: 88px;
         font-weight: 800;
         position: relative;
         margin-bottom: 30px;
@@ -31,16 +31,6 @@
 
         span{
             .headerDisplacer();
-        }
-
-        //Special case the home page as it's in markdown
-        &#hello-there{
-            text-transform: lowercase;
-
-            &::before{
-                content: "Well,";
-                .headerDisplacer();
-            }
         }
     }
 
