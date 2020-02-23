@@ -4,9 +4,9 @@ section.design-experience-grid{
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "pro intern"
-                         "pro edu";
+    grid-template-rows: auto;
+    grid-template-areas: "pro nonpro";
+    align-items: start;
 
     ol{
         li{
@@ -133,10 +133,10 @@ section.design-experience-grid{
         li::before{
             background-image: url("/resources/img/furniture/skill-bullets/intern.svg");
         }
-        grid-area: intern;
     }
 
     ol.education{
+        margin-top: 80px;
         &::before{
             content: 'Education';
             color: @galleryColorSecondary;
@@ -147,7 +147,6 @@ section.design-experience-grid{
         li div{
             margin-bottom: 10px;
         }
-        grid-area: edu;
     }
 }
 
