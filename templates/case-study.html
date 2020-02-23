@@ -1,7 +1,24 @@
 {% extends "page.html" %}
 
+{% macro summary(timeline, role, tools) -%}
+    <p>
+        <strong>Timeline:</strong> {{ timeline|safe }}<br>
+        <strong>Role:</strong> {{ role|safe }}<br>
+        <strong>Tools:</strong> {{ tools|safe }}
+    </p>
+{%- endmacro %}
+
+{% macro headline(title, img) -%}
+    <h1>{{ title }}</h1>
+    <img class="headline" src="/resources/img/case-studies/pages/{{ img }}" title="{{ title }}" />
+{%- endmacro %}
+
 {% block page_content %}
     <section class="project-details">
-        <div class="cms-alt">{{ content|safe }}</div>
+        <div class="cms-alt">
+            {{ headline(DATA.get("headline_title", "Missing Headline"), DATA.get("headline_img", "")) }}
+            {{ summary(DATA.get("summary_timeline", "Missing timeline"), DATA.get("summary_role", "Missing role"), DATA.get("summary_tools", "Missing tools")) }}
+            {{ content|safe }}
+        </div>
     </section>
 {% endblock %}

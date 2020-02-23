@@ -1,10 +1,9 @@
-# Eco-Tour
-
-<p>
-    <strong>Timeline:</strong> 3 months (2014)<br>
-    <strong>Role:</strong> Design Intern (+ UCN Diploma)<br>
-    <strong>Tools:</strong> Illustrator, Photoshop
-</p>
+page_title: Agnieszka Jerzewska — Case Study — Eco-friendly branding
+headline_title: Eco-Tour
+headline_img: ecotour/ecotour-main.png
+summary_timeline: 3 months (2014)
+summary_role: Design Intern (+ UCN Diploma)
+summary_tools: Illustrator, Photoshop
 
 Eco-Tour is a travel agency that specialises in eco friendly tourism, agrotourism
  and everyday travel. They are selling transportations, accommodations, insurance

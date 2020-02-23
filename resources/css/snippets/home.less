@@ -111,4 +111,41 @@ div.home{
     p{
         max-width: 50%;
     }
+
+    .follow-up{
+        p{
+            font-size: 12px;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+        ul{
+            margin-top: 10px;
+        }
+        li a{
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+            padding-bottom: 10px;
+            position: relative;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            .arrow(30px, 6px, 2px, 6px, 2px, 20px);
+
+            .label {
+                text-align: left !important;
+                text-transform: uppercase;
+            }
+            &.gallery .a{
+                left: 180px;
+            }
+            &.process .a{
+                left: 250px;
+            }
+            .a, .a:before, .a:after{
+                background-color: #000;
+            }
+        }
+    }
 }

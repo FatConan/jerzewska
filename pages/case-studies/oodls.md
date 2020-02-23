@@ -1,10 +1,9 @@
-# Oodls
-
-<p>
-    <strong>Timeline</strong>: 2 week (2018)<br>
-    <strong>Role</strong>: Freelance Designer<br>
-    <strong>Tools</strong>: Illustrator, Sketch<br>
-</p>
+page_title: Agnieszka Jerzewska — Case Study — Oodls
+headline_title: Oodls
+headline_img: oodls/oodls-main.png
+summary_timeline: 2 weeks (2018)
+summary_role: Freelance Designer
+summary_tools: Illustrator, Sketch
 
 Oodls is a Scottish startup that provides stock images providing opportunities to
 sell and buy through Instagram accounts.

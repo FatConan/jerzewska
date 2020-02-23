@@ -1,10 +1,9 @@
-# Shooting Society logo
-
-<p>
-    <strong>Timeline:</strong> 3 week (2018)<br>
-    <strong>Role:</strong> Freelance Designer<br>
-    <strong>Tools:</strong> Illustrator, Sketch, Photoshop
-</p>
+page_title: Agnieszka Jerzewska — Case Study — Shooting society logo
+headline_title: Shooting Society logo
+headline_img: shooting/shooting-main.png
+summary_title: 3 weeks (2018)
+summary_role: Freelance Designer
+summary tools: Illustrator, Sketch, Photoshop
 
 Strzelec Wrocław is a collective group of people from Wroclaw and the
 surrounding area interested in recreational activities involving proficiency tests of

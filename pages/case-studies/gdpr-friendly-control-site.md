@@ -1,10 +1,9 @@
-# MYBX gdpr data collection
-
-<p>
-    <strong>Timeline:</strong> 3 months (2018)
-    <strong>Role:</strong> Product Designer
-    <strong>Tools:</strong> Sketch, Invision, Full Story
-</p>
+page_title: Agnieszka Jerzewska — Case Study — MYBX GDPR data collection
+headline_title: MYBX GDPR data collection
+headline_img: dashboard/dash-main.png
+summary_timeline: 3 months (2018)
+summary_role: Product Designer
+summary_tools: Sketch, Invision, Full Story
 
 MY.BX is a part of the BLACKBX company software. BLACKBX (now Stampede) is
 a SaaS software company providing customer insights and effective digital

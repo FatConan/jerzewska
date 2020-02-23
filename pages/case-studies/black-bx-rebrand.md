@@ -1,10 +1,9 @@
-# BLACKBX branding
-
-<p>
-<strong>Timeline:</strong> 2 months - branding, 1 year overall with all the materials (2017)<br>
-<strong>Role:</strong> Graphic designer<br>
-<strong>Tools:</strong> Illustrator, Photoshop, Indesign, Sketch
-</p>
+page_title: Agnieszka Jerzewska — Case Study — BLACKBX branding
+headline_title: BLACKBX branding
+headline_img: bbx/bbx-main.png
+summary_timeline: 2 months - branding, 1 year overall with all the materials (2017)
+summary_role: Graphic Designer
+summary_tools: Illustrator, Photoshop, Indesign, Sketch
 
 BLACKBX is a SaaS software company providing customer insights and effective
 digital marketing automation tools through data collection from Wifi. The name
