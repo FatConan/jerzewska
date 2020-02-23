@@ -20,7 +20,7 @@ div.home{
         }
 
         &.bottom.right{
-             background-image: url(/resources/img/home/home-hover-bottom-right.png);
+            background-image: url(/resources/img/home/home-hover-bottom-right.png);
         }
 
         &.bottom.left{
@@ -45,9 +45,11 @@ div.home{
         text-transform: uppercase;
         text-align: center;
         overflow: hidden;
+        transition: opacity 0.3s 0.05s;
 
         &:hover{
             opacity: 1;
+            transition: opacity 0.3s 0.05s;
         }
 
         &.bottom.right{
@@ -118,9 +120,11 @@ div.home{
             line-height: normal;
             margin-bottom: 0;
         }
+
         ul{
             margin-top: 10px;
         }
+
         li a{
             font-size: 14px;
             display: block;
@@ -129,16 +133,19 @@ div.home{
             .linkText();
             .arrow(30px, 6px, 2px, 6px, 2px, 20px);
 
-            .label {
+            .label{
                 text-align: left !important;
                 text-transform: uppercase;
             }
+
             &.gallery .a{
                 left: 180px;
             }
+
             &.process .a{
                 left: 250px;
             }
+
             .a, .a:before, .a:after{
                 background-color: #000;
             }

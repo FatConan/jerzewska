@@ -2,8 +2,9 @@
 
 @headerStartColor: #1D1D1B;
 @headerEndColor: #6201D7;
+
 .headerColor{
-     background: linear-gradient(106deg, @headerStartColor, @headerEndColor 90%);
+    background: linear-gradient(106deg, @headerStartColor, @headerEndColor 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -16,6 +17,8 @@
 @bodyFont: "Raleway";
 @highlightFont: "Montserrat";
 @fallbackFont: monospace;
+
+@linkHoverColor: #6A01E9;
 
 @galleryColorPrimary: #6A01E9;
 @galleryColorPrimaryText: white;
@@ -50,7 +53,7 @@
         top: 50%;
         left: 50%;
         margin-top: @topPadding;
-        transform:  translateX(-50%) translateY(-50%) rotate(@rotation);
+        transform: translateX(-50%) translateY(-50%) rotate(@rotation);
 
         &:before,
         &:after{
@@ -121,7 +124,7 @@
 
     .hover .label,
     &:hover .label{
-        color: #6A01E9;
+        color: @linkHoverColor;
     }
 
     &.hover span.a,
@@ -134,19 +137,24 @@
             text-align: left;
             padding-left: 40px;
         }
+
         span.a{
             left: 10px;
+
             &:before,
             &:after{
                 left: -2px;
             }
-             &:before{
+
+            &:before{
                 transform: rotate(-45deg);
             }
+
             &:after{
                 transform: rotate(45deg);
             }
         }
+
         &.hover span.a,
         &:hover span.a{
             left: 0;
@@ -158,13 +166,16 @@
             text-align: right;
             padding-right: 40px;
         }
+
         span.a{
             right: 10px;
+
             &:before,
             &:after{
                 right: -2px;
             }
         }
+
         &.hover span.a,
         &:hover span.a{
             right: 0;
@@ -184,18 +195,22 @@ section.split{
     font-size: 12px;
     font-weight: bold;
 }
+
 .footerFont{
     font-family: @highlightFont, @fallbackFont;
     font-size: 12px;
 }
+
 .contentFont{
     font-family: @bodyFont, @fallbackFont;
     font-size: 22px;
 }
+
 .navFont{
     font-family: @bodyFont, @fallbackFont;
     font-size: 12px;
 }
+
 .defaultWidthAndMargin{
     /* Switch width to 100% and add
     degradation to certain views for mobile
@@ -252,8 +267,13 @@ section.split{
             font-size: 12px;
             font-style: italic;
         }
+
+        .label{
+            font-size: 14px;
+        }
+
         .a, .a:before, .a:after{
-                background-color: transparent;
+            background-color: transparent;
         }
 
         &::after{
