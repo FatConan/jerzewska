@@ -23,6 +23,7 @@ requirejs(["../build"], function(){
                 }
             };
 
+            eventHandler.addNullListener("ol.roles li div.description");
             eventHandler.addListener("ol.roles li", bioEntryHandler);
             eventHandler.addListener("a.submit", formHandler);
         });

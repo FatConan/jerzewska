@@ -13,6 +13,13 @@
     text-transform: capitalize;
 }
 
+.imgRestrict{
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
 .cms{
     box-sizing: border-box;
 
@@ -43,11 +50,6 @@
 .cms-alt {
     box-sizing: border-box;
     line-height: 1.6;
-
-    img.headline{
-        width: 100%;
-        height: auto;
-    }
 
     h1 {
         font-family: @highlightFont, @fallbackFont;
@@ -86,10 +88,16 @@
             padding-right: 10px;
         }
     }
+     /* some case study cms bits */
+
+    img.headline{
+        width: 100%;
+        height: auto;
+        margin-left: -@articleLeftMargin;
+    }
 
     .examples{
         background-color: #F4F6F6;
-        width: 80%;
     }
 
     .reveal{
@@ -98,6 +106,33 @@
         margin-bottom: 30px;
         margin-left: -@articleLeftMargin;
         margin-right: -@articleLeftMargin;
+        .imgRestrict();
+    }
+
+    .result{
+        width: 960px;
+        margin-bottom: 30px;
+        margin-left: -@articleLeftMargin;
+        margin-right: -@articleLeftMargin;
+    }
+
+    .research,
+    .examples{
+        width: 80%;
+        .imgRestrict();
+    }
+
+    .result.oodls{
+        .imgRestrict();
+    }
+
+    .additional{
+        width: 50%;
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 80px;
+        clear: right;
+        .imgRestrict();
     }
 }
 
