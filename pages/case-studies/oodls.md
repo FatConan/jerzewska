@@ -23,7 +23,7 @@ This was exactly what the customer wanted and requested in their brief, but it's
 can sometimes look outdated, and that the approach of embedding the symbol within the word mark often looks more modern and minimalistic.
 This was very much in keeping with the sort of progressive concept behind their business.
 
-<div class="research" title="Logo research">
+<div class="graphic standard" title="Logo research">
     <img src="/resources/img/case-studies/pages/oodls/oodls-inspi.png" 
     alt="Research into other branding, showing the logos of competitors Dreamstime, GettyImages, ShutterStock, foap and Adobe Stock"/>
 </div>
@@ -37,7 +37,7 @@ As they are providing stock images I thought the incorporation of a camera symbo
 I playing around with a number of variations; experimenting with the camera shape, shutter symbol, viewfinder of the camera. I was 
 looking for a very small yet very distinctive element that would be striking and stand out.
 
-<div class="examples">
+<div class="graphic standard">
     <img src="/resources/img/case-studies/pages/oodls/oodls-logo1.png" 
     alt="A number of logo variations incorporating a variety of camera and infinity symbol inspired aspects." />
 </div>
@@ -48,13 +48,13 @@ opportunities for Instagrammers. It also worked the best as a symbol &mdash; a c
 and a camera icon &mdash; which also functioned as a nod to the Instagram app logo, a platform on which the business depends.
 In the end I decided to show this iteration of the logo in my first presentation.
 
-<div class="reveal">
+<div class="graphic ultrawide">
     <img src="/resources/img/case-studies/pages/oodls/oodls-logo2.png" 
     alt="A breakdown of the new logo proposal showing the combination of the infinity symbol with a simple pictograph of a camera to 
     produce the Oodls brand name." />
 </div>
 
-## The problem
+## The problem:
 
 Turns out the idea was great, but the double line was not very visible when scaled.
 When tested with a group of people, they couldn’t discern the name of the company at the
@@ -64,7 +64,7 @@ ditch the idea of the double line for the sake of legibility.
 
 Another iteration was tested:
 
-<div class="iterate">
+<div class="graphic-auto">
     <img src="/resources/img/case-studies/pages/oodls/oodls-logo3.png" 
     alt="A simplified version of the logo with the brand name written with a single stroke."/>
 </div>
@@ -73,27 +73,20 @@ This version was much improved, but there was still an issue: when scaled we fou
 A new issue also arose: as a stock image company they need to use their logo as a word mark and it became apparent 
 that this version of the logo was not very visible as a watermark, and was too easy to remove from images.
 
-## Final result
+## Final result:
 
 In the end I decided to make the logo much thicker than we had planned for the
 original. This way the watermark on the photos would be easily visible and not as
 easily removed. This logo looked more legible and stable.
 
-<div class="result oodls">
-    <!-- img src="/resources/img/case-studies/pages/oodls/oodls-final4.png" 
-    alt="A hero shot of the final Oodls logo, a bolder and more impactful version of the revised version." />
-    <img src="/resources/img/case-studies/pages/oodls/oodls-final2.png" 
-    alt="Showing the condensed version of the logo for use as an app icon." />
-    <img src="/resources/img/case-studies/pages/oodls/oodls-final3.png" 
-    alt="The logo shown in situ as a watermark on a pair of stock photos: one a photo of a great dane, and the other a 
-    table setting." -->
+<div class="graphic ultrawide">
     <img src="/resources/img/case-studies/pages/oodls/oodls-final.png" />
 </div>
 
 
 ## Additionally:
 
-<div class="additional">
+<div class="graphic additional">
      <img src="/resources/img/case-studies/pages/oodls/oodls-email-scroll.gif" 
     alt="An animation showing the scrolling of the Oodls email template that shows off a selection of Instagram stock photograph." />
 </div>

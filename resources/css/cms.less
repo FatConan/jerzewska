@@ -20,6 +20,13 @@
     }
 }
 
+.imgAuto{
+    img{
+        width: auto;
+        height: auto;
+    }
+}
+
 .cms{
     box-sizing: border-box;
 
@@ -47,11 +54,11 @@
     }
 }
 
-.cms-alt {
+.cms-alt{
     box-sizing: border-box;
     line-height: 1.6;
 
-    h1 {
+    h1{
         font-family: @highlightFont, @fallbackFont;
         font-size: 30px;
         font-weight: 900;
@@ -83,17 +90,27 @@
 
     ul li{
         display: block;
+
         &:before{
             content: "—";
             padding-right: 10px;
         }
     }
-     /* some case study cms bits */
+
+    /* some case study cms bits */
 
     img.headline{
         width: 100%;
         height: auto;
         margin-left: -@articleLeftMargin;
+    }
+
+    .graphic{
+        .imgRestrict();
+    }
+
+    .graphic-auto{
+        .imgAuto();
     }
 
     .examples{
@@ -102,28 +119,30 @@
 
     .reveal{
         background-color: #F5EFF2;
-        width: 960px;
-        margin-bottom: 30px;
-        margin-left: -@articleLeftMargin;
-        margin-right: -@articleLeftMargin;
-        .imgRestrict();
     }
 
-    .result{
-        width: 960px;
-        margin-bottom: 30px;
-        margin-left: -@articleLeftMargin;
-        margin-right: -@articleLeftMargin;
-    }
-
-    .research,
-    .examples{
+    .standard{
         width: 80%;
-        .imgRestrict();
     }
 
-    .result.oodls{
-        .imgRestrict();
+    .wide{
+        width: 960px;
+        margin-bottom: 30px;
+        margin-left: -@articleLeftMargin;
+        margin-right: -@articleLeftMargin;
+    }
+
+    .ultrawide{
+        width: 1024px;
+        margin-bottom: 30px;
+        margin-left: -@ultrawideArticleLeftMargin;
+        margin-right: -@ultrawideArticleLeftMargin;
+    }
+
+    .split{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
     }
 
     .additional{
@@ -132,7 +151,6 @@
         margin-left: 20px;
         margin-bottom: 80px;
         clear: right;
-        .imgRestrict();
     }
 }
 
