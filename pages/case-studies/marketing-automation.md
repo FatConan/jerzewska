@@ -1,12 +1,16 @@
 page_title: Agnieszka Jerzewska — Case Study — Data collection and marketing tool platform
 headline_title: Data collection and marketing tool platform
 headline_img: dashboard/dash-main.png
-summery_title: 6 months initially (2019) - constant improvement
+summary_timeline: 6 months initially (2019) - constant improvement
 summary_role: Product Designer
 summary_tools: Sketch, Invision, Full Story
+prev_link: /case-studies/eco-friendly-branding.html
+prev_link_text: ECO-Tour
+next_link: /case-studies/gdpr-friendly-control-site.html
+next_link_text: GDPR Friendly
 
-BLACK**BX** (now Stampede) is a SaaS software company providing customer insights 
-and effective digital marketing automation tools through data collection from Wifi.
+BLACK**BX** (now Stampede) is a software as a service (SaaS) company providing customer insights 
+and effective digital marketing automation tools through data collection from their public Wifi offering.
 
 ## The brief:
 
@@ -46,7 +50,7 @@ The company is using Full Story to see user’s behaviours.
     alt=""/>
 </div>
 
-## Process
+## Process:
 
 * main dashboard overview + showing extra addons and their value
 
@@ -57,8 +61,7 @@ The company is using Full Story to see user’s behaviours.
     alt=""/>
 </div>
 
-
-* Bringing back side nav (from the older version)
+* Bringing back side nav (from an older version)
 
 <div class="graphic wide">
     <img src="/resources/img/case-studies/pages/dashboard/dash-3.png" 
@@ -106,7 +109,6 @@ with a generic preview on the right hand side with a variety of devices.
     alt=""/>
 </div>
 
-
 ## Problem 4:
 
 * User overview
@@ -132,7 +134,7 @@ This lets them reach higher productivity levels much faster than if they had to 
 
 ## Cancellation survey:
 
-<div class="additional">
+<div class="graphic additional">
      <img src="/resources/img/case-studies/pages/dashboard/dash-10.png" 
     alt="An animation showing the scrolling of the Oodls email template that shows off a selection of Instagram stock photograph." />
 </div>
@@ -148,6 +150,6 @@ solution for the CS team how to approach the customer, saved us some churn.
 ## Update:
 
 At the moment we’re conducting customer interviews and user testing this design - because of 
-the time pressure we had to wait with this until the new release. There is still 
-lots to be improved and few new features to be developed. Product design is a constant 
+the time pressure we had to wait with this until after the new release. There is still 
+lots to be improved, and few new features to be developed. Product design is a constant 
 improvement for the user.

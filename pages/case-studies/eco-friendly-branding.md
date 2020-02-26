@@ -4,6 +4,10 @@ headline_img: ecotour/ecotour-main.png
 summary_timeline: 3 months (2014)
 summary_role: Design Intern (+ UCN Diploma)
 summary_tools: Illustrator, Photoshop
+prev_link: /case-studies/shooting-society.html
+prev_link_text: Shooting Society
+next_link: /case-studies/marketing-automation.html
+next_link_text: Marketing automation
 
 Eco-Tour is a travel agency that specialises in eco friendly tourism, agrotourism and everyday travel. They are 
 selling transportations, accommodations, insurance and other organised travel services.

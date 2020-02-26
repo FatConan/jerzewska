@@ -1,0 +1,23 @@
+<nav class="case-study-navigation">
+    <div class="nav-links">
+        {%  if DATA.get("prev_link") %}
+            <div class="previous" data-direction="previous">
+                <a title="Previous project" href="{{ DATA.get("prev_link") }}">
+                    <span class="a">&nbsp;</span>
+                    <span class="label">{{ DATA.get("prev_link_text") }}</span>
+                </a>
+            </div>
+        {%  endif %}
+        <div class="switcher">
+            <a title="" href="/case-studies.html">Go Back</a>
+        </div>
+        {%  if DATA.get("next_link") %}
+            <div class="next" data-direction="next">
+                <a title="Next project" href="{{ DATA.get("next_link") }}">
+                    <span class="label">{{ DATA.get("next_link_text") }}</span>
+                    <span class="a">&nbsp;</span>
+                </a>
+            </div>
+        {%  endif %}
+    </div>
+</nav>

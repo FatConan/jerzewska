@@ -4,6 +4,10 @@ headline_img: shooting/shooting-main.png
 summary_timeline: 3 weeks (2018)
 summary_role: Freelance Designer
 summary_tools: Illustrator, Sketch, Photoshop
+prev_link: /case-studies/black-bx-rebrand.html
+prev_link_text: BlackBX rebrand
+next_link: /case-studies/eco-friendly-branding.html
+next_link_text: Eco-tour
 
 Strzelec Wrocław is a collective group of people from Wroclaw and the surrounding area 
 interested in recreational activities involving proficiency tests of accuracy, precision and speed in shooting, 

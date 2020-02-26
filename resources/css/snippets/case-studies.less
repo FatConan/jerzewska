@@ -1,4 +1,11 @@
-/* Case Studies */
+@import "../definitions.less";
+
+@arrowSize: 14px;
+@altArrowSize: 6px;
+@offsetTop: 5px;
+@altOffsetTop: 2px;
+@arrowWidth: 2px;
+
 .top-row{
     a{
         padding-top: 30px;
@@ -115,7 +122,50 @@
     }
 
     a{
+        .linkText();
         color: @bodyTextColor;
         text-indent: 0;
+    }
+}
+
+.case-study-navigation{
+    clear: both;
+    .nav-links{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        grid-template-areas: "previous switcher next";
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        margin: 70px 0 50px;
+
+        div{
+            white-space: nowrap;
+
+            .a, .a:before, .a:after{
+                background-color: #000;
+            }
+
+            a{
+                display: block;
+                text-decoration: none;
+                .linkText();
+            }
+
+            &.previous{
+                grid-area: previous;
+                .arrow(20px, @altArrowSize, @altOffsetTop, 8px,  @arrowWidth, 15px);
+            }
+            &.switcher{
+                grid-area: switcher;
+                text-align: center;
+            }
+            &.next{
+                grid-area: next;
+                .arrow(20px, @altArrowSize, @altOffsetTop, 8px, @arrowWidth, 15px);
+            }
+        }
     }
 }

@@ -106,10 +106,12 @@
     }
 
     .graphic{
+        margin: 20px 0;
         .imgRestrict();
     }
 
     .graphic-auto{
+        margin: 20px 0;
         .imgAuto();
     }
 
@@ -141,8 +143,6 @@
 
     .split{
         display: grid;
-        grid-gap: 20px;
-        grid-template-columns: 1fr 1fr;
     }
 
     .additional{
@@ -151,6 +151,16 @@
         margin-left: 20px;
         margin-bottom: 80px;
         clear: right;
+    }
+
+    .blackbx-montage{
+        background: black;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "A B"
+                             "C C"
+                             "D D"
+                             "E F";
     }
 }
 
