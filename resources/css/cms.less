@@ -58,6 +58,15 @@
     box-sizing: border-box;
     line-height: 1.6;
 
+    span.i{
+        color: red;
+        font-weight: bold;
+        font-family: monospace;
+        &:before{
+            content: "INCOMPLETE CONTENT - ";
+        }
+    }
+
     h1{
         font-family: @highlightFont, @fallbackFont;
         font-size: 30px;

@@ -21,13 +21,13 @@ selling transportation, accommodation, insurance and other organised travel serv
 ## Research:
 
 I spent a lot of time researching big travel companies, trying to understand the process and how it works. 
-I mostly focused on the eco aspect of the company, researched best materials for print and 
-how to incorporated nature in the logo.
+I mostly focused on the eco aspect of the company, researching the best materials for print, and 
+how to incorporated nature into the logo.
 
 ## The Idea:
 
 The idea was to create a fresh and simple look associated with nature. My inspiration came from the landscapes of 
-their destinations; that’s why I decided to include the movement of waves, the peaks of hills and animal symbols 
+their destinations; that’s why I decided to include the movement of waves, the peaks of hills, and animal symbols 
 that would symbolise eco friendly tourism and agrotourism.
 
 <div class="graphic ultrawide">
@@ -37,14 +37,14 @@ that would symbolise eco friendly tourism and agrotourism.
 
 ## The problem:
 
-This was a project I was doing my internship that turned into my diploma at UCN. At this point it pretty much 
-came to the cost of the re-brand, re-printing all the materials and hiring a developer to update the 
+This was a project I was doing during my internship that turned into my diploma at UCN. At this point it pretty much 
+came down to the cost of the re-brand, re-printing all the materials and hiring a developer to update the 
 website - unfortunately the project was not used.
 
 ## Final result:
 
-The logo is very minimalistic, yet captivating all the nature elements I wanted to include. 
-I decided to go with eco-friendly recycled paper, for print materials. On the website and 
+The logo is very minimalistic, yet captivating, and features all the nature elements I wanted to include. 
+I decided to go with eco-friendly recycled paper for print materials. On the website and <span class="i">Something should go here</span>
 
 <div class="graphic ultrawide split eco-montage1">
     <img src="/resources/img/case-studies/pages/ecotour/ecotour-final1.png" 
@@ -70,6 +70,6 @@ I decided to go with eco-friendly recycled paper, for print materials. On the we
 ## 2020 Update:
 
 Looking at this project from today’s point of view, I would say there is some things that could have been 
-improved. Website experience should have been tested but I didn’t had that knowledge or experience 
+improved. The website experience should have been tested, but I didn’t have that knowledge or experience 
 at the time. I still decided to use this project in my case studies, as it was one of my very first 
-individual, big project that even to this day, still looks very modern and up to date.
+individual, and one of my biggest single projects even to this day. I think it still looks very modern and up to date.
