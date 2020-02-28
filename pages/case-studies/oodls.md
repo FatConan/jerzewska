@@ -83,8 +83,13 @@ In the end I decided to make the logo much thicker than we had planned for the
 original. This way the watermark on the photos would be easily visible and not as
 easily removed. This logo looked more legible and stable.
 
-<div class="graphic ultrawide">
-    <img src="/resources/img/case-studies/pages/oodls/oodls-final.png" />
+<div class="graphic ultrawide split oodls-montage">
+    <img src="/resources/img/case-studies/pages/oodls/oodls-final4.png" 
+    alt="The Oodls logo." style="grid-area: A;"/>
+    <img src="/resources/img/case-studies/pages/oodls/oodls-final2.png" 
+    alt="The Oodls app icon shown on a mobile phone." style="grid-area: B;"/>
+    <img src="/resources/img/case-studies/pages/oodls/oodls-final3.png" 
+    alt="The Oodls watermark on a pair of stock images, one of a dog, the other a table setting." style="grid-area: C;"/>
 </div>
 
 

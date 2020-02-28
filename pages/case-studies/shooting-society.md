@@ -30,7 +30,7 @@ Mostly because of the history, process, idea and overall experience.
 Project started pretty basic. I designed couple of logos variations which were very simple, but they they were not speciall.
 
 <div class="graphic-auto">
-    <img src="/resources/img/case-studies/pages/shooting/shooting-logo1.png" />
+    <img src="/resources/img/case-studies/pages/shooting/shooting-logo1.png" alt="The original logo based around the cylinder of a revolver."/>
 </div>
 
 The customer didn’t really have any ideas what he wanted so he went a little bit soul searching. He came up with the 
@@ -41,7 +41,8 @@ one is talking about Orange Alternative movement, I personally prefer more versi
 ## Inspirations:
 
 <div class="graphic wide">
-    <img src="/resources/img/case-studies/pages/shooting/shooting-inspi.png" />
+    <img src="/resources/img/case-studies/pages/shooting/shooting-inspi.png"
+     alt="A collection of images of gnomes and gnome like creatures from various folklore and artists."/>
 </div>
 
 ## Research:
@@ -57,13 +58,15 @@ pistols. I was inspired by the story of gnomes fighting the gobiln, so I decided
 expression. In a developed version of the illustration I have gim Orange hat as a nod to the historical value.
 
 <div class="graphic ultrawide">
-    <img src="/resources/img/case-studies/pages/shooting/shooting-logo2.png" />
+    <img src="/resources/img/case-studies/pages/shooting/shooting-logo2.png" 
+    alt="The idea for the for the new logo based on a classic revolver and the gnomish image." />
 </div>
 
 ## The problem:
 
-<div class="graphic additional">
-    <img src="/resources/img/case-studies/pages/shooting/shooting-logo3.png" />
+<div class="graphic additional shooting-problem">
+    <img src="/resources/img/case-studies/pages/shooting/shooting-logo3.png" 
+    alt="A close up of the problematic finger placement on the trigger of the revolver within the logo."/>
 </div>
 
 Customer loved the logo, but there was one big issue he had with it. Anyone who hold guns like 
@@ -77,9 +80,11 @@ the circle for the morale patch.
 I’ve adjusted the shape to be round, removed the fingers from the trigger and decided to go more with the
 tactical hat pattern on the illustration. 
 
-<div class="graphic ultrawide">
-    <img src="/resources/img/case-studies/pages/shooting/shooting-final.png" />
-    <img src="/resources/img/case-studies/pages/shooting/shooting-final1.png" />
-    <img src="/resources/img/case-studies/pages/shooting/shooting-final2.png" />
-    <img src="/resources/img/case-studies/pages/shooting/shooting-final3.png" />
+<div class="graphic ultrawide split shooting-montage">
+    <img src="/resources/img/case-studies/pages/shooting/shooting-final1.png" style="grid-area: A;"
+    alt="The final version of the logo."/>
+    <img src="/resources/img/case-studies/pages/shooting/shooting-final2.png" style="grid-area: B;"
+    alt="The logo on printed on a society t-shirt" />
+    <img src="/resources/img/case-studies/pages/shooting/shooting-final3.png" style="grid-area: C;"
+    alt="A colourised version of the logo and an embroidery patch version for stitching to members' clothing."/>
 </div>

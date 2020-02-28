@@ -21,11 +21,9 @@ and effective digital marketing automation tools through data collection from th
 
 ## Previous software design:
 
-<div class="graphic wide split">
-    <img src="/resources/img/case-studies/pages/dashboard/dash-previous.png" 
-    alt=""/>
-     <img src="/resources/img/case-studies/pages/dashboard/dash-gif.png" 
-    alt=""/>
+<div class="graphic wide split fifty-fifty">
+    <img src="/resources/img/case-studies/pages/dashboard/dash-previous.png" alt="Screenshot of the original version of the system."/>
+    <img src="/resources/img/case-studies/pages/dashboard/dash-gif.png" alt="Animation showing the old version of the system in action." />
 </div>
 
 ## General Problems:
@@ -47,25 +45,25 @@ The company is using Full Story to see user’s behaviours.
 
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-wireframe.png" 
-    alt=""/>
+    alt="A collection of the the development wireframes."/>
 </div>
 
 ## Process:
 
 * main dashboard overview + showing extra addons and their value
 
-<div class="graphic wide split_70_30">
+<div class="graphic standard split" style="grid-template-columns: 526px 195px; grid-gap: 20px;">
     <img src="/resources/img/case-studies/pages/dashboard/dash-1.png" 
-    alt=""/>
+    alt="Updated dashboard view showing at a glance statistics and and graphically engaging mock-up of the customer's landing page."/>
      <img src="/resources/img/case-studies/pages/dashboard/dash-2.png" 
-    alt=""/>
+    alt="An example of a new attention grabbing section showing the add-ons customer's may pay for to enhance their account's abilities."/>
 </div>
 
 * Bringing back side nav (from an older version)
 
-<div class="graphic wide">
+<div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-3.png" 
-    alt=""/>
+    alt="A mock-up showing the reintegration of an older navigation system with sections linked across the top of the screen and sub-sections linked in a menu on the left hand side."/>
 </div>
 
 ## Problem 1:
@@ -74,11 +72,11 @@ The company is using Full Story to see user’s behaviours.
 * instead, we did 3 tabs steps to show less. It didn’t look so difficult and we didn’t ask 
 more then 3 very simple questions to avoid confusion.
 
-<div class="graphic wide">
+<div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-4.png" 
     alt=""/>
 </div>
-<div class="graphic wide">
+<div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-gif1.png" 
     alt=""/>
 </div>
@@ -92,7 +90,7 @@ on the right so it doesn’t take up all the necessary space for data.
 
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-gif2.png" 
-    alt=""/>
+    alt="An animation showing the new slide-in data filtering menu."/>
 </div>
 
 ## Problem 3:
@@ -102,11 +100,11 @@ on the right so it doesn’t take up all the necessary space for data.
 I decided to make the whole branding panel in one, 
 with a generic preview on the right hand side with a variety of devices.
 
-<div class="graphic wide split">
+<div class="graphic wide split fifty-fifty" >
     <img src="/resources/img/case-studies/pages/dashboard/dash-7.png" 
-    alt=""/>
+    alt="Screenshot showing the new configurable branding settings for customer's public wifi offering landing page."/>
     <img src="/resources/img/case-studies/pages/dashboard/dash-8.png" 
-    alt=""/>
+    alt="Screenshot of the branding preview window allowing customers to preview their landing page on a variety of devices."/>
 </div>
 
 ## Problem 4:
@@ -118,7 +116,7 @@ timeline showing end-user locations which they can chose to block them or idk.. 
 
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-9.png" 
-    alt=""/>
+    alt="Screenshot of the new user management system."/>
 </div>
 
 ## On boarding:
@@ -129,14 +127,14 @@ This lets them reach higher productivity levels much faster than if they had to 
 
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-gif3.png" 
-    alt=""/>
+    alt="Screenshot showing the new introduction to the on-boarding system to get customers up to speed with the new interfaces."/>
 </div>
 
 ## Cancellation survey:
 
 <div class="graphic additional">
      <img src="/resources/img/case-studies/pages/dashboard/dash-10.png" 
-    alt="An animation showing the scrolling of the Oodls email template that shows off a selection of Instagram stock photograph." />
+    alt="Screenshot of the new off-boarding survey designed to capture departing customer's thoughts so they can be channeled into design improvements and new feature sets." />
 </div>
 
 * since we had very limited research and data, we started doing something in this area :D
@@ -144,7 +142,8 @@ This lets them reach higher productivity levels much faster than if they had to 
 solution for the CS team how to approach the customer, saved us some churn.
 
 <div class="graphic ultrawide">
-    <img src="/resources/img/case-studies/pages/dashboard/dash-final-gif.png" />
+    <img src="/resources/img/case-studies/pages/dashboard/dash-final-gif.png" 
+    alt="An animation of a user navigating the new interfaces showing off the aspects discussed in this case study."/>
 </div>
 
 ## Update:

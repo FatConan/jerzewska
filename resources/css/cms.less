@@ -153,6 +153,11 @@
         clear: right;
     }
 
+    .fifty-fifty{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
     .blackbx-montage{
         background: black;
         grid-template-columns: 1fr 1fr;
@@ -161,6 +166,53 @@
                              "C C"
                              "D D"
                              "E F";
+    }
+
+    .blackbx-customer-montage{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 228px;
+        overflow: hidden;
+        grid-template-areas: "A B C D";
+    }
+
+    .oodls-montage{
+        grid-template-columns: 492px auto 209px;
+        grid-template-rows: auto;
+        grid-template-areas: "A B C";
+    }
+
+    .shooting-problem{
+        width: 160px;
+    }
+    .shooting-montage{
+        grid-template-columns: 493px 323px 209px;
+        grid-template-rows: 412px;
+        grid-template-areas: "A B C";
+        overflow: hidden;
+    }
+
+    .eco-montage1{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "A B";
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+    .eco-montage2{
+        grid-template-columns: 768px 269px;
+        grid-template-rows: 446px;
+        grid-template-areas: "C D";
+        overflow: hidden;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .eco-montage3{
+        grid-template-columns: 372px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "E F"
+                             "G F";
+        margin-top: 0;
+        overflow: hidden;
     }
 }
 

@@ -69,21 +69,31 @@ My favourite bit was designing the promotional cards. The idea was to laser cut 
 The inside of the envelopes were green, so when the business card was taken out, it showed wifi sign “getting online”. 
 
 <div class="graphic ultrawide split blackbx-montage">
-    <img src="/resources/img/case-studies/pages/bbx/bbx-final1.png" style="grid-area: A;"/>
-    <img src="/resources/img/case-studies/pages/bbx/bbx-final2.png" style="grid-area: B;"/>
-    <img src="/resources/img/case-studies/pages/bbx/bbx-final3.png" style="grid-area: C;"/>
-    <img src="/resources/img/case-studies/pages/bbx/bbx-final4.png" style="grid-area: D;"/>
-    <img src="/resources/img/case-studies/pages/bbx/bbx-final5.png" style="grid-area: E;"/>
-    <img src="/resources/img/case-studies/pages/bbx/bbx-final6.png" style="grid-area: F;"/>
+    <img src="/resources/img/case-studies/pages/bbx/bbx-final1.png"
+     alt="A BlackBX advertising card in its custom laser cut sleeve." style="grid-area: A;"/>
+    <img src="/resources/img/case-studies/pages/bbx/bbx-final2.png" 
+    alt="The BlackBX advertising card outside its sleeve with the sleeve now displaying a full wifi signal." style="grid-area: B;"/>
+    <img src="/resources/img/case-studies/pages/bbx/bbx-final3.png" 
+    alt="A BlackBX business card, showing detail of both faces." style="grid-area: C;"/>
+    <img src="/resources/img/case-studies/pages/bbx/bbx-final4.png" style="grid-area: D;" 
+    alt="The BlackBX branding book."/>
+    <img src="/resources/img/case-studies/pages/bbx/bbx-final5.png" style="grid-area: E;"
+    alt="Branded packaging for the BlackBX black box device." />
+    <img src="/resources/img/case-studies/pages/bbx/bbx-final6.png" style="grid-area: F;"
+    alt="An assortment of printed BlackBX marketing materials."/>
 </div>
 
 ## Additionally:
 
 I was also responsible for product photography
 
-<div class="graphic ultrawide split" style="grid-template-columns: repeat(4, 1fr);">
-    <img src="/resources/img/case-studies/pages/bbx/bbx-photo1.png" />
-    <img src="/resources/img/case-studies/pages/bbx/bbx-photo2.png" />
-    <img src="/resources/img/case-studies/pages/bbx/bbx-photo3.png" />
-    <img src="/resources/img/case-studies/pages/bbx/bbx-photo4.png" />
+<div class="graphic ultrawide split blackbx-customer-montage">
+    <img src="/resources/img/case-studies/pages/bbx/bbx-photo1.png" 
+    alt="Photograph of a customer landing page on a mobile phone." style="grid-area: A;"/>
+    <img src="/resources/img/case-studies/pages/bbx/bbx-photo2.png" 
+    alt="Photograph of a customer landing page on a mobile phone." style="grid-area: B;" />
+    <img src="/resources/img/case-studies/pages/bbx/bbx-photo3.png" 
+    alt="Photograph of a customer landing page on a mobile phone." style="grid-area: C;" />
+    <img src="/resources/img/case-studies/pages/bbx/bbx-photo4.png" 
+    alt="Photograph of a customer landing page on a mobile phone." style="grid-area: D;" />
 </div>

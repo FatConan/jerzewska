@@ -10,7 +10,7 @@
 
 {% macro headline(title, img) -%}
     <h1>{{ title }}</h1>
-    <img class="headline" src="/resources/img/case-studies/pages/{{ img }}" title="{{ title }}" />
+    <img class="headline" src="/resources/img/case-studies/pages/{{ img }}" alt="{{ title }}" title="{{ title }}" />
 {%- endmacro %}
 
 {% block page_content %}

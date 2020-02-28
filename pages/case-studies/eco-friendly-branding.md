@@ -10,7 +10,7 @@ next_link: /case-studies/marketing-automation.html
 next_link_text: Marketing automation
 
 Eco-Tour is a travel agency that specialises in eco friendly tourism, agrotourism and everyday travel. They are 
-selling transportations, accommodations, insurance and other organised travel services.
+selling transportation, accommodation, insurance and other organised travel services.
 
 ## The brief:
 
@@ -21,7 +21,7 @@ selling transportations, accommodations, insurance and other organised travel se
 ## Research:
 
 I spent a lot of time researching big travel companies, trying to understand the process and how it works. 
-I mostly focused on the eco aspect of the company., researched best materials for print and 
+I mostly focused on the eco aspect of the company, researched best materials for print and 
 how to incorporated nature in the logo.
 
 ## The Idea:
@@ -31,7 +31,8 @@ their destinations; that’s why I decided to include the movement of waves, the
 that would symbolise eco friendly tourism and agrotourism.
 
 <div class="graphic ultrawide">
-    <img src="/resources/img/case-studies/pages/ecotour/ecotour-logo1.png" />
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour-logo1.png" 
+    alt="The construction of the Eco-Tour logo from the essential elements of the idea."/>
 </div>
 
 ## The problem:
@@ -45,13 +46,25 @@ website - unfortunately the project was not used.
 The logo is very minimalistic, yet captivating all the nature elements I wanted to include. 
 I decided to go with eco-friendly recycled paper, for print materials. On the website and 
 
-<div class="graphic ultrawide">
-    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final1.png" />
-    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final2.png" />
-    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final3.png" />
-    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final4.png" />
-    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final5.png" />
-    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final6.png" />
+<div class="graphic ultrawide split eco-montage1">
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final1.png" 
+    alt="The finalised logo." style="grid-area: A;"/>
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final2.png" 
+    alt="Eco-Tour branded stationery" style="grid-area: B;"/>
+</div>
+<div class="graphic ultrawide split eco-montage2">
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final3.png" 
+    alt="A branded brochure of their services." style="grid-area: C;"/>
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final4.png" 
+    alt="Branded packaging and tote bags." style="grid-area: D;"/>
+</div>
+<div class="graphic ultrawide split eco-montage3">
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final5.png" 
+    alt="Detail shot of branded letter paper and binders" style="grid-area: E;"/>
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour-final6.png" 
+    alt="Eco-Tour business cards." style="grid-area: F;"/>
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour-GIF.png" 
+    alt="An animation showing off the Eco-Tour website." style="grid-area: G;"/>
 </div>
 
 ## 2020 Update:
