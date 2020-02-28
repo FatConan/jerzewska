@@ -42,6 +42,7 @@ The company is using Full Story to see user’s behaviours.
 
 * lot of research comes in between looking for different solutions - for example, double nav etc
 * solution inspirations that could work for us
+<span class="i">This needs a little clarification</span>
 
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-wireframe.png" 
@@ -71,7 +72,7 @@ The company is using Full Story to see user’s behaviours.
 * too long, complicated, confusing and distracting process
 * instead, we did 3 tabs steps to show less. It didn’t look so difficult and we didn’t ask 
 more then 3 very simple questions to avoid confusion.
-
+<span class="i">I'm not sure what this is referring to</span>
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-4.png" 
     alt=""/>
@@ -85,8 +86,8 @@ more then 3 very simple questions to avoid confusion.
 
 * Filters
 
-Filter panel started to get too long with too many options to be constantly visible. I decided to add a sliding panel 
-on the right so it doesn’t take up all the necessary space for data.
+The filter panel started to get too long with too many options to remain constantly visible. I decided to add a sliding panel 
+on the right so it doesn’t take up space that could otherwise be used to display data.
 
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-gif2.png" 
@@ -96,6 +97,7 @@ on the right so it doesn’t take up all the necessary space for data.
 ## Problem 3:
 
 * One of the setup problems (general problem) belong to the data capture
+<span class="i">Needs a little clarification</span>
 
 I decided to make the whole branding panel in one, 
 with a generic preview on the right hand side with a variety of devices.
@@ -113,6 +115,7 @@ with a generic preview on the right hand side with a variety of devices.
 
 The easiest option was to created the 
 timeline showing end-user locations which they can chose to block them or idk.. :D
+<span class="i">Something missing here</span>
 
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-9.png" 
@@ -123,7 +126,8 @@ timeline showing end-user locations which they can chose to block them or idk.. 
 
 * so the users can get up to speed with the new design quicker. 
 
-This lets them reach higher productivity levels much faster than if they had to figure everything out on their own
+This lets them reach higher productivity levels much faster than if they had to figure everything out on their own. It also 
+allows us a way of introducing new features to the user.
 
 <div class="graphic standard">
     <img src="/resources/img/case-studies/pages/dashboard/dash-gif3.png" 
