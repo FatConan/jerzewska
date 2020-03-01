@@ -4,10 +4,10 @@ headline_img: oodls/oodls-main.png
 summary_timeline: 2 weeks (2018)
 summary_role: Freelance Designer
 summary_tools: Illustrator, Sketch
-prev_link: /case-studies/gdpr-friendly-control-site.html
-prev_link_text: GDPR Friendly
-next_link: /case-studies/black-bx-rebrand.html
-next_link_text: BlackBX rebrand
+prev_link: /case-studies/gdpr-collection-control-site.html
+prev_link_text: GDPR data collection control site
+next_link: /case-studies/blackbx-branding.html
+next_link_text: BlackBX branding
 
 Oodls is a Scottish startup that provides stock images by allowing Instagrammers the opportunity to
 monetise their content through their Instagram accounts.

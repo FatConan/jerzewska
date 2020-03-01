@@ -4,10 +4,10 @@ headline_img: bbx/bbx-main.png
 summary_timeline: 2 months - branding, 1 year overall with all the materials (2017)
 summary_role: Graphic Designer
 summary_tools: Illustrator, Photoshop, Indesign, Sketch
-prev_link: /case-studies/oodls.html
-prev_link_text: Oodls
-next_link: /case-studies/shooting-society.html
-next_link_text: Shooting Society
+prev_link: /case-studies/oodls-branding.html
+prev_link_text: Oodls branding
+next_link: /case-studies/shooting-society-logo.html
+next_link_text: Shooting Society Logo
 
 BLACKBX is a SaaS software company providing customer insights and effective digital 
 marketing automation tools through data collection from Wifi. The name came from the 

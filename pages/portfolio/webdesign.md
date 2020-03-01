@@ -11,7 +11,7 @@ portfolio_images: web/web1.png, #fff
     web/web8.png, #fff
     web/web9.png, #fff
     
-#Web-design
+#Web-designs
 Here is a selection of sites I’ve designed over the years. This gallery includes layouts for various clients.
 I started as a self taught web designer with a knowledge of Photoshop and HTML. 
 I have developed my skills over time through education and self improvement. 

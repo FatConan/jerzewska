@@ -4,10 +4,10 @@ headline_img: dashboard/dash-main.png
 summary_timeline: 6 months initially (2019) - constant improvement
 summary_role: Product Designer
 summary_tools: Sketch, Invision, Full Story
-prev_link: /case-studies/eco-friendly-branding.html
-prev_link_text: ECO-Tour
-next_link: /case-studies/gdpr-friendly-control-site.html
-next_link_text: GDPR Friendly
+prev_link: /case-studies/eco-tour-branding.html
+prev_link_text: ECO-Tour branding
+next_link: /case-studies/gdpr-collection-control-site.html
+next_link_text: GDPR data collection control site
 
 BLACK**BX** (now Stampede) is a software as a service (SaaS) company providing customer insights 
 and effective digital marketing automation tools through data collection from their public Wifi offering.
@@ -23,7 +23,7 @@ and effective digital marketing automation tools through data collection from th
 
 <div class="graphic wide split fifty-fifty">
     <img src="/resources/img/case-studies/pages/dashboard/dash-previous.png" alt="Screenshot of the original version of the system."/>
-    <img src="/resources/img/case-studies/pages/dashboard/" alt="Animation showing the old version of the system in action." />
+    <img src="/resources/img/case-studies/pages/dashboard/old-dash.gif" alt="Animation showing the old version of the system in action." />
 </div>
 
 ## General Problems:

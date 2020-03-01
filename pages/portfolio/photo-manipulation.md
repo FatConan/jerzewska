@@ -9,7 +9,7 @@ portfolio_images: photomanipulation/pm1.png, #fff
     photomanipulation/pm5.png, #fff
     
     
-#Photo Manipulation
+#Photo Manipulations
 This is a selection of photo-manipulations created using Photoshop; my Photoshop skills are self taught. 
 While many of them are only creative endeavours, some were also parts of a [commercial project](/portfolio/waterbysun.html) encapsulating their processes
 in striking visuals.

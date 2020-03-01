@@ -4,10 +4,10 @@ headline_img: mybx/mybx-main.png
 summary_timeline: 3 months (2018)
 summary_role: Product Designer
 summary_tools: Sketch, Invision, Full Story
-prev_link: /case-studies/marketing-automation.html
-prev_link_text: Marketing Automation
-next_link: /case-studies/oodls.html
-next_link_text: Oodls
+prev_link: /case-studies/data-collection-marketing-tool-platform.html
+prev_link_text: Data collection & marketing tool platform
+next_link: /case-studies/oodls-branding.html
+next_link_text: Oodls branding
 
 MY.BX is a part of the BLACK**BX** company software suite. BLACK**BX** (now Stampede) 
 is a software as a service (SaaS) company providing customer insights and effective digital marketing 
