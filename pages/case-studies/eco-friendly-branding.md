@@ -44,7 +44,10 @@ website - unfortunately the project was not used.
 ## Final result:
 
 The logo is very minimalistic, yet captivating, and features all the nature elements I wanted to include. 
-I decided to go with eco-friendly recycled paper for print materials. On the website and <span class="i">Something should go here</span>
+I decided to go with eco-friendly recycled paper for print materials. The original website did not include photography
+of the destinations and I wanted to introduce this to make this visually engaging and to highlight the natural beauty
+of the areas the company serviced.  There was previously no search engine available within the site, and I wanted to add 
+this as a matter of urgency and designed the new site accordingly.
 
 <div class="graphic ultrawide split eco-montage1">
     <img src="/resources/img/case-studies/pages/ecotour/ecotour-final1.png" 
@@ -63,7 +66,7 @@ I decided to go with eco-friendly recycled paper for print materials. On the web
     alt="Detail shot of branded letter paper and binders" style="grid-area: E;"/>
     <img src="/resources/img/case-studies/pages/ecotour/ecotour-final6.png" 
     alt="Eco-Tour business cards." style="grid-area: F;"/>
-    <img src="/resources/img/case-studies/pages/ecotour/ecotour-GIF.png" 
+    <img src="/resources/img/case-studies/pages/ecotour/ecotour.gif" 
     alt="An animation showing off the Eco-Tour website." style="grid-area: G;"/>
 </div>
 
@@ -72,4 +75,4 @@ I decided to go with eco-friendly recycled paper for print materials. On the web
 Looking at this project from today’s point of view, I would say there is some things that could have been 
 improved. The website experience should have been tested, but I didn’t have that knowledge or experience 
 at the time. I still decided to use this project in my case studies, as it was one of my very first 
-individual, and one of my biggest single projects even to this day. I think it still looks very modern and up to date.
+individual, and one of my biggest single projects. I think it still looks very modern and up to date.
