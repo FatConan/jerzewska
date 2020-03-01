@@ -2,13 +2,10 @@ page_title: App
 template: portfolio-page.html
 prev_link: /portfolio/aloelive.html
 next_link: /portfolio/photo-manipulation.html
-portfolio_images: blackbx/bx_bb.png, #000
-    blackbx/bx_bc.png, #000
-    blackbx/bx_eb.png, #000
-    blackbx/bx_pc.png, #000
+portfolio_images: blackbx/phone_3.gif, #000    
     
 #BLACK**BX** App
-On-going brand design development for BLACK**BX**, Guest WiFi Software.
-Brandbook, business cards, promotional cards, ebooks, [portraits](https://www.blackbx.io/about-us)
 
-If you want to check out more recent work, [visit their website](https://www.blackbx.io/)
+The BLACKBX app provides an overview of the headline data that's available through the BLACKBX platform. 
+You can read all about the platform itself in the 
+platform's [case study](/case-studies/data-collection-marketing-tool-platform.html).

@@ -12,7 +12,7 @@
             {% include "snippets/photo-controls.html" %}
 
             <ul class="galleria shots">
-                {% for item in DATA.get("portfolio_images", []) %}
+                {% for item in GLOBALS.site.get_portfolio_images(DATA) %}
                     {% if "," in item %}
                         {% set path, color = item.split(",") %}
                     {% else %}
