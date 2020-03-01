@@ -142,8 +142,9 @@ solution for the CS team how to approach the customer and therefore saved us som
 ## Final result
 
 <div class="graphic ultrawide">
-    <img src="/resources/img/case-studies/pages/dashboard/dash-final-gif.png" 
-    alt="An animation of a user navigating the new interfaces showing off the aspects discussed in this case study."/>
+    <video autoplay loop muted>
+        <source src="/resources/img/case-studies/pages/dashboard/view.mp4" />
+    </video>
 </div>
 
 ## Update:
