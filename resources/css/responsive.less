@@ -1,0 +1,113 @@
+@import "definitions.less";
+
+@media screen and (min-width: 1024px){
+    #inner-wrapper{
+        .defaultWidthAndMargin();
+    }
+
+    .debug{
+        #inner-wrapper{
+            background-color: cyan;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #inner-wrapper{
+        .responsiveWidthAndMargin();
+    }
+
+    .debug{
+        #inner-wrapper{
+            background-color: yellow;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    #inner-wrapper{
+        .responsiveWidthAndMargin();
+    }
+
+    .debug{
+        #inner-wrapper{
+            background-color: limegreen;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    nav.main{
+        margin-bottom: 0;
+
+        ul{
+            display: grid;
+            grid-gap: 0 35px;
+            grid-template-columns: 42px min-content min-content;
+            grid-template-rows: 32px 32px;
+            grid-template-areas: "home bio studies"
+                                 "home other contact";
+        }
+
+        li.home a{
+            height: 64px;
+        }
+
+        li.bio a,
+        li.studies a,
+        li.other a,
+        li.contact a{
+            line-height: 32px;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    nav.social{
+        position: relative;
+        width: auto;
+        top: 0;
+        left: 0;
+
+        li.top{
+            display: none;
+            background: none;
+            padding-left: 0;
+            transform: none;
+
+            span{
+                padding: 0;
+            }
+        }
+
+        li{
+            display: block;
+        }
+
+        ul a.instagram{
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    footer{
+        .inner{
+            .responsiveWidthAndMargin();
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    div.home{
+        background: none;
+
+        p{
+            max-width: 100%;
+        }
+        div.hot-link{
+            display: none;
+        }
+    }
+}

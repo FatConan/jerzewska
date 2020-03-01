@@ -59,30 +59,6 @@ body{
     }
 }
 
-@media screen and (min-width: 1024px){
-    #inner-wrapper{
-        .defaultWidthAndMargin();
-    }
-
-    .debug{
-        #inner-wrapper{
-            background-color: cyan;
-        }
-    }
-}
-
-@media screen and (max-width: 1024px){
-    #inner-wrapper{
-        .responsiveWidthAndMargin();
-    }
-
-    .debug{
-        #inner-wrapper{
-            background-color: yellow;
-        }
-    }
-}
-
 a{
     color: @bodyTextColor;
 }
@@ -154,14 +130,22 @@ nav.main{
     }
 }
 
+.debug nav.main li{
+    border: 1px solid red;
+}
+
 @media screen and (max-width: 1024px){
-    nav.main {
+    nav.main{
         margin-bottom: 0;
 
         ul{
             display: grid;
             grid-template-columns: 42px min-content min-content min-content min-content;
             grid-template-areas: "home bio studies other contact";
+        }
+
+        li.contact a{
+            text-align: left;
         }
     }
 }
@@ -218,33 +202,6 @@ nav.social{
     }
 }
 
-@media screen and (max-width: 1024px){
-    nav.social{
-        position: relative;
-        width: auto;
-        top: 0;
-        left: 0;
-
-        li.top{
-            display: none;
-            background: none;
-            padding-left: 0;
-            transform: none;
-            span{
-                padding: 0;
-            }
-        }
-
-        li{
-            display: block;
-        }
-
-        ul a.instagram {
-            margin-top: 10px;
-        }
-    }
-}
-
 #inner-wrapper{
     padding: 0 20px;
     flex: 1;
@@ -263,7 +220,6 @@ footer{
     color: @footerTextColor;
     background: @footerColor;
     width: 100%;
-
     .inner{
         .defaultWidthAndMargin();
         .footerFont();
@@ -272,3 +228,5 @@ footer{
         text-align: right;
     }
 }
+
+@import "responsive.less";
