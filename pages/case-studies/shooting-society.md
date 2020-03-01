@@ -37,7 +37,8 @@ The customer didn’t really have any ideas what they wanted so they did a littl
 idea to incorporate Gnomes in the project. Sounds weird, but there is a bit of history behind it. One of Wrocław’s 
 most memorable and funkiest attractions are Gnomes. There are a couple of stories and tales about how it started; the historic 
 one talks about the Orange Alternative movement, but I personally prefer the version about gnomes fighting a goblin :)
-<span class="i">This is cool, but is there anywhere we can link to give more information</span>
+You can read more about the gnomes of Wroclaw in this <a traget="_blank" href="http://www.bbc.com/travel/story/20171017-the-truth-behind-wrocaws-cheeky-gnomes">BBC article</a>
+about the gnomes, their history and the artwork around them.
 
 ## Inspirations:
 

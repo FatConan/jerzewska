@@ -1,6 +1,5 @@
 import datetime
 
-
 class SiteExt:
     def tick(self):
         try:

@@ -36,9 +36,49 @@ body{
         }
     }
 
-     &.debug{
+    a.debugger{
+        display: none;
+    }
+
+    &.dev a.debugger{
+        font-weight: bold;
+        color: yellow;
+        display: inline-block;
+    }
+
+    &.dev.debug a.debugger{
+        color: limegreen;
+    }
+
+    &.debug{
+        img[alt=""],
+        img:not([alt]){
+            border: 2px solid tomato;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #inner-wrapper{
+        .defaultWidthAndMargin();
+    }
+
+    .debug{
         #inner-wrapper{
-            background: lime;
+            background-color: cyan;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #inner-wrapper{
+        .responsiveWidthAndMargin();
+    }
+
+    .debug{
+        #inner-wrapper{
+            background-color: yellow;
         }
     }
 }
@@ -114,6 +154,18 @@ nav.main{
     }
 }
 
+@media screen and (max-width: 1024px){
+    nav.main {
+        margin-bottom: 0;
+
+        ul{
+            display: grid;
+            grid-template-columns: 42px min-content min-content min-content min-content;
+            grid-template-areas: "home bio studies other contact";
+        }
+    }
+}
+
 nav.social{
     width: 20px;
     position: absolute;
@@ -166,19 +218,34 @@ nav.social{
     }
 }
 
-#inner-wrapper{
-    .defaultWidthAndMargin();
+@media screen and (max-width: 1024px){
+    nav.social{
+        position: relative;
+        width: auto;
+        top: 0;
+        left: 0;
 
-    /*@media screen and (min-width: 1024px){
-        background: cyan;
-        .defaultWidthAndMargin();
+        li.top{
+            display: none;
+            background: none;
+            padding-left: 0;
+            transform: none;
+            span{
+                padding: 0;
+            }
+        }
+
+        li{
+            display: block;
+        }
+
+        ul a.instagram {
+            margin-top: 10px;
+        }
     }
+}
 
-    @media screen and (max-width: 1024px){
-        background: yellow;
-        .responsiveWidthAndMargin();
-    }*/
-
+#inner-wrapper{
     padding: 0 20px;
     flex: 1;
 }

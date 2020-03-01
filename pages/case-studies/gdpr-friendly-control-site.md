@@ -83,7 +83,7 @@ My experience has taught me that people struggle with data. It’s very importan
 numbers.
 
 <div class="graphic ultrawide split" style="grid-template-columns: 416px 608px;">
-    <img src="/resources/img/case-studies/pages/mybx/mybx-final1.png" alt="The MY.BX portal running on a mobile phone." />
+    <img src="/resources/img/case-studies/pages/mybx/mybx_1.gif" alt="The MY.BX portal running on a mobile phone." />
     <img src="/resources/img/case-studies/pages/mybx/mybx-final2.png" alt="The various aspects of the MY.BX portal shown as screenshots capture on a mobile phone." />
 </div>
 
