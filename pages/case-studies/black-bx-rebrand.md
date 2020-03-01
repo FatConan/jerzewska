@@ -68,11 +68,16 @@ I was very satisfied with the final result. I had to work on a lot of illustrati
 My favourite bit was designing the promotional cards. The idea was to laser cut the shape of the wifi signal symbol into the envelope. 
 The inside of the envelopes were green, so when the business card was taken out, it showed wifi sign “getting online”. 
 
-<div class="graphic ultrawide split blackbx-montage">
+<div class="graphic ultrawide split blackbx-montage1">
     <img src="/resources/img/case-studies/pages/bbx/bbx-final1.png"
      alt="A BlackBX advertising card in its custom laser cut sleeve." style="grid-area: A;"/>
     <img src="/resources/img/case-studies/pages/bbx/bbx-final2.png" 
     alt="The BlackBX advertising card outside its sleeve with the sleeve now displaying a full wifi signal." style="grid-area: B;"/>
+    <video style="grid-area: V" autoplay muted loop>
+        <source src="/resources/img/case-studies/pages/bbx/bbx-card.mp4" type="video/mp4">
+    </video>
+</div>
+<div class="graphic ultrawide split blackbx-montage2">
     <img src="/resources/img/case-studies/pages/bbx/bbx-final3.png" 
     alt="A BlackBX business card, showing detail of both faces." style="grid-area: C;"/>
     <img src="/resources/img/case-studies/pages/bbx/bbx-final4.png" style="grid-area: D;" 

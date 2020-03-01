@@ -1,6 +1,6 @@
 page_title: Kurczaki
 template: portfolio-page.html
-prev_link: /portfolio/web.html
+prev_link: /portfolio/webdesign.html
 next_link: /portfolio/aloelive.html
 portfolio_images: kubus/kub_logo.png, #fff
     kubus/kub_pphon.png, #fff
