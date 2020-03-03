@@ -6,6 +6,18 @@ portfolio_images: photos/DSC01181.png, #fff
     photos/DSC01195.png, #fff
     photos/DSC01352.png, #fff
     photos/DSC01515.png, #fff
+    photos/_DSC0025.jpg, #fff
+    photos/_DSC0035.jpg, #fff
+    photos/_DSC0103.jpg, #fff
+    photos/_DSC2600.jpg, #fff
+    photos/_DSC2690.jpg, #fff
+    photos/_DSC2737.jpg, #fff
+    photos/_DSC2946.jpg, #fff
+    photos/_DSC3010.jpg, #fff
+    photos/_DSC3019.jpg, #fff
+    photos/_DSC3498a.jpg, #fff
+    photos/_DSC3523.jpg, #fff
+    photos/_DSC3524.jpg, #fff
     
     
 #Photography
