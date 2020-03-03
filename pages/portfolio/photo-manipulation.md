@@ -1,4 +1,4 @@
-page_title: Photo Manipulation
+page_title: Agnieszka Jerzewska — Project — Photo Manipulations
 template: portfolio-page.html
 prev_link: /portfolio/app.html
 next_link: /portfolio/logos.html

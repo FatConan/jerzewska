@@ -1,4 +1,4 @@
-page_title: Web
+page_title: Agnieszka Jerzewska — Project — Web-designs
 template: portfolio-page.html
 prev_link: /portfolio/kwk.html
 next_link: /portfolio/kurczaki.html

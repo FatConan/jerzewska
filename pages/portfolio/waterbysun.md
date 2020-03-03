@@ -1,4 +1,4 @@
-page_title: Water By Sun
+page_title: Agnieszka Jerzewska — Project — Water By Sun branding
 template: portfolio-page.html
 prev_link: /portfolio/logos.html
 next_link: /portfolio/kotlownia.html

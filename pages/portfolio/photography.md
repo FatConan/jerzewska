@@ -1,4 +1,4 @@
-page_title: Photography
+page_title: Agnieszka Jerzewska — Project — Photography
 template: portfolio-page.html
 prev_link: /portfolio/rpz.html
 next_link: /portfolio/kwk.html

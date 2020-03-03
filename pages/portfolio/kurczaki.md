@@ -1,4 +1,4 @@
-page_title: Kurczaki
+page_title: Agnieszka Jerzewska — Project — Kurczaki - game log and interface mockup
 template: portfolio-page.html
 prev_link: /portfolio/webdesign.html
 next_link: /portfolio/aloelive.html

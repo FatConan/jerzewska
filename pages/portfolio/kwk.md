@@ -1,4 +1,4 @@
-page_title: KWK
+page_title: Agnieszka Jerzewska — Project — KWK Symposium event materials
 template: portfolio-page.html
 prev_link: /portfolio/photography.html
 next_link: /portfolio/webdesign.html

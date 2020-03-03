@@ -1,4 +1,4 @@
-page_title: Package
+page_title: Agnieszka Jerzewska — Project — Logos
 template: portfolio-page.html
 prev_link: /portfolio/photo-manipulation.html
 next_link: /portfolio/waterbysun.html

@@ -1,4 +1,4 @@
-page_title: Kotlownia
+page_title: Agnieszka Jerzewska — Project — Kotłownia — 3D visuals and a catalog
 template: portfolio-page.html
 prev_link: /portfolio/waterbysun.html
 next_link: /portfolio/rpz.html

@@ -1,4 +1,4 @@
-page_title: RPZ
+page_title: Agnieszka Jerzewska — Project — RPZ promotional materials + photoediting
 template: portfolio-page.html
 prev_link: /portfolio/waterbysun.html
 next_link: /portfolio/photography.html

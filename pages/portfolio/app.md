@@ -1,4 +1,4 @@
-page_title: App
+page_title: Agnieszka Jerzewska — Project — BLACKBX App
 template: portfolio-page.html
 prev_link: /portfolio/aloelive.html
 next_link: /portfolio/photo-manipulation.html

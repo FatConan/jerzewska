@@ -1,4 +1,4 @@
-page_title: Package
+page_title: Agnieszka Jerzewska — Project — Aloelive packaging + photo manipulation
 template: portfolio-page.html
 prev_link: /portfolio/kurczaki.html
 next_link: /portfolio/app.html
