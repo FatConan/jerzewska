@@ -18,6 +18,8 @@ class SiteExt:
     def get_portfolio_count(self, data):
         return len(self.get_portfolio_images(data))
 
+    def copyright(self):
+        return datetime.date.today().strftime("© %Y Agnieszka Jerzewska")
 
 if __name__ == "__main__":
     print(SiteExt().tick())
