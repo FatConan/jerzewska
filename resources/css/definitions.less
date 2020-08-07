@@ -222,9 +222,6 @@ section.split{
 }
 
 .defaultWidthAndMargin{
-    /* Switch width to 100% and add
-    degradation to certain views for mobile
-     */
     width: @contentMaxWidth;
     max-width: @contentMaxWidth;
     margin: 0 auto;
@@ -232,9 +229,12 @@ section.split{
 }
 
 .responsiveWidthAndMargin{
+    /* Switch width to 100% and add
+    degradation to certain views for mobile
+     */
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
 }
 

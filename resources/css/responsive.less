@@ -13,57 +13,6 @@
 }
 
 @media screen and (max-width: 1024px){
-    #inner-wrapper{
-        .responsiveWidthAndMargin();
-    }
-
-    .debug{
-        #inner-wrapper{
-            background-color: yellow;
-        }
-    }
-}
-
-@media screen and (max-width: 500px){
-    #inner-wrapper{
-        .responsiveWidthAndMargin();
-    }
-
-    .debug{
-        #inner-wrapper{
-            background-color: limegreen;
-        }
-    }
-}
-
-@media screen and (max-width: 500px){
-    nav.main{
-        margin-bottom: 0;
-
-        ul{
-            display: grid;
-            grid-gap: 0 35px;
-            grid-template-columns: 42px min-content min-content;
-            grid-template-rows: 32px 32px;
-            grid-template-areas: "home bio studies"
-                                 "home other contact";
-        }
-
-        li.home a{
-            height: 64px;
-        }
-
-        li.bio a,
-        li.studies a,
-        li.other a,
-        li.contact a{
-            line-height: 32px;
-            text-align: left;
-        }
-    }
-}
-
-@media screen and (max-width: 1024px){
     nav.social{
         position: relative;
         width: auto;
@@ -89,12 +38,21 @@
             margin-top: 10px;
         }
     }
-}
 
-@media screen and (max-width: 1024px){
+    #inner-wrapper{
+        .responsiveWidthAndMargin();
+    }
+
     footer{
         .inner{
             .responsiveWidthAndMargin();
+            padding-right: 20px;
+        }
+    }
+
+    .debug{
+        #inner-wrapper{
+            background-color: yellow;
         }
     }
 }
@@ -109,5 +67,254 @@
         div.hot-link{
             display: none;
         }
+    }
+
+    section.design-experience-grid{
+        display: block;
+
+        ol.education{
+            margin-top: 0;
+        }
+    }
+
+    section.skills,
+    section.split{
+       display: block;
+    }
+
+    section.skills{
+        h2{
+            font-weight: bold;
+            padding: 5px 0;
+            margin-top: 10px;
+        }
+
+        .software{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fill,52px);
+        }
+    }
+
+    section.case-studies-grid {
+        display: grid;
+        grid-gap: 20px;
+        margin-right: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "marketing"
+            "gdpr "
+            "interior"
+            "rebrand "
+            "shooting"
+            "eco ";
+
+        div{
+            background-size: 100% auto;
+            &.gdpr-friendly-control-site{
+                a{
+                    padding-top: 260px;
+                }
+
+                background-color: #4f6bfb;
+                background-size: 100% auto;
+            }
+            &.oodls{
+                background-color:#75054a;
+            }
+            &.marketing-automation{
+                a{
+                    padding-top: 260px;
+                }
+                background-color: #2d2622;
+            }
+        }
+
+        a{
+            padding: 0 20px 20px;
+        }
+    }
+
+    div.cms-alt,
+    div.cms{
+         padding-left: 0;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+
+        h1{
+            word-wrap: break-word;
+        }
+
+        p{
+            max-width: 100%;
+        }
+
+        img.headline {
+             margin-left: 0;
+        }
+        .split{
+            display: block;
+        }
+        .fifty-fifty{
+            grid-template-columns: 1fr;
+        }
+        .ultrawide,
+        .wide{
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .case-study-navigation{
+         .nav-links div.next span.label,
+         .nav-links div.previous span.label {
+            visibility: hidden;
+            width: 30px;
+        }
+    }
+
+    .debug{
+        #inner-wrapper{
+            background-color: orange;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    /* Minimal navigation */
+    nav.main{
+        margin-bottom: 0;
+
+        ul{
+            display: grid;
+            grid-gap: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas: "home"
+                                 "bio"
+                                 "studies"
+                                 "other"
+                                 "contact";
+        }
+
+        li.home a{
+            background: none;
+            text-indent: 0;
+        }
+
+        li.home a,
+        li.bio a,
+        li.studies a,
+        li.other a,
+        li.contact a{
+            text-align: left;
+            line-height: 32px;
+        }
+    }
+
+    nav.social ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 20px;
+
+        li{
+            &.top{
+                display: none;
+            }
+            a.instagram,
+            a{
+                margin-top: 0;
+                width: auto;
+                background-position: left center;
+            }
+        }
+    }
+
+    /*#inner-wrapper{
+        .responsiveWidthAndMargin();
+    }
+
+    section.design-experience-grid{
+        display: block;
+
+        ol.education{
+            margin-top: 0;
+        }
+    }
+
+    section.skills,
+    section.split{
+       display: block;
+    }
+
+    section.skills{
+         h2{
+            font-weight: bold;
+            padding: 5px 0;
+            margin-top: 10px;
+        }
+
+        .software{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fill,52px);
+        }
+    }*/
+
+    /*section.case-studies-grid {
+        display: grid;
+        grid-gap: 20px;
+        margin-right: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, auto);
+        grid-template-areas:
+            "marketing"
+            "gdpr "
+            "interior"
+            "rebrand "
+            "shooting"
+            "eco ";
+
+        div{
+            background-size: auto 100%;
+
+            &.gdpr-friendly-control-site{
+                background-color: #4f6bfb;
+                background-size: 100% auto;
+            }
+        }
+
+        a{
+            padding: 0 20px 20px;
+        }
+    }*/
+
+    /*div.cms-alt,
+    div.cms{
+        padding-left: 0;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+
+        h1{
+            //word-wrap: break-word;
+        }
+    }*/
+
+    .debug{
+        #inner-wrapper{
+            background-color: limegreen;
+        }
+    }
+}
+
+@media screen and (max-width: 380px){
+    form.form input, form.form textarea {
+        width: 100%;
+        margin-right: 20px;
+        box-sizing: border-box;
     }
 }
