@@ -1,6 +1,6 @@
 import datetime
 
-class SiteExt:
+class Jerzewska:
     def tick(self):
         try:
             return self.run_tick
@@ -21,5 +21,15 @@ class SiteExt:
     def copyright(self):
         return datetime.date.today().strftime("© %Y Agnieszka Jerzewska")
 
-if __name__ == "__main__":
-    print(SiteExt().tick())
+class Plugin:
+    def __init__(self):
+       self.JERZEWSKA = Jerzewska()
+
+    def configure(self, site_data, site):
+        self.site = site
+
+    def add_render_context(self, page, environment, data):
+        data["JERZEWSKA"] = self.JERZEWSKA
+
+    def parse(self, site_data, site):
+       pass
