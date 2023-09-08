@@ -1,5 +1,8 @@
 import datetime
 
+from sand.plugin import SandPlugin
+
+
 class Jerzewska:
     def tick(self):
         try:
@@ -13,7 +16,7 @@ class Jerzewska:
         if isinstance(imgs, list):
             return imgs
         else:
-            return [imgs]#
+            return [imgs]
 
     def get_portfolio_count(self, data):
         return len(self.get_portfolio_images(data))
@@ -21,15 +24,17 @@ class Jerzewska:
     def copyright(self):
         return datetime.date.today().strftime("© %Y Agnieszka Jerzewska")
 
-class Plugin:
+
+class Plugin(SandPlugin):
     def __init__(self):
-       self.JERZEWSKA = Jerzewska()
+        self.JERZEWSKA = Jerzewska()
+        self.debug = False
 
     def configure(self, site_data, site):
-        self.site = site
+        self.debug = site_data.get("jerzewska", {}).get("debug", False)
+
 
     def add_render_context(self, page, environment, data):
         data["JERZEWSKA"] = self.JERZEWSKA
+        data["DEBUG"] = self.debug
 
-    def parse(self, site_data, site):
-       pass
