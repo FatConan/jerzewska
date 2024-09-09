@@ -1,0 +1,34 @@
+{% extends "page.html" %}
+
+{% block page_content_inner %}
+    <h1 id="other-projects"><span>Other projects</span> gallery</h1>
+{% endblock %}
+
+{% macro entry(className, link, title, focus) -%}
+    <div class="{{ className }}">
+        <a class="{{ className }}" href="{{ link }}">
+            <span class="title">{{ title|safe }}</span>
+            <span class="focus">{{ focus|safe }}</span>
+            <div data-direction="next">
+                <span class="label">See Project</span>
+                <span class="a"></span>
+            </div>
+        </a>
+    </div>
+{%- endmacro %}
+
+{% block post_article %}
+    <section class="portfolio-grid">
+        {{ entry("rpz", "/portfolio/rpz.html", "RPZ promotional materials + photoediting", "Packaging, Brand, Print, Photo Manipulation") }}
+        {{ entry("photo-manipulation", "/portfolio/photo-manipulation.html", "Photo Manipulations", "Photo Manipulation") }}
+        {{ entry("kurczaki", "/portfolio/kurczaki.html", "Kurczaki game logo and interface mockup", "Logo, UI") }}
+        {{ entry("aloe-live", "/portfolio/aloelive.html", "Aloelive packaging + photo manipulation", "Packaging, Brand, Print, Photo Manipulation") }}
+        {{ entry("app", "/portfolio/app.html", "BLACKBX App", "Product design") }}
+        {{ entry("wbs", "/portfolio/waterbysun.html", "Water by Sun branding", "Brand, Logo, Print, Web, Photo Manipulation") }}
+        {{ entry("photography", "/portfolio/photography.html", "Photography", "Photography + edits") }}
+        {{ entry("kot", "/portfolio/kotlownia.html", "Kotłownia 3D visuals and a catalog", "Print, 3D") }}
+        {{ entry("web", "/portfolio/webdesign.html", "Web-designs", "Web, Digital, UI") }}
+        {{ entry("logos", "/portfolio/logos.html", "Logos", "Brand, Logo") }}
+        {{ entry("kwk", "/portfolio/kwk.html", "KWK Symposium event materials", "Brand, Print") }}
+    </section>
+{% endblock %}

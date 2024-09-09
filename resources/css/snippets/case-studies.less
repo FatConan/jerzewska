@@ -1,0 +1,170 @@
+@import "../definitions.less";
+
+@arrowSize: 14px;
+@altArrowSize: 6px;
+@offsetTop: 5px;
+@altOffsetTop: 2px;
+@arrowWidth: 2px;
+
+.top-row{
+    a{
+        padding-top: 30px;
+        color: #fff;
+
+        .title{
+            padding-top: 0;
+        }
+    }
+
+
+    .a, .a:before, .a:after{
+        background-color: #fff;
+    }
+}
+
+.middle-row{
+    a{
+        padding-top: 260px;
+        color: #fff;
+
+        .title{
+            padding-top: 0;
+        }
+    }
+
+    .a, .a:before, .a:after{
+        background-color: #fff;
+    }
+}
+
+.bottom-row{
+     a{
+        padding-top: 260px;
+        color: #fff;
+
+        .title{
+            padding-top: 0;
+        }
+    }
+
+    .a, .a:before, .a:after{
+        background-color: #fff;
+    }
+}
+
+.case-studies-grid{
+    .gallery-grid();
+    margin-right: 160px;
+    grid-template-columns: 380px 380px;
+    grid-template-rows: 530px 430px 430px;
+    grid-template-areas: "marketing     gdpr     "
+                         "interior      rebrand  "
+                         "shooting      eco      ";
+
+    div{
+        background-size: 100% auto;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+        div{
+            margin-top: 30px;
+
+            .arrow(30px, 6px, 2px, 8px, 2px, 10px);
+
+            .hover .label,
+            &:hover .label{
+                color: #fff;
+            }
+
+            .label {
+                text-align: left !important;
+                .linkText();
+            }
+            .a{
+                left: 170px;
+            }
+        }
+
+        &.marketing-automation{
+            grid-area: marketing;
+            .top-row();
+            background-image: url("../img/case-studies/aj-cs-bbxdash.png");
+        }
+
+        &.gdpr-friendly-control-site{
+            grid-area: gdpr;
+            .top-row();
+            background-image: url("../img/case-studies/aj-cs-mybx.png");
+        }
+
+        &.oodls{
+            grid-area: interior;
+            .middle-row();
+            background-image: url("../img/case-studies/aj-cs-oodls.png");
+        }
+
+        &.eco-friendly-branding{
+            grid-area: eco;
+            .bottom-row();
+            background-image: url("../img/case-studies/aj-cs-ecotour.png");
+        }
+
+        &.black-bx-rebrand{
+            grid-area: rebrand;
+            .middle-row();
+            background-image: url("../img/case-studies/aj-cs-bbx.png");
+        }
+        &.shooting-society{
+            grid-area: shooting;
+            .bottom-row();
+            background-image: url("../img/case-studies/aj-cs-gnome.png");
+        }
+    }
+
+    a{
+        color: @bodyTextColor;
+        text-indent: 0;
+    }
+}
+
+.case-study-navigation{
+    clear: both;
+    .nav-links{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        grid-template-areas: "previous switcher next";
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        margin: 70px 0 50px;
+
+        div{
+            white-space: nowrap;
+
+            .a, .a:before, .a:after{
+                background-color: #000;
+            }
+
+            a{
+                display: block;
+                text-decoration: none;
+                .linkText();
+            }
+
+            &.previous{
+                grid-area: previous;
+                .arrow(20px, @altArrowSize, @altOffsetTop, 8px,  @arrowWidth, 15px);
+            }
+            &.switcher{
+                grid-area: switcher;
+                text-align: center;
+            }
+            &.next{
+                grid-area: next;
+                .arrow(20px, @altArrowSize, @altOffsetTop, 8px, @arrowWidth, 15px);
+            }
+        }
+    }
+}

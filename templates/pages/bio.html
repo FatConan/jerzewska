@@ -1,0 +1,128 @@
+{% extends "page.html" %}
+
+{% block head_extra %}
+    <script type="text/javascript" data-main="/resources/javascript/bio/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+{% endblock %}
+
+{% macro role(title, description, open) %}
+    <li {% if open %}class="open"{% endif %}>
+        <div class="title">{{ title|safe }}</div>
+        <div class="description">{{ description|safe }}</div>
+    </li>
+{%- endmacro %}
+
+{% macro professional(location, dates, roles) -%}
+    <li>
+        <div class="location">{{ location|safe }}</div>
+        <div class="date">{{ dates|safe }}</div>
+        <ol class="roles">
+            {% for r in roles %}
+                {{ role(r.0, r.1, r.2) }}
+            {% endfor %}
+        </ol>
+    </li>
+{%- endmacro %}
+
+{% macro internship(location, dates) -%}
+    <li>
+        <div class="location">{{ location|safe }}</div>
+        <div class="date">{{ dates|safe }}</div>
+    </li>
+{%- endmacro %}
+
+{% macro education(location, dates, courses) -%}
+    <li>
+        <div class="location">{{ location|safe }}</div>
+        <div class="date">{{ dates|safe }}</div>
+        <div class="courses">
+            {% for c in courses %}
+                <div>{{ c|safe }}</div>
+            {% endfor %}
+        </div>
+    </li>
+{%- endmacro %}
+
+{% block page_content_inner %}
+    <section class="some-skills fraction">
+        <h1 id="skills"><span>Some</span> skills</h1>
+        <section class="skills">
+            <h2 class="icon-title">Software:</h2>
+            <div class="software">
+                <span class="package sketch" title="Sketch"></span><span class="sep">,</span>
+                <span class="package photoshop" title="Photoshop">Photoshop</span><span class="sep">,</span>
+                <span class="package lightroom" title="Lightroom">Lightroom</span><span class="sep">,</span>
+                <span class="package illustrator" title="Illustrator">Illustrator</span><span class="sep">,</span>
+                <span class="package indesign" title="InDesign">InDesign</span><span class="sep">,</span>
+                <span class="package experience-design" title="Experience Design">Experience Design</span><span class="sep">,</span>
+                <span class="package premier" title="Premier">Premier</span>
+            </div>
+            <h2>Additional:</h2>
+            <p>Sketch, Craft/Invision, UXPin, HTML, CSS, <br />Wordpress, Hubspot</p>
+            <h2>Languages:</h2>
+            <p>Polish, English</p>
+            <h2>Interests:</h2>
+            <p>Design, Architecture, Photography, <br />Cooking, Comic Books, Video Games</p>
+        </section>
+    </section>
+
+    <section class="design-experience fraction">
+        <h1 id="design-experience"><span>Design</span> experience</h1>
+        <section class="design-experience-grid">
+            <ol class="professional">
+                {{ professional("Stampede", "May 2017 - Present",
+                [("Product Designer", "<p>Product design ranging from collaborating with developers to wireframe and prototype new features, through to iterating design improvements to existing interfaces. </p>
+                <p>I have also conducted customer interviews and organised customer feedback sessions to better inform our design decisions and to use to steer the direction of the product to better serve
+                    the customer.</p><p>I am also still responsible for a variety of the tasks of my previous graphic designer role.</p>", true),
+                    ("Graphic Designer", "<p>Initially creating a brand, then enforcing the adherence and cohesion of that brand by providing assets for marketing and sales both in print and digital.
+                Marketing materials I have created include things like fliers, brochures and e-books.</p>
+                <p>I've also been responsible for designing the company website and frequently coding those designs within Wordpress.</p>
+                <p>Additionally I have been responsible for providing photography when needed &mdash; I maintained the company Instagram account &mdash; and have aided in the production and edit of video content for
+                    client presentations.</p>")]) }}
+                {{ professional("deltaDNA", "Feb 2015 - May 2017", [("Web Designer", "<p>Principally designing and coding the company website in Wordpress. I worked within the marketing
+            department creating the likes of presentations, fliers and related assets for the sales team. I also created illustrations as part of the core branding used both in digital and print media.</p>
+                <p>Additionally I was responsible for staff photography for the company website.</p>")]) }}
+                {{ professional("Tandem Digital", "Jan 2015 - Feb 2015", [("Graphic Designer", "<p>Working on a number of print and digital projects as well as contributing to the websites' UIs.</p>")]) }}
+                {{ professional("IPCON", "Jul 2014 - Jan 2015", [("Graphic Designer", "<p>Involved in an EU project to document the history, geography and biology of the
+                Lower Silesia Province, and curate that information digitally in a publicly accessible website. This included the creation of promotional, branded materials
+                as well as illustration, redrawing maps and the generation of other consistently branded renders.</p>")]) }}
+                {{ professional("13 piętro", "Apr 2014 - Oct 2014", [("Graphic Designer", "<p>Working on multiple projects for multiple clients working within a creative agency, across a range of media.</p>")]) }}
+                {{ professional("Freelance", "Sep 2012 - Jan 2014", [("Graphic Designer", "<p>Working on multiple projects for multiple clients working within a creative agency, across a range of media.</p>")]) }}
+                {{ professional("BystraVision", "Sep 2011 - Sep 2012", [("Graphic Designer", "<p>Working on multiple projects for multiple clients working within a creative agency, across a range of media.</p>")]) }}
+            </ol>
+            <div class="non-professional">
+                <ol class="internship">
+                    {{ internship("MAMF", "Jan 2014 - Apr 2014") }}
+                    {{ internship("BystraVision", "Jun 2011 - Sep 2011") }}
+                    {{ internship("Eco-Tour", "Apr 2011 - May 2011") }}
+                    {{ internship("DlaLejdis.pl", "Dec 2010 - Jan 2011") }}
+                </ol>
+                 <ol class="education">
+                    {{ education('University College of Northern Denmark', "Sep 2012 - Jun 2014",
+                        ["Program: Design, technology &amp; business"]) }}
+                    {{ education("College &ldquo;Promocja&rdquo;", "Jun 2011 - Sep 2011",
+                        ["Program 1: Technician, organization of advertising activities",
+                        "Program 2: Interior design"]) }}
+                </ol>
+            </div>
+        </section>
+    </section>
+
+    <section class="contact split fraction">
+        <h1 id="lets-talk"><span>Let's</span> talk</h1>
+        <form action="https://formspree.io/mayodkqy"
+            method="POST"
+            class="form">
+            <div class="input-row">
+                <label for="talk_text">Email</label>
+                <input id="talk_text" type="text" placeholder="Your email address" required name="_replyto">
+            </div>
+            <div class="input-row">
+                <label for="talk_message">Message</label>
+                <textarea id="talk_message" name="message" required placeholder="How can I help?"></textarea>
+            </div>
+            <div class="button-row">
+                <a data-direction="next" class="submit"><span class="label">Send</span><span class="a"></span></a>
+            </div>
+        </form>
+    </section>
+{% endblock %}

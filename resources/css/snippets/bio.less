@@ -1,0 +1,182 @@
+@import "../definitions.less";
+
+section.design-experience-grid{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "pro nonpro";
+    align-items: start;
+
+    ol{
+        li{
+            display: block;
+            margin: 0 0 30px;
+            padding: 0 0 0 20px;
+            border-left: 1px solid #EDECED;
+            position: relative;
+
+            &::before{
+                content: " ";
+                background-size: 16px auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: block;
+                height: 16px;
+                line-height: 16px;
+                text-align: center;
+                width: 16px;
+                position: absolute;
+                top: 0;
+                left: -8px;
+                z-index: 10;
+            }
+
+            li{
+                &::before{
+                    display: none;
+                }
+                border: 0;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        &::before{
+            .linkText();
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 0 10px;
+            border: 1px solid;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            line-height: 20px;
+            height: 20px;
+            font-size: 10px;
+        }
+
+        .location{
+            font-family: @highlightFont, @fallbackFont;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .date{
+            color: @galleryColorPrimary;
+            font-family: @highlightFont, @fallbackFont;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .title{
+            cursor: pointer;
+            font-size: 16px;
+            font-family: @bodyFont, @fallbackFont;
+            margin-bottom: 20px;
+            position: relative;
+
+            &:after{
+                display: inline-block;
+                content: "⌄";
+                color: #6A01E9;
+                top: 5px;
+                padding-left: 10px;
+                position: absolute;
+                transform-origin: center center;
+                transform: rotate(-90deg);
+            }
+        }
+
+        li.open {
+            .title:after{
+                top: -4px;
+                transform: none;
+            }
+            .description{
+                height: auto;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        .courses{
+            font-size: 16px;
+            font-family: @bodyFont, @fallbackFont;
+            margin-bottom: 20px;
+        }
+
+        .description{
+            height: 0;
+            display: none;
+            font-size: 14px;
+            font-family: @bodyFont, @fallbackFont;
+        }
+    }
+
+    ol.professional{
+        &::before{
+            content: 'Professional';
+            color: @galleryColorPrimary;
+        }
+        li::before{
+            background-image: url("/resources/img/furniture/skill-bullets/professional.svg");
+        }
+        grid-area: pro;
+    }
+
+    ol.internship{
+        &::before{
+            content: 'Internship';
+            color: @galleryColorTertiary;
+        }
+        li::before{
+            background-image: url("/resources/img/furniture/skill-bullets/intern.svg");
+        }
+    }
+
+    ol.education{
+        margin-top: 80px;
+        &::before{
+            content: 'Education';
+            color: @galleryColorSecondary;
+        }
+        li::before{
+            background-image: url("/resources/img/furniture/skill-bullets/education.svg");
+        }
+        li div{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+section.contact{
+    padding: 50px 0 30px;
+    h1{
+        grid-area: alpha;
+    }
+
+    form{
+        grid-area: beta;
+    }
+}
+
+a.submit{
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    .linkText();
+
+    .arrow(30px, 6px, 2px, 6px, 2px, 10px);
+    .label {
+        text-align: left !important;
+        text-transform: uppercase;
+    }
+    .a{
+        left: 50px;
+    }
+
+    .a, .a:before, .a:after{
+        background-color: #000;
+    }
+}

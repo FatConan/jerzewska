@@ -1,0 +1,29 @@
+{% extends "page.html" %}
+
+{% block page_content_inner %}
+    <h1 id="case-studies"><span>Case</span> studies</h1>
+{% endblock %}
+
+{% macro entry(className, link, title, focus) -%}
+    <div class="{{ className }}">
+        <a class="{{ className }}" href="{{ link }}">
+            <span class="title">{{ title|safe }}</span>
+            <span class="focus">{{ focus|safe }}</span>
+            <div data-direction="next">
+                <span class="label">View Case Study</span>
+                <span class="a"></span>
+            </div>
+        </a>
+    </div>
+{%- endmacro %}
+
+{% block post_article %}
+    <div class="case-studies-grid">
+        {{ entry("marketing-automation", "/case-studies/data-collection-marketing-tool-platform.html", "Data collection &amp; marketing tool platform", "Product design") }}
+        {{ entry("gdpr-friendly-control-site", "/case-studies/gdpr-collection-control-site.html", "GDPR data collection control site", "Product design") }}
+        {{ entry("oodls", "/case-studies/oodls-branding.html", "Oodls branding", "Branding, logo") }}
+        {{ entry("eco-friendly-branding", "/case-studies/eco-tour-branding.html", 'Eco-tour branding', "Branding, website, digital") }}
+        {{ entry("black-bx-rebrand", "/case-studies/blackbx-branding.html", 'BLACKBX branding', "Branding, print, digital") }}
+        {{ entry("shooting-society", "/case-studies/shooting-society-logo.html", 'Shooting Society Logo', "Logo, illustration") }}
+    </div>
+{% endblock %}
