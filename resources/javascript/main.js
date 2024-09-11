@@ -12,14 +12,20 @@ VIEWS.set("portfolio", PortfolioView)
 class StartUp extends BaseClass{
     constructor(){
         super();
+        this.addDebugger();
+        this.dispatcher();
+    }
 
+    dispatcher(){
         const view = $("html").data("view");
         let instantiatedView;
         if(VIEWS.has(view)){
             let ViewClass = VIEWS.get(view);
             instantiatedView = new ViewClass();
         }
+    }
 
+    addDebugger(){
         const host = window.location.hostname;
         const $body = $("body");
 

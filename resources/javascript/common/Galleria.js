@@ -34,6 +34,17 @@ export default class Galleria extends BaseClass{
             }
         });
 
+        this.eventHandler.addListenerOnEvent("touchSwipeLeft", ".galleria.shots", (e, args) => {
+            if(args.payload.distance > 20){
+                this.show("next");
+            }
+        });
+        this.eventHandler.addListenerOnEvent("touchSwipeRight", ".galleria.shots", (e, args) => {
+            if(args.payload.distance > 20){
+                this.show("previous");
+            }
+        });
+
         /*$(".galleria.shots").touchwipe({
             wipeLeft: function(){
                 this.show("next");
@@ -44,6 +55,7 @@ export default class Galleria extends BaseClass{
             min_move_x: 20,
             preventDefaultEvents: false
         });*/
+
 
         /*this.events.addKeyboardListener("body", "ArrowLeft", function(e, args){
             e.preventDefault();
