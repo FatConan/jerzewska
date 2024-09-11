@@ -1,7 +1,8 @@
 {% extends "page.html" %}
 
+{% block data_view %}home{%  endblock %}
+
 {% block head_extra %}
-    <script type="text/javascript" data-main="/resources/javascript/home/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
 {% endblock %}
 
 {% block page_content %}
@@ -14,15 +15,15 @@
                     <p>What do you want to see?</p>
                     <ul>
                         <li><a class="gallery" data-direction="next" href="/other-projects.html"><span class="label">Images only</span><span class="a"></span></a></li>
-                        <li><a class="process" data-direction="next" href="/case-studies.html"><span class="label">Process</span><span class="a"></span></a></a></li>
+                        <li><a class="process" data-direction="next" href="/case-studies.html"><span class="label">Process</span><span class="a"></span></a></li>
                     </ul>
                 </div>
             {% endblock %}
             <div class="hot-link">
-                <a href="/other-projects.html" class="cs-link bottom right"><span class="label">Portfolio</span><div class="inner"><span class="a">&nbsp;</span></div></a>
-                <a href="/case-studies/data-collection-marketing-tool-platform.html" class="cs-link bottom left"><span class="label">Read Case Study</span><div class="inner"><span class="a">&nbsp;</span></div></a>
-                <a href="/case-studies/oodls-branding.html" class="cs-link middle"><span class="label">Read Case Study</span><div class="inner"><span class="a">&nbsp;</span></div></a>
-                <a href="/case-studies/gdpr-collection-control-site.html" class="cs-link top right"><span class="label">Read Case Study</span><div class="inner"><span class="a">&nbsp;</span></div></a>
+                <a href="/other-projects.html" class="cs-link bottom right" data-clazz="bottom right"><span class="label">Portfolio</span><div class="inner"><span class="a">&nbsp;</span></div></a>
+                <a href="/case-studies/data-collection-marketing-tool-platform.html" class="cs-link bottom left" data-clazz="bottom left"><span class="label">Read Case Study</span><div class="inner"><span class="a">&nbsp;</span></div></a>
+                <a href="/case-studies/oodls-branding.html" class="cs-link middle" data-clazz="middle"><span class="label">Read Case Study</span><div class="inner"><span class="a">&nbsp;</span></div></a>
+                <a href="/case-studies/gdpr-collection-control-site.html" class="cs-link top right" data-clazz="top right"><span class="label">Read Case Study</span><div class="inner"><span class="a">&nbsp;</span></div></a>
             </div>
         </div>
     </div>

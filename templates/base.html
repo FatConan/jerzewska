@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" data-view="{%  block data_view %}{{ DATA.get("data_view", "") }}{%  endblock %}">
     <head>
         <meta charset="UTF-8">
         <meta name="theme-color" content="#6B00E9">
@@ -8,16 +8,12 @@
         <title>{{ DATA.get("page_title") }}</title>
         {{ ES6CSS.headers() | safe }}
         <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" />
-        <link href="/resources/css/reset.css" rel="stylesheet" media="all"/>
         <link href="/resources/css/print.css"  rel="stylesheet" media="print" />
 
         {% block head %}
-            <script data-main="/resources/javascript/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
-            <link href="/resources/css/styles.css?tick={{ JERZEWSKA.tick() }}" rel="stylesheet" media="screen">
         {% endblock %}
 
         {% block head_extra %}
-            <script data-main="/resources/javascript/no-op" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
         {% endblock %}
     </head>
     <body>
